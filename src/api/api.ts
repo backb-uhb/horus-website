@@ -41,4 +41,19 @@ export const frontendApi = {
       return null;
     }
   },
+
+  EnquiryForm: async (formData: object) => {
+    try {
+      const response = await axiosClient.post("forms/create", formData);
+
+      console.log("resp==",response)
+      return response;
+    } catch (error) {
+      console.log(error);
+
+      return null;
+    }
+  }
+
 };
+

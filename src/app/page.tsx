@@ -57,42 +57,26 @@ const getHomePage = async (): Promise<THomeData> => {
 const page = async () => {
   const response = await getHomePage();
   return (
-    <div>
-<div className="relative bg-black overflow-hidden">
-  <Herosection />
+    <div className="max-w-[1440px] mx-auto">
+      <div className="relative bg-black ">
+        <Herosection />
 
-  <div className="relative  max-w-[1440px] mx-auto">
-    <div className="pointer-events-none absolute ~top-[-10rem]/[-12.5rem] left-1/2 -translate-x-1/2 z-0">
-      <div
-        className="
-          w-[85vw]
-          max-w-[1100px]
-          h-[520px]
-    rounded-lg
-   bg-gradient-radial from-[#ECB76A]/40 to-transparent
-          blur-2xl
-        "
-      />
-    </div>
+        <div className="relative   max-w-[1440px] mx-auto">
+          
+            <Experience />
+            <div className="max-w-[1440px] mx-auto  bg-black">
+              <VideoSection />
+              <CourseSection />
+              <TradingAcademySection />
+           
+          </div>
+        </div>
 
-    <div className="relative z-10">
-      <Experience />
-    </div>
-  </div>
-</div>
 
-      <div className="max-w-[1440px] mx-auto">
-        <VideoSection />
       </div>
-      <div className="max-w-[1440px] mx-auto">
-        {" "}
-        <CourseSection />
-      </div>
-      <div className="max-w-[1440px] mx-auto">
-        <TradingAcademySection />
-      </div>{" "}
+
       <Testimonials testimonials={response?.testimonials} />
-      <div className="max-w-[1440px] mx-auto">
+      <div className="max-w-[1440px] mx-auto bg-black relative ">
         <FAQSection
           textColor="text-[#8F8F8F]"
           faqData={faqData}

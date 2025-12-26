@@ -38,7 +38,7 @@ const MobileTradingCarousel = () => {
                 }
                 className="~size-[8.75rem]/[21.875rem] ~rounded-[0.625rem]/[1.5rem]"
               />
-              <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.875rem] md:font-bold">
+              <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-semibold">
                 We Build Earners, <br /> Not Just Learners 
               </p>
             </div>
@@ -51,7 +51,7 @@ const MobileTradingCarousel = () => {
                 }
                 className="~size-[8.75rem]/[21.875rem] ~rounded-[0.625rem]/[1.5rem]"
               />
-              <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.875rem] md:font-bold">
+              <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-semibold">
                 College in the morning. Charts by night | Horus Financial
                 Academy{" "}
               </p>
@@ -65,7 +65,7 @@ const MobileTradingCarousel = () => {
                 }
                 className="~size-[8.75rem]/[21.875rem] ~rounded-[0.625rem]/[1.5rem]"
               />
-              <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.875rem] md:font-bold">
+              <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-semibold">
             Learning trading the right 
                 <br /> way makes all the difference.
               </p>
@@ -79,7 +79,7 @@ const MobileTradingCarousel = () => {
                 }
                 className="~size-[8.75rem]/[21.875rem] ~rounded-[0.625rem]/[1.5rem]"
               />
-              <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.875rem] md:font-bold">
+              <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-semibold">
                 Welcome to India&apos; First LIVE Trading Floor{" "}
               </p>
             </div>
@@ -92,7 +92,7 @@ const MobileTradingCarousel = () => {
                 }
                 className="~size-[8.75rem]/[21.875rem] ~rounded-[0.625rem]/[1.5rem]"
               />
-              <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.875rem] md:font-bold">
+              <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-bold">
                 From Beginner to Profitable Trader at 22!{" "}
               </p>
             </div>
@@ -176,6 +176,7 @@ const DesktopTradingLayout = () => {
         >
           <div>
             <div className="~rounded-[0.625rem]/[1.5rem]  overflow-hidden">
+            
               <YouTube
                 videoId="GBpnUja4vvI"
                 opts={opts}
@@ -184,7 +185,7 @@ const DesktopTradingLayout = () => {
                 onPlay={() => handlePlay("uNTTgMd_ghQ")}
               />
             </div>
-            <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.875rem] md:font-bold">
+            <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-bold">
               We Build Earners, <br /> Not Just Learners
             </p>
           </div>
@@ -205,7 +206,7 @@ const DesktopTradingLayout = () => {
                 onPlay={() => handlePlay("Wjd8pE8I-Cs")}
               />
             </div>
-            <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.875rem] md:font-bold">
+            <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-bold">
               College in the morning. Charts by night | Horus Financial Academy
             </p>
           </div>
@@ -226,7 +227,7 @@ const DesktopTradingLayout = () => {
                 onPlay={() => handlePlay("qeaQI3MAWZU")}
               />
             </div>
-            <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.875rem] md:font-bold">
+            <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-bold">
       Learning trading the right  <br /> way makes all the difference. 
             </p>
           </div>
@@ -247,7 +248,7 @@ const DesktopTradingLayout = () => {
                 onPlay={() => handlePlay("rDCQ6q3Q0PA")}
               />
             </div>
-            <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.875rem] md:font-bold">
+            <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-bold">
               Welcome to India&apos;s First LIVE Trading Floor
             </p>
           </div>
@@ -269,7 +270,7 @@ const DesktopTradingLayout = () => {
                 onPlay={() => handlePlay("uFtbfj6TWfs")}
               />
             </div>
-            <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.875rem] md:font-bold">
+            <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-bold">
               From Beginner to Profitable Trader at 22!
             </p>
           </div>

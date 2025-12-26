@@ -84,60 +84,52 @@ const InstructorProfile = () => {
     );
   };
 
-  /* ---------------- SCROLL TO SPECIFIC CARD (FOR CLICK/HOVER) ---------------- */
-  const scrollToCard = (index: number) => {
-    if (!scrollRef.current) return;
-    
-    const container = scrollRef.current;
-    const containerWidth = container.clientWidth;
-    
-    // Get all card elements
-    const cards = container.querySelectorAll('[data-card-index]');
-    const targetCard = cards[index] as HTMLElement;
-    
-    if (targetCard) {
-      if (isDesktop) {
-        // Desktop: Calculate to show expanded card + details centered
-        const cardLeft = targetCard.offsetLeft;
-        const expandedCardWidth = 300; // 18.75rem
-        const detailsWidth = 360; // 22.5rem
-        const gap = 27; // 1.6875rem
-        
-        // Total width of expanded card + gap + details
-        const totalWidth = expandedCardWidth + gap + detailsWidth;
-        
-        // Calculate scroll to center the whole unit
-        // We want: (containerWidth - totalWidth) / 2 = left margin
-        const targetScroll = cardLeft - ((containerWidth - totalWidth) / 2);
-        
-        // Constrain to valid scroll range
-        const maxScroll = container.scrollWidth - containerWidth;
-        const finalScroll = Math.max(0, Math.min(targetScroll, maxScroll));
-        
-        isScrollingRef.current = true;
-        container.scrollTo({
-          left: finalScroll,
-          behavior: "smooth",
-        });
-        
-        setTimeout(() => {
-          isScrollingRef.current = false;
-        }, 800);
-      } else {
-        // Mobile: simple left align
-        const cardLeft = targetCard.offsetLeft;
-        isScrollingRef.current = true;
-        container.scrollTo({
-          left: Math.max(0, cardLeft - 16),
-          behavior: "smooth",
-        });
-        
-        setTimeout(() => {
-          isScrollingRef.current = false;
-        }, 600);
+  const scrollToCard = React.useCallback(
+    (index: number) => {
+      if (!scrollRef.current) return;
+      const container = scrollRef.current;
+      const containerWidth = container.clientWidth;
+      const cards = container.querySelectorAll('[data-card-index]');
+      const targetCard = cards[index] as HTMLElement;
+      if (targetCard) {
+        if (isDesktop) {
+          // Desktop: Calculate to show expanded card + details centered
+          const cardLeft = targetCard.offsetLeft;
+          const expandedCardWidth = 300; // 18.75rem
+          const detailsWidth = 360; // 22.5rem
+          const gap = 27; // 1.6875rem
+          // Total width of expanded card + gap + details
+          const totalWidth = expandedCardWidth + gap + detailsWidth;
+          // Calculate scroll to center the whole unit
+          // We want: (containerWidth - totalWidth) / 2 = left margin
+          const targetScroll = cardLeft - ((containerWidth - totalWidth) / 2);
+          // Constrain to valid scroll range
+          const maxScroll = container.scrollWidth - containerWidth;
+          const finalScroll = Math.max(0, Math.min(targetScroll, maxScroll));
+          isScrollingRef.current = true;
+          container.scrollTo({
+            left: finalScroll,
+            behavior: "smooth",
+          });
+          setTimeout(() => {
+            isScrollingRef.current = false;
+          }, 800);
+        } else {
+          // Mobile: simple left align
+          const cardLeft = targetCard.offsetLeft;
+          isScrollingRef.current = true;
+          container.scrollTo({
+            left: Math.max(0, cardLeft - 16),
+            behavior: "smooth",
+          });
+          setTimeout(() => {
+            isScrollingRef.current = false;
+          }, 600);
+        }
       }
-    }
-  };
+    },
+    [isDesktop]
+  );
 
   /* ---------------- AUTO SCROLL ---------------- */
   useEffect(() => {
@@ -185,9 +177,8 @@ const InstructorProfile = () => {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [isPaused, activeIndex, isDesktop]);
+  }, [isPaused, activeIndex, isDesktop, scrollToCard]);
 
-  /* ---------------- UPDATE ACTIVE INDEX BASED ON SCROLL ---------------- */
   useEffect(() => {
     const container = scrollRef.current;
     if (!container || !isDesktop) return; // Only for desktop

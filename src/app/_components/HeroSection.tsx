@@ -1,19 +1,18 @@
 "use client";
 import Image from "next/image";
 import ArrowSvg from "../../components/svg/ArrowSvg";
-import SpotlightCursor from "@/components/SpotLightCursor";
 import { ButtonAnimation } from "@/components/ButtonAnimation";
 import Link from "next/link";
 
 const Herosection = () => {
-  const rows = 30;
-  const cols = 40;
-  const cells = Array.from({ length: rows * cols });
+  // const rows = 30;
+  // const cols = 40;
+  // const cells = Array.from({ length: rows * cols });
 
   return (
-    <div className="">
+    <div className=" sticky top-0 w-full h-screen max-w-[1440px]  ">
       <div className="relative flex flex-col items-center overflow-hidden">
-        <div className="absolute inset-0 h-[100vh]">
+        {/* <div className="absolute inset-0 h-[100vh]">
           <div
             className="relative z-0 h-[50vh] grid"
             style={{
@@ -37,16 +36,18 @@ const Herosection = () => {
               }}
             />
           </div>
-        </div>
+        </div> */}
         <div className="relative px-[1rem] w-full h-[100vh] flex flex-col ">
-          <div className="absolute inset-0 z-0">
+             <div className="">
             <Image
               src={"/images/bg-hero.png"}
               alt="background-img"
               fill
               className="object-cover z-0"
             />
-            <div className="absolute flex flex-col items-center bottom-[1rem] w-full   z-20">
+          <div className="bg-gradient-to-t from-black to-transparent absolute inset-0 z-10"></div>
+       
+            <div className="absolute flex flex-col items-center bottom-[1rem] w-full   z-[5000000]">
               <h1
                 className="font-merriweather font-normal md:font-bold ~text-[1.5rem]/[3.75rem] leading-[110%]  tracking-[-0.07rem]
                 text-center 

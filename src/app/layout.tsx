@@ -9,6 +9,7 @@ import Footer from "./_components/Footer";
 import ProgressProvider from "@/providers/ProgressProvider";
 import { AbsoluteUrl } from "@/utils/BaseUrl";
 import IphoneViewportGuard from "@/components/IphoneViewportGuard";
+import { Toaster } from "react-hot-toast";
 
 const satoshi = localFont({
   src: "../app/fonts/Satoshi-Variable.ttf",
@@ -53,10 +54,13 @@ export default function RootLayout({
       >
         <IphoneViewportGuard />
         <ProgressProvider>
+          <Toaster position="top-center" containerClassName="mt-4" />
           <Header />
           {children}
-          <Footer />
-        </ProgressProvider>
+<div className="max-w-[1440px] mx-auto z-10 relative bg-black">
+            <Footer />
+  
+</div>        </ProgressProvider>
       </body>
     </html>
   );

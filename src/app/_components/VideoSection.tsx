@@ -2,7 +2,7 @@ import React from "react";
 import { YouTubeEmbed } from "@next/third-parties/google";
 const VideoSection = () => {
   return (
-    <div className="~pt-[3.4375rem]/[6.5625rem] ~px-[0.75rem]/[7rem]">
+    <div className="~pt-[3.4375rem]/[6.5625rem] ~px-[0.75rem]/[7rem] ">
       <div className="items-center flex flex-col ">
         <div className="text-[#FFFFFF] md:font-bold font-normal font-merriweather text-center ~text-[1.375rem]/[3.25rem] leading-[120%] tracking-[-0.05rem] ~pb-[0.625rem]/[2rem]">
           <div>

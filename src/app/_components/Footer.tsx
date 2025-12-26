@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "./Logo";
-import ArrowSvg from "@/components/svg/ArrowSvg";
 import TwitterSvg from "@/components/svg/TwitterSvg";
 import InstagramSvg from "@/components/svg/InstagramSvg";
 import LinkedInSvg from "@/components/svg/LinkedinSvg";
@@ -9,6 +8,7 @@ import Link from "next/link";
 import MailSvg from "@/components/svg/MailSvg";
 import PhoneSvg from "@/components/svg/PhoneSvg";
 import MessageSvg from "@/components/svg/MessageSvg";
+import EnrollCTA from "./EnrollCta";
 
 const icons = [
   { href: "https://twitter.com", icon: TwitterSvg },
@@ -25,8 +25,8 @@ const icons = [
 
 const Footer = () => {
   return (
-    <div>
-      <div className="bg-black flex flex-col ~pt-[2.625rem]/[18.75rem]  items-center ~pb-[2.7406rem]/[10.4125rem] ">
+    <div className="">
+      <div className="bg-black flex flex-col ~pt-[2.125rem]/[17.75rem]  items-center ~pb-[2.7406rem]/[10.4125rem] ">
         <div>
           <Logo className="~w-[9.375rem]/[27.5231rem] ~h-[5.1094rem]/[15rem]" />
         </div>
@@ -38,15 +38,18 @@ const Footer = () => {
           <br />
           Journey Today!
         </div>
-        <div className="relative p-[1px]  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-fit">
-          <Link href={"/courses"} className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full cursor-pointer transition-all duration-300 ease-in-out py-[0.5rem] ~px-[0.75rem]/[1rem] hover:bg-[#000] bg-transparent">
+
+        {/* <div className="relative p-[1px]  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-fit">
+          <div className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full cursor-pointer transition-all duration-300 ease-in-out py-[0.5rem] ~px-[0.75rem]/[1rem] hover:bg-[#000] bg-transparent">
             <button className="text-white font-semibold font-geist ~text-[0.75rem]/[1rem] leading-[160%] tracking-[-1.2%]">
               Enroll Now
             </button>
 
             <ArrowSvg className="text-white h-[0.625rem] w-auto" />
-          </Link>
-        </div>
+          </div>
+        </div> */}
+<EnrollCTA/>
+
       </div>
 
       <div className="bg-[#101010] border-t-[0.0625rem] border-[#FFFFFF14]">
@@ -92,13 +95,13 @@ const Footer = () => {
                   >
                     Courses
                   </Link>
-                  <Link href="" className="hover:text-white transition-colors">
+                  <Link href="/" className="hover:text-white transition-colors">
                     Students Life
                   </Link>
-                  <Link href="" className="hover:text-white transition-colors">
+                  <Link href="/" className="hover:text-white transition-colors">
                     Community
                   </Link>
-                  <Link href="" className="hover:text-white transition-colors">
+                  <Link href="/" className="hover:text-white transition-colors">
                     Blog
                   </Link>
                 </div>
@@ -109,7 +112,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex flex-col ~gap-[0.375rem]/[0.875rem] ~text-[0.75rem]/[0.875rem] text-[#FFFFFF]/60 ~leading-[0.8381rem]/[1.3125rem] tracking-[0%] ~pt-[0.375rem]/[0.875rem]">
-                  <Link href="" className="hover:text-white transition-colors">
+                  <Link href="/privacy-policy" className="hover:text-white transition-colors">
                     Privacy Policy
                   </Link>
                   <Link

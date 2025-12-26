@@ -27,7 +27,7 @@ const FAQSection = ({
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <div className=" text-white relative z-10  ~pt-[3.75rem]/[6.25rem]">
+    <div className=" text-white relative z-10  ~pt-[3.75rem]/[6.25rem] ~pb-[0.5rem]/[1.25rem]">
       <div className="flex flex-col items-center ~px-[0.625rem]/[3.75rem]">
         <div
           className="inline-block bg-[#342511] backdrop-blur-[6px]
@@ -76,7 +76,7 @@ const FAQSection = ({
                   onClick={() => setOpenIndex(index)}
                   className="w-full ~px-[0.625rem]/[1.875rem] ~py-[0.5rem]/[1.5rem] flex items-center justify-between text-left group"
                 >
-                  <h3 className="~text-[0.75rem]/[1.5rem] md:font-bold font-medium font-satoshi text-[#D1D1D1] ~leading-[0.7456rem]/[2.2556rem] ~tracking-[-0.0056rem]/[-0.0163rem] transition-colors duration-200">
+                  <h3 className="~text-[0.75rem]/[1.5rem] md:font-semibold font-medium font-satoshi text-[#D1D1D1] ~leading-[0.7456rem]/[2.2556rem] ~tracking-[-0.0056rem]/[-0.0163rem] transition-colors duration-200">
                     {item.question}
                   </h3>
                   <div className="flex-shrink-0 flex items-center justify-center">
@@ -100,8 +100,8 @@ const FAQSection = ({
                       }}
                       className=" overflow-hidden"
                     >
-                      <div className="~px-[0.625rem]/[1.875rem] ~pb-[0.3819rem]/[2.75rem]">
-                        <p className="md:font-bold font-normal font-inter ~text-[0.625rem]/[1.1912rem] leading-[130%] ~tracking-[-0.0056rem]/[-0.0163rem] text-[#D1D1D1]">
+                      <div className="~px-[0.625rem]/[1.875rem] ~pb-[0.3819rem]/[2.25rem]">
+                        <p className="md:font-medium font-normal font-inter ~text-[0.625rem]/[1.1912rem] leading-[130%] ~tracking-[-0.0056rem]/[-0.0163rem] text-[#D1D1D1]">
                           {item.answer}
                         </p>
                       </div>
