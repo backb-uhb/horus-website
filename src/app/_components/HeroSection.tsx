@@ -3,51 +3,23 @@ import Image from "next/image";
 import ArrowSvg from "../../components/svg/ArrowSvg";
 import { ButtonAnimation } from "@/components/ButtonAnimation";
 import Link from "next/link";
+import AnimatedHeroBackground from "@/components/svg/AnimatedHeroBackround";
 
 const Herosection = () => {
-  // const rows = 30;
-  // const cols = 40;
-  // const cells = Array.from({ length: rows * cols });
-
   return (
-    <div className=" sticky top-0 w-full h-screen max-w-[1440px]  ">
+    <div className=" sticky top-0 w-full h-screen   ">
       <div className="relative flex flex-col items-center overflow-hidden">
-        {/* <div className="absolute inset-0 h-[100vh]">
-          <div
-            className="relative z-0 h-[50vh] grid"
-            style={{
-              gridTemplateColumns: `repeat(${cols}, 1fr)`,
-              gridTemplateRows: `repeat(${rows}, 1fr)`,
-            }}
-          >
-            {cells.map((_, i) => (
-              <div
-                key={i}
-                className="w-full h-[100vh] border-[0.5px] border-[#DFAB60]/20"
-              />
-            ))}
-            <SpotlightCursor
-              className="absolute z-0  inset-0"
-              config={{
-                radius: 200,
-                brightness: 1,
-                color: "#DFAB60",
-                smoothing: 0.08,
-              }}
-            />
-          </div>
-        </div> */}
         <div className="relative px-[1rem] w-full h-[100vh] flex flex-col ">
-             <div className="">
+          <div className="">
             <Image
               src={"/images/bg-hero.png"}
               alt="background-img"
               fill
               className="object-cover z-0"
             />
-          <div className="bg-gradient-to-t from-black to-transparent absolute inset-0 z-10"></div>
-       
-            <div className="absolute flex flex-col items-center bottom-[1rem] w-full   z-[5000000]">
+            <div className="bg-gradient-to-t from-black to-transparent absolute inset-0 z-10"></div>
+
+            <div className="absolute flex flex-col items-center bottom-[25%] w-full   z-[5000000]">
               <h1
                 className="font-merriweather font-normal md:font-bold ~text-[1.5rem]/[3.75rem] leading-[110%]  tracking-[-0.07rem]
                 text-center 
@@ -74,10 +46,11 @@ const Herosection = () => {
                 </div>
               </ButtonAnimation>
             </div>
-
- 
-
-            <div className="absolute bottom-[-3rem] z-30 right-0">
+            <div className="h-screen w-full  z-50 ">
+              {" "}
+              <AnimatedHeroBackground />
+            </div>
+            {/* <div className="absolute bottom-[-3rem] z-30 right-0">
               <div className="relative ~w-[10rem]/[30rem] ~h-[56rem]/[12.875rem] ">
                 <Image
                   src={"/images/dots.png"}
@@ -97,7 +70,7 @@ const Herosection = () => {
                 />
               </div>
             </div>
-                       <div className="absolute ~bottom-[0rem]/[-5rem] z-30 ~right-[9rem]/[20rem]">
+            <div className="absolute ~bottom-[0rem]/[-5rem] z-30 ~right-[9rem]/[20rem]">
               <div className="relative ~w-[10rem]/[50rem] h-[20.625rem] ">
                 <Image
                   src={"/images/dots-2.svg"}
@@ -107,24 +80,15 @@ const Herosection = () => {
                 />
               </div>
             </div>
-                                             <div className="absolute bottom-[-6rem] z-30 ~left-[9rem]/[20rem] ">
-                          <div className="relative ~w-[10rem]/[50rem] h-[20.625rem] ">
-                            <Image
-                              src={"/images/dots-2.svg"}
-                              alt="img"
-                              fill
-                              className="object-cover rotate-180"
-                            />
-                          </div>
-                        </div>
-
-            {/* <div className="relative ~w-[14.4175rem]/[51.875rem] z-10 ~h-[18.0844rem]/[46.25rem]">
-              <Image
-                src={"/images/test.png"}
-                alt="Firefly"
-                fill
-                className=" object-contain  "
-              />
+            <div className="absolute bottom-[-6rem] z-30 ~left-[9rem]/[20rem] ">
+              <div className="relative ~w-[10rem]/[50rem] h-[20.625rem] ">
+                <Image
+                  src={"/images/dots-2.svg"}
+                  alt="img"
+                  fill
+                  className="object-cover rotate-180"
+                />
+              </div>
             </div> */}
           </div>
         </div>

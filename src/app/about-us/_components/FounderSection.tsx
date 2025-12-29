@@ -7,7 +7,7 @@ const FounderSection = () => {
     <div className="bg-black ~px-[0.625rem]/[7.4375rem]">
       <div className="">
         <ButtonBrown content="Founder Talks" />
-        <div className="flex md:flex-row items-center gap-[1.5rem] md:~gap-[-5rem]/[10rem] flex-col-reverse pt-[1.875rem] ~pb-[4rem]/[17.6875rem] justify-between">
+        <div className="flex md:flex-row items-center gap-[1.5rem] md:~gap-[-5rem]/[7rem] flex-col-reverse pt-[1.875rem] ~pb-[4rem]/[17.6875rem] justify-between">
           <div className="md:w-[60%]">
             <div className="">
               <div className="bg-gradient-to-r from-[#ECB45D] via-[#FFD38D] to-[#FFB644] bg-clip-text text-transparent font-normal font-merriweather ~text-[1.25rem]/[3.5rem] leading-[120%] ~tracking-[-0.0175rem]/[-0.07rem]">

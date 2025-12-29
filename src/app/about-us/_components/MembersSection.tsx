@@ -36,17 +36,17 @@ const slides = [
     image: "/images/nasif.png",
     title: "Nasif",
     subtitle: "Business Development Head",
-    heading: "watch",
-    span: "Learn Lead",
+ heading: "Lead",
+span: "With Confidence",
     description:
       "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging. ",
   },
   {
     image: "/images/founder.png",
-    title: "Future",
+    title: "Shanu",
     subtitle: "Trainer",
-    heading: "watch",
-    span: "Learn Lead",
+heading: "Shape",
+span: "Your Future",
     description:
       "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging. ",
   },
@@ -54,35 +54,8 @@ const slides = [
     image: "/images/shanu.png",
     title: "Shanu",
     subtitle: "Trainer",
-    heading: "watch",
-    span: "Learn Lead",
-    description:
-      "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging. ",
-  },
-  {
-    image: "/images/anas.png",
-    title: "Anas",
-    subtitle: "Trainer",
-    heading: "watch",
-    span: "Learn Lead",
-    description:
-      "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging.",
-  },
-  {
-    image: "/images/nasif.png",
-    title: "Nasif",
-    subtitle: "Business Development Head",
-    heading: "watch",
-    span: "Learn Lead",
-    description:
-      "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging. ",
-  },
-  {
-    image: "/images/founder.png",
-    title: "Future",
-    subtitle: "Trainer",
-    heading: "watch",
-    span: "Learn Lead",
+ heading: "Practice",
+span: "Real Skills",
     description:
       "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging. ",
   },
@@ -95,28 +68,28 @@ const MembersSection = () => {
     Autoplay({ delay: 6000, stopOnInteraction: true })
   );
   return (
-    <div className="~px-[0.625rem]/[7.4375rem] font-satoshi">
-      <div className="flex justify-center md:justify-start">
+    <div className="font-satoshi">
+      <div className="flex justify-center ~px-[0.625rem]/[7.4375rem]  md:justify-start">
         <ButtonBrown content="Meet Our Members" />
       </div>
-      <h4 className="text-white ~text-[0.75rem]/[1.5rem] ~pt-[1rem]/[1.5rem] leading-[100%] font-medium">
+      <h4 className="text-white ~text-[0.75rem]/[1.5rem] ~px-[0.625rem]/[7.4375rem]  ~pt-[1rem]/[1.5rem] leading-[100%] font-medium">
         There&apos;s a mind behind every move.
       </h4>
-      <p className="text-[#6A6B6C] ~text-[0.75rem]/[1.5rem] pt-[0.25rem] leading-[100%] font-medium">
+      <p className="text-[#6A6B6C] ~text-[0.75rem]/[1.5rem] ~px-[0.625rem]/[7.4375rem]  pt-[0.25rem] leading-[100%] font-medium">
         Meet the traders, mentors, and builders
       </p>
 
       <Carousel
         plugins={[plugin.current]}
         opts={{
-          align: "start",
+          align: "center",
           loop: true,
         }}
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
         className="relative"
       >
-        <CarouselNext className=" absolute  ~right-[-0.5rem]/[-2rem] -translate-y-1/2 top-1/2 z-10 cursor-pointer">
+        <CarouselNext className=" absolute   ~right-[0.5rem]/[2rem] -translate-y-1/2 top-1/2 z-10 cursor-pointer">
           <ButtonAnimation>
             <div className="relative hover:scale-110 duration-300 transition-all ease-in-out w-fit p-[1px] bg-gradient-to-br rounded-full from-[#333333] h-full to-[#111111]">
               <div className="~size-[2rem]/[3.75rem] rounded-full flex justify-center items-center bg-gradient-to-br from-[#111214] to-[#111214]">

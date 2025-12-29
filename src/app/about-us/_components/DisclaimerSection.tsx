@@ -1,5 +1,6 @@
 import ArrowSvg from "@/components/svg/ArrowSvg";
 import ButtonBrown from "@/components/svg/ButtonBrown";
+import Link from "next/link";
 import React from "react";
 
 const DisclaimerSection = () => {
@@ -25,13 +26,13 @@ const DisclaimerSection = () => {
           </div>
           <div>
             <div className="relative p-[1px]  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-fit">
-              <div className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full cursor-pointer transition-all duration-300 ease-in-out py-[0.5rem] ~px-[0.75rem]/[1rem] bg-[#161616] hover:bg-transparent">
+              <Link href={"/disclaimer"} className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full cursor-pointer transition-all duration-300 ease-in-out py-[0.5rem] ~px-[0.75rem]/[1rem] bg-[#161616] hover:bg-transparent">
                 <button className="text-white font-semibold font-geist ~text-[0.75rem]/[1rem] leading-[160%] tracking-[-1.2%]">
                   Read More
                 </button>
 
                 <ArrowSvg className="text-white h-[0.625rem] w-auto" />
-              </div>
+              </Link>
             </div>
           </div>
         </div>

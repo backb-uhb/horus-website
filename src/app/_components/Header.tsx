@@ -56,12 +56,11 @@ const Header = () => {
               ease: [0.25, 0.8, 0.25, 1],
             }}
             data-lenis-prevent
-            className="fixed lg:hidden top-0 right-0 ~p-[1rem]/[2rem] z-[6000]  ~min-w-[20rem]/[60rem] h-full bg-[#111111] overflow-y-auto no-scrollbar "
+            className="fixed lg:hidden top-[2.5rem] right-0 ~p-[1rem]/[2rem] z-[6000]  ~min-w-[20rem]/[60rem] h-full bg-[#111111] overflow-y-auto no-scrollbar "
           >
             <div className="flex items-center justify-between">
               <Link onClick={() => setOpen(false)} href="/">
-        
-      <Logo className="~h-[4.0625rem]/[6.375rem] w-auto" />
+                <Logo className="~h-[4.0625rem]/[6.375rem] w-auto" />
               </Link>
               <ClossSvg
                 onClick={() => setOpen(false)}
@@ -156,7 +155,7 @@ const Header = () => {
       </AnimatePresence>
       <div className="flex justify-center">
         <div
-          className={`~px-[0.9375rem]/[5rem] max-w-[1440px]  fixed top-0 z-[4000] w-full`}
+          className={`~px-[0.9375rem]/[5rem]   fixed top-[3.5rem] z-[4000] w-full`}
         >
           {/* Separate blur layer */}
           {isScrolled && (
@@ -170,7 +169,7 @@ const Header = () => {
             />
           )}
 
-          <div className="relative ~py-[0.75rem]/[1.25rem] flex justify-between items-center">
+          <div className="relative ~py-[0.75rem]/[1.25rem] max-w-[1440px] mx-auto flex justify-between items-center">
             <Link href="/">
               <Logo
                 className={`transition-all duration-500 ease-in-out ${
@@ -220,7 +219,10 @@ const Header = () => {
               </div>
             </div>
             <ButtonAnimation>
-              <Link href={"/courses"} className="hidden lg:block duration-300 transition-all ease-in-out">
+              <Link
+                href={"/courses"}
+                className="hidden lg:block duration-300 transition-all ease-in-out"
+              >
                 <div className="text-white text-[0.8269rem] font-inter font-semibold leading-[1.4875rem] tracking-[0%] bg-gradient-to-l from-[#F3C070] to-[#3B2A16] py-[0.4rem] px-[1.0263rem] rounded-full">
                   Get Started
                 </div>

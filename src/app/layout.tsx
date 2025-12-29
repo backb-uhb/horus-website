@@ -10,6 +10,7 @@ import ProgressProvider from "@/providers/ProgressProvider";
 import { AbsoluteUrl } from "@/utils/BaseUrl";
 import IphoneViewportGuard from "@/components/IphoneViewportGuard";
 import { Toaster } from "react-hot-toast";
+import TradingViewTicker from "@/components/TradingViewTicker";
 
 const satoshi = localFont({
   src: "../app/fonts/Satoshi-Variable.ttf",
@@ -39,14 +40,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(AbsoluteUrl),
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log("hellooo")
-  console.log("response:::",AbsoluteUrl)
   return (
     <html lang="en">
       <body
@@ -55,12 +53,11 @@ export default function RootLayout({
         <IphoneViewportGuard />
         <ProgressProvider>
           <Toaster position="top-center" containerClassName="mt-4" />
+          <TradingViewTicker height="56px"/>
           <Header />
           {children}
-<div className="max-w-[1440px] mx-auto z-10 relative bg-black">
-            <Footer />
-  
-</div>        </ProgressProvider>
+          <Footer />
+        </ProgressProvider>
       </body>
     </html>
   );

@@ -57,34 +57,23 @@ const getHomePage = async (): Promise<THomeData> => {
 const page = async () => {
   const response = await getHomePage();
   return (
-    <div className="max-w-[1440px] mx-auto">
-      <div className="relative bg-black ">
-        <Herosection />
+    <div className="">
+      <Herosection />
 
-        <div className="relative   max-w-[1440px] mx-auto">
-          
-            <Experience />
-            <div className="max-w-[1440px] mx-auto  bg-black">
-              <VideoSection />
-              <CourseSection />
-              <TradingAcademySection />
-           
-          </div>
-        </div>
-
-
-      </div>
+      <Experience />
+      <VideoSection />
+      <CourseSection />
+      <TradingAcademySection />
 
       <Testimonials testimonials={response?.testimonials} />
-      <div className="max-w-[1440px] mx-auto bg-black relative ">
-        <FAQSection
-          textColor="text-[#8F8F8F]"
-          faqData={faqData}
-          title="Frequently Asked "
-          span="Questions"
-          description=" Everything you need to know before stepping into the markets with Horus."
-        />
-      </div>
+
+      <FAQSection
+        textColor="text-[#8F8F8F]"
+        faqData={faqData}
+        title="Frequently Asked "
+        span="Questions"
+        description=" Everything you need to know before stepping into the markets with Horus."
+      />
     </div>
   );
 };

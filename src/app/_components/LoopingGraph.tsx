@@ -12,7 +12,7 @@ export default function LoopingGraphImage() {
         className="flex w-[200%]"
         animate={{ x: ["0%", "-50%"] }}
         transition={{
-          duration: 25,
+          duration: 45,
           ease: "linear",
           repeat: Infinity,
         }}

@@ -1,3 +1,4 @@
+"use client"
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SpotlightCursor from "@/components/SpotLightCursor";
 import ArrowSvg from "@/components/svg/ArrowSvg";
@@ -36,7 +37,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div className="  flex items-center h-full relative  pt-[9.375rem] ~pb-[2rem]/[5.625rem] ">
+      <div className="  flex items-center h-full relative  pt-[8.875rem] ~pb-[2rem]/[5.625rem] ">
         <div className="~pl-[1rem]/[6.25rem] ~pr-[1rem]/[6.25rem] md:pr-0  z-40 ">
           <div className="font-merriweather font-normal max-md:text-center ~text-[1.375rem]/[4rem] leading-[108%] tracking-[-0.07rem] text-[#FFFFFF] md:max-w-[19ch] ">
             Learn What{" "}
@@ -58,10 +59,17 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="flex justify-center md:justify-start">
-            <div className="relative p-[1px] ~mt-[1.2rem]/[2.25rem] rounded-full bg-gradient-to-l from-[#DFAB60] to-[#DFAB601A] w-fit">
-              <div className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full cursor-pointer transition-all duration-300 ease-in-out py-[0.5rem] ~px-[0.75rem]/[1rem] bg-transparent  hover:bg-black">
-                <button className="text-white font-semibold font-geist ~text-[0.75rem]/[1rem] leading-[160%] tracking-[-1.2%]">
-                  Explore Our Courses{" "}
+            <div
+              onClick={() => {
+                document.getElementById("courses")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+              className="relative p-[1px] ~mt-[1.2rem]/[2.25rem] rounded-full bg-gradient-to-l from-[#DFAB60] to-[#DFAB601A] w-fit"
+            >
+              <div className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full cursor-pointer transition-all duration-300 ease-in-out py-[0.5rem] ~px-[0.75rem]/[1rem] bg-transparent hover:bg-black">
+                <button className="text-white font-semibold font-geist ~text-[0.75rem]/[1rem]">
+                  Explore Our Courses
                 </button>
 
                 <ArrowSvg className="text-white h-[0.625rem] w-auto" />

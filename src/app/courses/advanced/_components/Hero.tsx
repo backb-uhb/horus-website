@@ -26,7 +26,7 @@ const Hero = () => {
     {
       name: "Kabir Malhotra",
       quote: "Placed at DGCX",
-      image: "/images/testimonial-1.png",
+      image: "/images/testimonial-2.jpg",
     },
     {
       name: "Raghav Nair",

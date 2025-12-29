@@ -5,6 +5,9 @@ import CourseDetails from "./_components/CourseDetails";
 import FAQSection from "../_components/FaqSection";
 import InstructorProfile from "./_components/InstructorProfile";
 import { Metadata } from "next";
+import { THomeData } from "@/api/type";
+import { frontendApi } from "@/api/api";
+import Testimonials from "./_components/Testimonials";
 
 const faqData = [
   {
@@ -52,18 +55,20 @@ export const metadata: Metadata = {
   },
 };
 
-// const getCoursePage = async (): Promise<THomeData> => {
-//   return await frontendApi.getCourseTestimonials();
-// };
+const getCoursePage = async (): Promise<THomeData> => {
+  return await frontendApi.getCourseTestimonials();
+};
 const page = async () => {
-  // const response = await getCoursePage();
+  const response = await getCoursePage();
   return (
     <div className="max-w-[1440px] mx-auto">
       <HeroSection />
       <FeaturesSection />
-      <CourseDetails />
+      <section id="courses">
+        <CourseDetails />
+      </section>{" "}
       <InstructorProfile />
-      {/* <Testimonials testimonials={response?.testimonials} /> */}
+      <Testimonials testimonials={response?.testimonials} />
       <FAQSection
         textColor="text-white"
         faqData={faqData}

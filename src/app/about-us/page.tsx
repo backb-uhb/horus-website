@@ -8,13 +8,17 @@ import InsideSection from "./_components/InsideHorusSection";
 
 const page = () => {
   return (
-    <div className="max-w-[1440px] mx-auto">
-      <TopSection />
-      <FounderSection />
+    <div>
+      <div className="max-w-[1440px] mx-auto">
+        <TopSection />
+        <FounderSection />
+      </div>
       <MembersSection />
       <BrandsSection />
-      <DisclaimerSection />
-      <InsideSection />
+      <div className="max-w-[1440px] mx-auto">
+        <DisclaimerSection />
+        <InsideSection />
+      </div>
     </div>
   );
 };

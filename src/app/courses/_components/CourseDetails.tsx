@@ -1,4 +1,5 @@
 "use client";
+import EnrollButton from "@/app/_components/EnrollButton";
 import ButtonBrown from "@/components/svg/ButtonBrown";
 import CertificateSvg from "@/components/svg/CertificateSvg";
 import CheckSvg from "@/components/svg/CheckSvg";
@@ -24,18 +25,18 @@ const CourseDetails = () => {
     { id: 3, text: "Live Trading Floor Access for 15 Days", completed: true },
     { id: 4, text: "Manipulations Of Fundamentals", completed: true },
     { id: 5, text: "Risk Management", completed: true },
-    { id: 6, text: "Certification ceremony.", completed: true },
+    { id: 6, text: "Certification Ceremony.", completed: true },
     { id: 7, text: "Trading Psychology", completed: true },
     { id: 8, text: "Traps & Consolidation", completed: true },
     { id: 9, text: "Online & Offline Classes Available", completed: true },
     {
       id: 10,
-      text: "Guest lecturers (Industry expert, Personal growth",
+      text: "Guest Lecturers (Industry expert, Personal growth",
       completed: true,
     },
     {
       id: 11,
-      text: "Advanced curriculum (From Introduction to advanced Level) ",
+      text: "Advanced Curriculum (From Introduction to Advanced Level) ",
       completed: true,
     },
         { id: 12, text: "Club Access", completed: false },
@@ -51,18 +52,18 @@ const CourseDetails = () => {
     { id: 3, text: "Live Trading Floor Access for 30 days", completed: true },
     { id: 4, text: "Manipulations Of Fundamentals", completed: true },
     { id: 5, text: "Risk Management", completed: true },
-    { id: 6, text: "Certification ceremony.", completed: true },
+    { id: 6, text: "Certification Ceremony.", completed: true },
     { id: 7, text: "Trading Psychology", completed: true },
     { id: 8, text: "Traps & Consolidation", completed: true },
     { id: 9, text: "Online & Offline Classes Available", completed: true },
     {
       id: 10,
-      text: "Guest lecturers (Industry expert, Personal growth",
+      text: "Guest Lecturers (Industry expert, Personal Growth",
       completed: true,
     },
     {
       id: 11,
-      text: "Advanced curriculum (From Introduction to advanced Level) ",
+      text: "Advanced Curriculum (From Introduction to Advanced Level) ",
       completed: true,
     },
     { id: 12, text: "Club Access", completed: true },
@@ -70,6 +71,8 @@ const CourseDetails = () => {
     { id: 14, text: "Trading Community Access", completed: true },
     { id: 15, text: "Placement Assistance", completed: true },
   ];
+
+  
 
   const ChecklistSection = ({ items }: ChecklistSectionProps) => (
     <div className="~px-[0.75rem]/[2.5rem] ~pb-[1rem]/[1.875rem]">
@@ -81,9 +84,9 @@ const CourseDetails = () => {
           >
             <div className="flex-shrink-0">
               {item.completed ? (
-                <CheckSvg className="~size-[0.75rem]/[1.25rem] " />
+                <CheckSvg className="~size-[0.625rem]/[1rem] " />
               ) : (
-                <CrossSvg className="~size-[0.75rem]/[1.25rem] text-[#666666]" />
+                <CrossSvg className="~size-[0.625rem]/[1rem] text-[#666666]" />
               )}
             </div>
             <span
@@ -181,11 +184,12 @@ const CourseDetails = () => {
                     <p className="text-white   ">View course</p>
                   </div>
                 </Link>{" "}
-                <div className="relative p-[1px] h-fit  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-full">
+                <EnrollButton/>
+                {/* <div className="relative p-[1px] h-fit  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-full">
                   <div className="flex justify-center cursor-pointer items-center ~gap-[0.35rem]/[0.62rem] rounded-full  transition-all duration-300 ease-in-out ~py-[0.5rem]/[1rem] ~px-[0.75rem]/[1rem] bg-transparent hover:bg-[#161616] ">
                     <p className="text-white   "> Enrolll Now</p>
                   </div>
-                </div>{" "}
+                </div>{" "} */}
               </div>
             </div>
           </div>
@@ -239,11 +243,7 @@ const CourseDetails = () => {
                     <p className="text-white   ">View course</p>
                   </div>
                 </Link>{" "}
-                <div className="relative p-[1px] h-fit  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-full">
-                  <div className="flex justify-center cursor-pointer items-center ~gap-[0.35rem]/[0.62rem] rounded-full  transition-all duration-300 ease-in-out ~py-[0.5rem]/[1rem] ~px-[0.75rem]/[1rem] bg-transparent hover:bg-[#161616] ">
-                    <p className="text-white   "> Enrolll Now</p>
-                  </div>
-                </div>{" "}
+   <EnrollButton/>
               </div>
             </div>
           </div>

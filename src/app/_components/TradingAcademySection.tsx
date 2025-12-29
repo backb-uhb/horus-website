@@ -33,13 +33,11 @@ const MobileTradingCarousel = () => {
           <CarouselItem className="md:flex block justify-end basis-1/1 md:basis-1 mr-[1rem] md:mr-0">
             <div className="max-md:basis-1/1 max-md:w-fit">
               <iframe
-                src={
-                  "https://youtube.com/embed/GBpnUja4vvI"
-                }
+                src={"https://youtube.com/embed/GBpnUja4vvI"}
                 className="~size-[8.75rem]/[21.875rem] ~rounded-[0.625rem]/[1.5rem]"
               />
               <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-semibold">
-                We Build Earners, <br /> Not Just Learners 
+                We Build Earners, <br /> Not Just Learners
               </p>
             </div>
           </CarouselItem>
@@ -60,13 +58,11 @@ const MobileTradingCarousel = () => {
           <CarouselItem className="md:flex mr-[1rem] md:mr-0 justify-center basis-1/1 md:basis-1 pt-0 md:pt-[9.875rem]">
             <div className="">
               <iframe
-                src={
-                  "https://youtube.com/embed/glIt4_D3ShI"
-                }
+                src={"https://youtube.com/embed/glIt4_D3ShI"}
                 className="~size-[8.75rem]/[21.875rem] ~rounded-[0.625rem]/[1.5rem]"
               />
               <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-semibold">
-            Learning trading the right 
+                Learning trading the right
                 <br /> way makes all the difference.
               </p>
             </div>
@@ -162,12 +158,12 @@ const DesktopTradingLayout = () => {
     target: ref5,
     offset: ["start end", "end start"],
   });
-  const y5 = useTransform(s5, [0, 1], [-100, 150]); // strongest parallax
+  const y5 = useTransform(s5, [0, 1], [-100, 150]);
   const opacity5 = useTransform(s5, [0, 0.2, 1], [0, 1, 0.4]);
   const scale5 = useTransform(s5, [0, 1], [0.9, 1.1]);
 
   return (
-    <div className="~px-[0rem]/[5.5rem] z-[100] relative overflow-hidden">
+    <div className="~px-[0rem]/[5.5rem] z-[100] mx-auto max-w-[1440px] relative overflow-hidden">
       <div className="~pt-[3rem]/[10rem] relative z-20 md:block ~pb-[2.5rem]/[7rem] space-y-20">
         <motion.div
           ref={ref1}
@@ -176,7 +172,6 @@ const DesktopTradingLayout = () => {
         >
           <div>
             <div className="~rounded-[0.625rem]/[1.5rem]  overflow-hidden">
-            
               <YouTube
                 videoId="GBpnUja4vvI"
                 opts={opts}
@@ -228,7 +223,7 @@ const DesktopTradingLayout = () => {
               />
             </div>
             <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-bold">
-      Learning trading the right  <br /> way makes all the difference. 
+              Learning trading the right <br /> way makes all the difference.
             </p>
           </div>
         </motion.div>

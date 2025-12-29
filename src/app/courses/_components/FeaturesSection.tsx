@@ -37,7 +37,7 @@ const FeaturesSection = () => {
                 </div>
                 <div>
                   <div className="font-normal font-merriweather ~text-[0.875rem]/[1.5rem]  leading-[120%] tracking-[-0.0163rem] text-[#F7F8F8] ">
-                    Exclusive Discord access
+                    Exclusive Discord Access
                   </div>
                   <div className="pt-[0.625rem]">
                     <button className="flex items-center gap-[0.5rem]  hover:scale-110 duration-300 transition-all ease-in-out text-[#FFFFFF] font-satoshi font-normal  text-[0.6913rem] leading-[0.79rem] tracking-[2%] gradient-bg-fill-new gradient-border ~px-[0.75rem]/[1rem] ~py-[0.35rem]/[0.5rem]">

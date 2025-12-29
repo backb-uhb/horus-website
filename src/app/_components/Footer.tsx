@@ -121,7 +121,7 @@ const Footer = () => {
                   >
                     Terms & Conditions
                   </Link>
-                  <Link href="" className="hover:text-white transition-colors">
+                  <Link href="/disclaimer" className="hover:text-white transition-colors">
                     Disclaimer
                   </Link>
                 </div>
