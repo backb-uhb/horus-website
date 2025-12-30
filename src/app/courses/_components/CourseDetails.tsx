@@ -19,6 +19,41 @@ interface ChecklistSectionProps {
 }
 
 const CourseDetails = () => {
+  const onlineChecklistItems: ChecklistItem[] = [
+    { id: 1, text: "Introduction Into The Markets", completed: true },
+    { id: 2, text: "Online Practical Sessions", completed: true },
+    { id: 3, text: "Live Trading Floor Access for 30 Days", completed: true },
+    { id: 4, text: "Manipulations Of Fundamentals", completed: true },
+    { id: 5, text: "Club Access", completed: true },
+    { id: 6, text: "Trading Psychology", completed: true },
+    {
+      id: 7,
+      text: "Guest Lecturers (Industry expert, Personal growth )",
+      completed: true,
+    },
+    {
+      id: 8,
+      text: "Advanced Curriculum (From Introduction to Advanced Level) ",
+      completed: true,
+    },
+    { id: 9, text: "Candlesticks & Chart Patterns", completed: false },
+    {
+      id: 10,
+      text: "Certification Ceremony.",
+      completed: false,
+    },
+    {
+      id: 11,
+      text: "Traps & Consolidation",
+      completed: false,
+    },
+    { id: 12, text: "Risk Management", completed: false },
+
+    { id: 13, text: "Funded Accounts For Achievers", completed: false },
+    { id: 14, text: "Trading Community Access", completed: false },
+    { id: 15, text: "Placement Assistance", completed: false },
+  ];
+
   const beginnerChecklistItems: ChecklistItem[] = [
     { id: 1, text: "Introduction Into The Markets", completed: true },
     { id: 2, text: "Candlesticks & Chart Patterns", completed: true },
@@ -31,7 +66,7 @@ const CourseDetails = () => {
     { id: 9, text: "Online & Offline Classes Available", completed: true },
     {
       id: 10,
-      text: "Guest Lecturers (Industry expert, Personal growth",
+      text: "Guest Lecturers (Industry expert, Personal growth )",
       completed: true,
     },
     {
@@ -39,7 +74,7 @@ const CourseDetails = () => {
       text: "Advanced Curriculum (From Introduction to Advanced Level) ",
       completed: true,
     },
-        { id: 12, text: "Club Access", completed: false },
+    { id: 12, text: "Club Access", completed: false },
 
     { id: 13, text: "Funded Accounts For Achievers", completed: false },
     { id: 14, text: "Trading Community Access", completed: false },
@@ -58,7 +93,7 @@ const CourseDetails = () => {
     { id: 9, text: "Online & Offline Classes Available", completed: true },
     {
       id: 10,
-      text: "Guest Lecturers (Industry expert, Personal Growth",
+      text: "Guest Lecturers (Industry expert, Personal Growth )",
       completed: true,
     },
     {
@@ -69,10 +104,8 @@ const CourseDetails = () => {
     { id: 12, text: "Club Access", completed: true },
     { id: 13, text: "Funded Accounts For Achievers", completed: true },
     { id: 14, text: "Trading Community Access", completed: true },
-    { id: 15, text: "Placement Assistance", completed: true },
+    { id: 15, text: "Placement Assistance", completed: false },
   ];
-
-  
 
   const ChecklistSection = ({ items }: ChecklistSectionProps) => (
     <div className="~px-[0.75rem]/[2.5rem] ~pb-[1rem]/[1.875rem]">
@@ -134,11 +167,70 @@ const CourseDetails = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 ~gap-[1rem]/[4.375rem] ~px-[0.625rem]/[16rem] ~py-[1.25rem]/[2.5625rem] ">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 ~gap-[1rem]/[2rem] lg:~px-[0.625rem]/[5rem] ~px-[0.625rem]/[16rem] ~py-[1.25rem]/[2.5625rem] ">
         <div className="relative flex flex-col  justify-between h-full items-center p-[1px] bg-gradient-to-br overflow-hidden from-[#333333]  to-[#111111] ~rounded-[1.4119rem]/[3rem]">
           <div className="bg-gradient-to-br from-[#333333] to-[#111111] w-full ">
             <div className="flex items-center gap-[0.5rem]  justify-between ~px-[0.75rem]/[1.875rem] ~py-[0.625rem]/[1.5225rem]">
-              <div className="bg-gradient-to-r from-[#FBCC83] to-[#FFC770] text-transparent bg-clip-text font-merriweather ~text-[0.875rem]/[1.5rem] leading-[120%] md:tracking-[-0.047em] tracking-[-0.08em]">
+              <div className="bg-gradient-to-r from-[#FBCC83] to-[#FFC770] text-transparent bg-clip-text font-merriweather ~text-[0.875rem]/[1.425rem] leading-[120%] md:tracking-[-0.047em] tracking-[-0.08em]">
+                Online Trading Course
+              </div>
+              <div className="relative p-[1px] h-fit  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-fit">
+                <div className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full  transition-all duration-300 ease-in-out py-[0.5rem] ~px-[0.75rem]/[1rem] bg-[#252525] ">
+                  <p className="text-white   ~text-[0.75rem]/[1rem] leading-[100%] tracking-[-1.2%]">
+                    Beginner
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-t from-[#171717] to-[#101010] ~rounded-[1.4119rem]/[3rem] ~pt-[1rem]/[2.5rem]">
+              <ChecklistSection items={onlineChecklistItems} />
+              <div className=" font-satoshi font-medium ~text-[0.75rem]/[1.125rem] leading-[120%] tracking-[2%] ~px-[0.75rem]/[2.5rem]  text-[#FFF4E3] ">
+                <div className="flex ~gap-[0.5rem]/[0.875rem]">
+                  <div className="flex ~gap-[0.5rem]/[0.75rem] items-center">
+                    <CertificateSvg className="~size-[0.875rem]/[1.625rem] ]" />{" "}
+                    Certified
+                  </div>
+                  <div className="flex items-center ~gap-[0.5rem]/[0.75rem]">
+                    <ClockSvg className="~size-[0.875rem]/[1.625rem]" />30 Days
+                  </div>
+                </div>
+                <div className="flex items-center gap-[0.75rem] ~pt-[0.5rem]/[0.875rem]">
+                  <PeopleSvg className="~size-[1rem]/[1.8125rem] " />
+                  20-Student Batches
+                </div>
+              </div>
+              <div className="~py-[1rem]/[1.875rem]">
+                <div className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#FBCC83] to-[#FFC770] font-merriweather font-normal ~text-[2rem]/[3.5rem] leading-[120%] tracking-[-0.07rem]">
+                  ₹ 49,999{" "}
+                </div>
+                <div className="text-center  font-satoshi pt-[0.5rem] font-normal text-[#FFFFFF] ~text-[0.625rem]/[1.0669rem] leading-[120%] tracking-[2%] ">
+                  Including GST <br /> {" "}
+                </div>
+              </div>
+              <div className="~px-[0.75rem]/[1.25rem] flex flex-col ~gap-[0.625rem]/[1.25rem] ~pb-[0.75rem]/[1.25rem] text-[#FFFFFF] font-satoshi font-normal ~text-[0.625rem]/[1.245rem] leading-[120%] tracking-[2%]">
+                <Link
+                  href="/courses/online"
+                  className="relative p-[1px] h-fit  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-full"
+                >
+                  <div className="flex justify-center cursor-pointer items-center ~gap-[0.35rem]/[0.62rem] rounded-full  transition-all duration-300 ease-in-out ~py-[0.5rem]/[1rem] ~px-[0.75rem]/[1rem] hover:bg-transparent bg-[#161616] ">
+                    <p className="text-white   ">View course</p>
+                  </div>
+                </Link>{" "}
+                <EnrollButton variant="default"/>
+                {/* <div className="relative p-[1px] h-fit  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-full">
+                  <div className="flex justify-center cursor-pointer items-center ~gap-[0.35rem]/[0.62rem] rounded-full  transition-all duration-300 ease-in-out ~py-[0.5rem]/[1rem] ~px-[0.75rem]/[1rem] bg-transparent hover:bg-[#161616] ">
+                    <p className="text-white   "> Enrolll Now</p>
+                  </div>
+                </div>{" "} */}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="relative flex flex-col  justify-between h-full items-center p-[1px] bg-gradient-to-br overflow-hidden from-[#333333]  to-[#111111] ~rounded-[1.4119rem]/[3rem]">
+          <div className="bg-gradient-to-br from-[#333333] to-[#111111] w-full ">
+            <div className="flex items-center gap-[0.5rem]  justify-between ~px-[0.75rem]/[1.875rem] ~py-[0.625rem]/[1.5225rem]">
+              <div className="bg-gradient-to-r from-[#FBCC83] to-[#FFC770] text-transparent bg-clip-text font-merriweather ~text-[0.875rem]/[1.425rem] leading-[120%] md:tracking-[-0.047em] tracking-[-0.08em]">
                 Technical Course
               </div>
               <div className="relative p-[1px] h-fit  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-fit">
@@ -164,7 +256,7 @@ const CourseDetails = () => {
                 </div>
                 <div className="flex items-center gap-[0.75rem] ~pt-[0.5rem]/[0.875rem]">
                   <PeopleSvg className="~size-[1rem]/[1.8125rem] " />
-                  30-Student Batches
+                  20-Student Batches
                 </div>
               </div>
               <div className="~py-[1rem]/[1.875rem]">
@@ -184,7 +276,7 @@ const CourseDetails = () => {
                     <p className="text-white   ">View course</p>
                   </div>
                 </Link>{" "}
-                <EnrollButton/>
+                <EnrollButton variant="default"/>
                 {/* <div className="relative p-[1px] h-fit  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-full">
                   <div className="flex justify-center cursor-pointer items-center ~gap-[0.35rem]/[0.62rem] rounded-full  transition-all duration-300 ease-in-out ~py-[0.5rem]/[1rem] ~px-[0.75rem]/[1rem] bg-transparent hover:bg-[#161616] ">
                     <p className="text-white   "> Enrolll Now</p>
@@ -197,8 +289,8 @@ const CourseDetails = () => {
         <div className="relative flex flex-col  justify-between h-full items-center p-[1px] bg-gradient-to-br overflow-hidden from-[#333333]  to-[#111111] ~rounded-[1.4119rem]/[3rem]">
           <div className="bg-gradient-to-br from-[#333333] to-[#111111] w-full ">
             <div className="flex items-center gap-[0.5rem]  justify-between ~px-[0.75rem]/[1.875rem] ~py-[0.625rem]/[1.5225rem]">
-              <div className="bg-gradient-to-r from-[#FBCC83] to-[#FFC770] text-transparent bg-clip-text font-merriweather ~text-[0.875rem]/[1.5rem] leading-[120%] md:tracking-[-0.047em] tracking-[-0.08em]">
-                Advanced Technical 
+              <div className="bg-gradient-to-r from-[#FBCC83] to-[#FFC770] text-transparent bg-clip-text font-merriweather ~text-[0.875rem]/[1.425rem] leading-[120%] md:tracking-[-0.047em] tracking-[-0.08em]">
+                Advanced Technical
               </div>
               <div className="relative p-[1px] h-fit  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-fit">
                 <div className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full  transition-all duration-300 ease-in-out py-[0.5rem] ~px-[0.75rem]/[1rem] bg-[#252525] ">
@@ -223,7 +315,7 @@ const CourseDetails = () => {
                 </div>
                 <div className="flex items-center gap-[0.75rem] ~pt-[0.5rem]/[0.875rem]">
                   <PeopleSvg className="~size-[1rem]/[1.8125rem] " />
-                  30-Student Batches
+                  20-Student Batches
                 </div>
               </div>
               <div className="~py-[1rem]/[1.875rem]">
@@ -243,7 +335,7 @@ const CourseDetails = () => {
                     <p className="text-white   ">View course</p>
                   </div>
                 </Link>{" "}
-   <EnrollButton/>
+                <EnrollButton variant="default"/>
               </div>
             </div>
           </div>

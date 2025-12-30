@@ -2,24 +2,61 @@
 
 import { useState } from "react";
 import EnrollModal from "./EnrollModal";
+import clsx from "clsx";
 
-const EnrollButton = () => {
+type EnrollButtonProps = {
+  variant?: "default" | "hero" | "cta";
+  className?: string;
+};
+
+const EnrollButton = ({
+  variant = "default",
+  className,
+}: EnrollButtonProps) => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <div className="relative p-[1px] h-fit rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-full">
-        <div
+      {/* OUTER GRADIENT */}
+      <div
+        className={clsx(
+          "relative p-[1px] rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16]",
+          variant === "default" && "w-full",
+          variant === "hero" && "w-full lg:w-fit",
+          variant === "cta" && "w-fit",
+          className
+        )}
+      >
+        {/* ACTUAL BUTTON */}
+        <button
+          type="button"
           onClick={() => setOpen(true)}
-          className="flex justify-center cursor-pointer items-center
-                     ~gap-[0.35rem]/[0.62rem]
-                     rounded-full transition-all duration-300 ease-in-out
-                     ~py-[0.5rem]/[1rem]
-                     ~px-[0.75rem]/[1rem]
-                     bg-transparent hover:bg-[#161616]"
+          className={clsx(
+            "flex items-center  justify-center rounded-full cursor-pointer",
+            "transition-all duration-300 ease-in-out bg-transparent hover:bg-[#111]",
+            "~gap-[0.35rem]/[0.62rem]",
+            variant === "default" && [
+              "~py-[0.5rem]/[1rem]",
+              "~px-[0.75rem]/[1rem]",
+              "text-white",
+              "w-full"
+            ],
+            variant === "hero" && [
+              "~py-[0.5rem]/[1rem]",
+              "~px-[0.75rem]/[6rem]",
+              "text-white",
+            ],
+            variant === "cta" && [
+              "py-[0.5rem]",
+              "~px-[0.75rem]/[1rem]",
+              "text-white font-semibold font-geist",
+              "~text-[0.75rem]/[1rem]",
+              "leading-[160%] tracking-[-1.2%]",
+            ]
+          )}
         >
-          <p className="text-white">Enroll Now</p>
-        </div>
+          Enroll Now
+        </button>
       </div>
 
       {/* MODAL */}
