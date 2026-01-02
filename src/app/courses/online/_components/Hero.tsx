@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import ButtonBrown from "@/components/svg/ButtonBrown";
 import PlayIcon from "@/components/svg/PlayIcon";
 import { Marquee } from "@/components/ui/Marquee";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -12,52 +13,48 @@ const Hero = () => {
     {
       name: "Raghav Nair",
       quote: "Placed at Emirates NBD",
-      image: "/images/testimonial-1.png",
+      image: "/images/testimonial/raghav-nair.jpg",
     },
     {
       name: "Zoya Sheikh",
       quote: "Placed at DFM",
-      image: "/images/testimonial-1.png",
+      image: "/images/testimonial/zoya-sheikh.jpg",
     },
     {
       name: "Meera Kapoor",
       quote: "Placed at Al Ramz Corp.",
-      image: "/images/testimonial-1.png",
+      image: "/images/testimonial/meera-kappor.jpg",
     },
     {
       name: "Kabir Malhotra",
       quote: "Placed at DGCX",
-      image: "/images/testimonial-2.jpg",
+      image: "/images/testimonial/kabir-malhotra.jpg",
     },
+    
     {
-      name: "Raghav Nair",
-      quote: "Placed at Emirates NBD",
-      image: "/images/testimonial-1.png",
-    },
-    {
-      name: "Zoya Sheikh",
+      name: "Aditya Rao",
       quote: "Placed at DFM",
-      image: "/images/testimonial-1.png",
+      image: "/images/testimonial/aditya-rao.jpg",
     },
     {
-      name: "Meera Kapoor",
-      quote: "Placed at Al Ramz Corp.",
-      image: "/images/testimonial-1.png",
+      name: "Rahul",
+      quote: "Placed at Aegis Logistics Ltd.",
+      image: "/images/testimonial/rahul.jpg",
     },
     {
-      name: "Kabir Malhotra",
-      quote: "Placed at DGCX",
-      image: "/images/testimonial-1.png",
+      name: "Saad Mohsin",
+      quote: "Placed at Redington Ltd.",
+      image: "/images/testimonial/saad-mohsin.jpg",
     },
   ];
 
   const features = [
-    "Advanced price action",
+    "Basic to advanced theory",
     "Multi-timeframe analysis",
-    "Order flow & liquidity zones",
-    "High-probability setups",
-    "Live market application",
-    "Risk & capital control",
+    "Club access",
+    "Psychology session",
+    "Guest lectures",
+    "Online pactical sessions (live)",
   ];
 
   const [isPlaying, setIsPlaying] = useState(false);
@@ -95,7 +92,7 @@ const Hero = () => {
                       Average course rating
                     </p>
                   </div>
-                  <div className="border-r flex justify-center items-center text-white font-satoshi border-r-[#DFAB60]">
+                  <div className=" flex justify-center items-center text-white font-satoshi ">
                     <div>
                       <p className="font-medium ~text-[0.75rem]/[1.125rem] leading-[100%]">
                         1 Month
@@ -105,7 +102,7 @@ const Hero = () => {
                       </p>
                     </div>
                   </div>
-                  <div className=" text-white flex items-center justify-center font-satoshi ">
+                  {/* <div className=" text-white flex items-center justify-center font-satoshi ">
                     <div>
                       <p className="font-medium ~text-[0.75rem]/[1.125rem] leading-[100%]">
                         30 Days
@@ -114,7 +111,7 @@ const Hero = () => {
                         Live Trading Floor
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="~text-[0.625rem]/[1.25rem] ~pt-[1rem]/[2.25rem] leading-[110%] text-[#FFF4E3] font-satoshi">
 Experience the markets in real time. Over 30 days, master live setups, decision-making, and pressure—without theory overload or stale charts. Only action, clarity, and growth.
@@ -132,13 +129,7 @@ Experience the markets in real time. Over 30 days, master live setups, decision-
                   ))}
                 </div>
                 <div className="flex ~gap-[0.5rem]/[1.25rem] ~py-[1.25rem]/[2.25rem]">
-                  <div className="relative p-[1px]  rounded-full bg-gradient-to-l from-[#DFAB60] to-[#DFAB601A] w-fit">
-                    <div className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full cursor-pointer transition-all duration-300 ease-in-out py-[0.5rem] ~px-[0.75rem]/[1rem] hover:bg-transparent bg-[#111111]">
-                      <button className="text-white font-semibold font-geist ~text-[0.75rem]/[1rem] leading-[160%] tracking-[-1.2%]">
-                        Talk to our Mentor
-                      </button>
-                    </div>
-                  </div>
+    <WhatsAppButton message="Hi, I visited your website and would like to know more information about your Online trading course."/>
                   <EnrollButton variant="cta"/>
 
                   {/* <div className="relative p-[1px]  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-fit">
@@ -223,10 +214,10 @@ Experience the markets in real time. Over 30 days, master live setups, decision-
             key={i}
             className="relative  p-[1px] bg-gradient-to-br w-fit ~rounded-[0.625rem]/[1rem] from-[#333333] h-full to-[#111111] "
           >
-            <div className="~max-w-[10.75rem]/[18.75rem] ~p-[0.75rem]/[1.5rem]   ~rounded-[0.625rem]/[1rem] bg-gradient-to-t from-[#1a1a19] to-[#201f1c]">
+            <div className="~min-w-[10rem]/[18.75rem] ~p-[0.75rem]/[1.5rem]   ~rounded-[0.625rem]/[1rem] bg-gradient-to-t from-[#1a1a19] to-[#201f1c] ">
               <div className="flex items-center ~gap-[0.625rem]/[1rem]">
-                <div className="relative ~size-[1.3722555637rem]/[2.8779070377rem] rounded-full">
-                  <Image src={review.image} alt="" fill />
+                <div className="relative ~size-[1.3722555637rem]/[2.8779070377rem] ">
+                  <Image src={review.image} alt="" fill className="rounded-full object-cover object-top"/>
                 </div>
                 <div className="flex flex-col justify-between h-full">
                   <h3 className="text-[#F4F0FF] font-medium md:font-bold leading-[120%] ~text-[0.625rem]/[1.04625rem]">

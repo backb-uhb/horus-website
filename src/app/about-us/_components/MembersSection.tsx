@@ -15,11 +15,11 @@ import { ButtonAnimation } from "@/components/ButtonAnimation";
 
 const slides = [
   {
-    image: "/images/shanu.png",
+    image: "/images/founder-img.png",
     title: "Shanu",
     subtitle: "CEO & Trainer",
-    heading: "watch",
-    span: "Learn Lead",
+    heading: "Guiding",
+    span: "The Vision",
     description:
       "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging. ",
   },
@@ -27,37 +27,28 @@ const slides = [
     image: "/images/anas.png",
     title: "Anas",
     subtitle: "Trainer",
-    heading: "Led By",
-    span: "Industry Experts",
+    heading: "Master",
+    span: "The Markets",
     description:
-      "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging.",
+      "Anas is a dedicated trading mentor at Horus Academy, focused on live market execution and structured trade planning. He emphasizes discipline, risk control, and repeatable setups, helping students turn strategy into consistent action in real market conditions.",
   },
   {
     image: "/images/nasif.png",
     title: "Nasif",
     subtitle: "Business Development Head",
- heading: "Lead",
-span: "With Confidence",
+    heading: "Build",
+    span: "With Vision",
     description:
-      "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging. ",
+      "Nasif leads Business Development at Horus Academy, shaping strategic growth and high-value partnerships. His clear vision and market insight strengthen the academy’s presence and long-term impact.",
   },
   {
-    image: "/images/founder.png",
-    title: "Shanu",
+    image: "/images/lsp.png",
+    title: "LSP",
     subtitle: "Trainer",
-heading: "Shape",
-span: "Your Future",
+    heading: "Learn The",
+    span: "Right Way",
     description:
-      "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging. ",
-  },
-  {
-    image: "/images/shanu.png",
-    title: "Shanu",
-    subtitle: "Trainer",
- heading: "Practice",
-span: "Real Skills",
-    description:
-      "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging. ",
+      "LSP is a skilled trading mentor at Horus Academy, specializing in structured market analysis and disciplined execution. His practical approach and clarity help students develop consistency, confidence, and a strong trading foundation.",
   },
 ];
 const MembersSection = () => {
@@ -85,9 +76,9 @@ const MembersSection = () => {
           align: "center",
           loop: true,
         }}
-        onMouseEnter={plugin.current.stop}
-        onMouseLeave={plugin.current.reset}
-        className="relative"
+        // onMouseEnter={plugin.current.stop}
+        // onMouseLeave={plugin.current.reset}
+        className="relative "
       >
         <CarouselNext className=" absolute   ~right-[0.5rem]/[2rem] -translate-y-1/2 top-1/2 z-10 cursor-pointer">
           <ButtonAnimation>
@@ -104,8 +95,14 @@ const MembersSection = () => {
               key={i}
               className="~w-[18.75rem]/[22.5rem] basis-1/1 shrink-0 ~h-[14.3092088699rem]/[33.6875rem] ~mr-[2rem]/[3rem] cursor-pointer"
               style={{ perspective: "1000px" }}
-              onMouseEnter={() => setFlippedIndex(i)}
-              onMouseLeave={() => setFlippedIndex(null)}
+              onMouseEnter={() => {
+                plugin.current.stop();
+                setFlippedIndex(i);
+              }}
+              onMouseLeave={() => {
+                plugin.current.reset();
+                setFlippedIndex(null);
+              }}
             >
               <motion.div
                 className="relative w-full h-full"

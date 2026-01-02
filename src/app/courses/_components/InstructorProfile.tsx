@@ -1,17 +1,22 @@
 "use client";
 
+import { ButtonAnimation } from "@/components/ButtonAnimation";
+import ArrowSvg from "@/components/svg/ArrowSvg";
 import ButtonBrown from "@/components/svg/ButtonBrown";
-import { gsap } from "gsap";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext } from "@/components/ui/carousal";
+import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
+import { motion } from "motion/react";
+
 
 const slides = [
   {
-    image: "/images/shanu.png",
+    image: "/images/founder-img.png",
     title: "Shanu",
-    subtitle: "Trainer",
-    heading: "watch",
-    span: "Learn Lead",
+    subtitle: "CEO & Trainer",
+    heading: "Guiding",
+    span: "The Vision",
     description:
       "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging. ",
   },
@@ -19,91 +24,44 @@ const slides = [
     image: "/images/anas.png",
     title: "Anas",
     subtitle: "Trainer",
-    heading: "watch",
-    span: "Learn Lead",
+    heading: "Master",
+    span: "The Markets",
     description:
-      "Anas is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging.",
+      "Anas is a dedicated trading mentor at Horus Academy, focused on live market execution and structured trade planning. He emphasizes discipline, risk control, and repeatable setups, helping students turn strategy into consistent action in real market conditions.",
   },
   {
     image: "/images/nasif.png",
     title: "Nasif",
     subtitle: "Business Development Head",
-    heading: "watch",
-    span: "Learn Lead",
+    heading: "Build",
+    span: "With Vision",
     description:
-      "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging. ",
+      "Nasif leads Business Development at Horus Academy, shaping strategic growth and high-value partnerships. His clear vision and market insight strengthen the academy’s presence and long-term impact.",
+  },
+  {
+    image: "/images/lsp.png",
+    title: "LSP",
+    subtitle: "Trainer",
+    heading: "Learn The ",
+    span: "Right Way",
+    description:
+      "LSP is a skilled trading mentor at Horus Academy, specializing in structured market analysis and disciplined execution. His practical approach and clarity help students develop consistency, confidence, and a strong trading foundation.",
   },
 ];
 
+
 const InstructorProfile = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const detailsRef = useRef<(HTMLDivElement | null)[]>([]);
+ 
+  const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
 
-  useEffect(() => {
-    // Set initial state on mount
-    cardsRef.current.forEach((card, i) => {
-      if (!card) return;
-      gsap.set(card, {
-        flex: i === 0 ? "0 0 18.75rem" : "1 1 0%",
-      });
-    });
-
-    detailsRef.current.forEach((detail, i) => {
-      if (!detail) return;
-      gsap.set(detail, {
-        width: i === 0 ? "22.5rem" : 0,
-        opacity: i === 0 ? 1 : 0,
-        marginLeft: i === 0 ? "0rem" : "-1.6875rem",
-      });
-    });
-  }, []);
-
-  useEffect(() => {
-    cardsRef.current.forEach((card, i) => {
-      if (!card) return;
-
-      if (i === activeIndex) {
-        gsap.to(card, {
-          flex: "0 0 18.75rem",
-          duration: 0.6,
-          ease: "power3.inOut",
-        });
-      } else {
-        gsap.to(card, {
-          flex: "1 1 0%",
-          duration: 0.6,
-          ease: "power3.inOut",
-        });
-      }
-    });
-
-    detailsRef.current.forEach((detail, i) => {
-      if (!detail) return;
-
-      if (i === activeIndex) {
-        gsap.to(detail, {
-          width: "22.5rem",
-          opacity: 1,
-          marginLeft: "0rem",
-          duration: 0.6,
-          ease: "power3.inOut",
-        });
-      } else {
-        gsap.to(detail, {
-          width: 0,
-          opacity: 0,
-          marginLeft: "-1.6875rem",
-          duration: 0.6,
-          ease: "power3.inOut",
-        });
-      }
-    });
-  }, [activeIndex]);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const plugin = React.useRef<any>(
+    Autoplay({ delay: 6000, stopOnInteraction: true })
+  );
 
   return (
-    <div className="~pt-[2rem]/[11.6875rem] bg-black ~px-[1rem]/[8.9375rem]">
-      <div>
+    <div className="~pt-[2rem]/[11.6875rem] bg-black ">
+      <div className="~px-[1rem]/[8.9375rem]">
         <div className="flex justify-center">
           <ButtonBrown content="Instructor profile" />
         </div>
@@ -120,70 +78,106 @@ const InstructorProfile = () => {
       </div>
 
       <div className="~pt-[2.5rem]/[5rem] ~pb-[3rem]/[4.625rem] overflow-hidden">
-        <div className="flex gap-[1.6875rem]">
+  <Carousel
+        plugins={[plugin.current]}
+        opts={{
+          align: "center",
+          loop: true,
+        }}
+        // onMouseEnter={plugin.current.stop}
+        // onMouseLeave={plugin.current.reset}
+        className="relative "
+      >
+        <CarouselNext className=" absolute   ~right-[0.5rem]/[2rem] -translate-y-1/2 top-1/2 z-10 cursor-pointer">
+          <ButtonAnimation>
+            <div className="relative hover:scale-110 duration-300 transition-all ease-in-out w-fit p-[1px] bg-gradient-to-br rounded-full from-[#333333] h-full to-[#111111]">
+              <div className="~size-[2rem]/[3.75rem] rounded-full flex justify-center items-center bg-gradient-to-br from-[#111214] to-[#111214]">
+                <ArrowSvg className="~w-[0.3rem]/[0.5rem] text-[#DFAB60]" />
+              </div>
+            </div>
+          </ButtonAnimation>
+        </CarouselNext>
+        <CarouselContent className="~pt-[2.5rem]/[5rem]  flex  ~py-[3rem]/[4.625rem]  ">
           {slides.map((item, i) => (
-            <React.Fragment key={i}>
-              <div
-                ref={el => {
-                  cardsRef.current[i] = el;
-                }}
-                onMouseEnter={() => setActiveIndex(i)}
-                className="cursor-pointer flex-shrink-0"
+            <CarouselItem
+              key={i}
+              className="~w-[18.75rem]/[22.5rem] basis-1/1 shrink-0 ~h-[14.3092088699rem]/[33.6875rem] ~mr-[2rem]/[3rem] cursor-pointer"
+              style={{ perspective: "1000px" }}
+              onMouseEnter={() => {
+                plugin.current.stop();
+                setFlippedIndex(i);
+              }}
+              onMouseLeave={() => {
+                plugin.current.reset();
+                setFlippedIndex(null);
+              }}
+            >
+              <motion.div
+                className="relative w-full h-full"
+                style={{ transformStyle: "preserve-3d" }}
+                animate={{ rotateY: flippedIndex === i ? 180 : 0 }}
+                transition={{ duration: 0.7, ease: "easeInOut" }}
               >
-                <div className="relative w-full p-[1px] bg-gradient-to-br ~rounded-[0.5rem]/[1.25rem] from-[#333333] h-full to-[#111111]">
-                  <div className="w-full relative ~rounded-[0.5rem]/[1.25rem] ~h-[14.3092088699rem]/[33.6875rem]">
-                    <Image
-                      src={item.image}
-                      fill
-                      className="object-cover ~rounded-[0.5rem]/[1.25rem]"
-                      alt=""
-                    />
+                <motion.div
+                  className="absolute inset-0"
+                  style={{ backfaceVisibility: "hidden" }}
+                >
+                  <div className="relative w-fit p-[1px] bg-gradient-to-br ~rounded-[0.5rem]/[1.25rem] from-[#333333] h-full to-[#111111]">
+                    <div className="~w-[18.75rem]/[22.5rem] relative ~rounded-[0.5rem]/[1.25rem] ~h-[14.3092088699rem]/[33.6875rem]">
+                      <Image
+                        src={item.image}
+                        fill
+                        className="object-cover ~rounded-[0.5rem]/[1.25rem]"
+                        alt=""
+                      />
 
-                    <div className="~p-[0.5rem]/[1.5rem] absolute w-full bottom-0 text-white">
-                      <h2 className="font-medium ~text-[0.875rem]/[1.5rem] ~pb-[0.1rem]/[0.5rem] border-b w-full border-b-white/5">
-                        {item.title}
-                      </h2>
+                      <div className="~p-[0.5rem]/[1.5rem] absolute w-full bottom-0 text-white">
+                        <h2 className="font-medium ~text-[0.875rem]/[1.5rem] ~pb-[0.1rem]/[0.5rem] border-b w-full border-b-white/5">
+                          {item.title}
+                        </h2>
 
-                      <div className="flex justify-between items-center relative overflow-hidden ~pt-[0.3rem]/[0.5rem]">
-                        <h4 className="~text-[0.75rem]/[1.125rem] text-nowrap text-ellipsis leading-[100%]">
-                          {item.subtitle}
-                        </h4>
+                        <div className="flex justify-between items-center ~pt-[0.3rem]/[0.5rem]">
+                          <h4 className="~text-[0.75rem]/[1.125rem] leading-[100%]">
+                            {item.subtitle}
+                          </h4>
+
+                          <div className="~size-[1.25rem]/[2.25rem] flex justify-center items-center border border-[#FFFFFF1A] ~rounded-[0.3rem]/[0.5rem] shadow-[inset_0_-1px_0_0_#00000033,inset_0_0_0_0_#FFFFFF0D]">
+                            <ArrowSvg className="~w-[0.3rem]/[0.5rem]" />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </motion.div>
 
-              <div
-                ref={el => {
-                  detailsRef.current[i] = el;
-                }}
-                className="flex-shrink-0 overflow-hidden -ml-[1.6875rem]"
-                style={{
-                  width: 0,
-                  opacity: 0,
-                  marginLeft: "-1.6875rem",
-                }}
-              >
-                <div className="relative z-20 p-[1px] bg-gradient-to-br ~rounded-[0.5rem]/[1.25rem] from-[#DFAB6012] h-full to-[#AC814326]">
-                  <div className="~w-[14rem]/[22.5rem] text-white flex justify-center items-center ~px-[1rem]/[1.875rem] ~rounded-[0.5rem]/[1.25rem] relative ~h-[14.3092088699rem]/[33.6875rem] bg-gradient-to-br from-[#090909] to-[#25221c]">
-                    <div>
-                      <h2 className="font-merriweather leading-[120%] ~text-[1.25rem]/[3.0625rem]">
-                        {item.heading} <br />
-                        <span className="bg-gradient-to-r from-[#ECB45D] via-[#FFD38D] to-[#FFB644] bg-clip-text text-transparent">
-                          {item.span}
-                        </span>
-                      </h2>
-                      <p className="~text-[0.75rem]/[1rem] leading-[120%] ~pt-[1rem]/[2rem]">
-                        {item.description}
-                      </p>
+                <motion.div
+                  className="absolute inset-0"
+                  style={{
+                    backfaceVisibility: "hidden",
+                    transform: "rotateY(180deg)",
+                  }}
+                >
+                  <div className="relative w-fit p-[1px] bg-gradient-to-br ~rounded-[0.5rem]/[1.25rem] from-[#DFAB6012] h-full to-[#AC814326]">
+                    <div className="~w-[18.75rem]/[22.5rem] text-white flex justify-center items-center ~px-[1rem]/[1.875rem] ~rounded-[0.5rem]/[1.25rem] relative ~h-[14.3092088699rem]/[33.6875rem] bg-gradient-to-br from-[#090909] to-[#25221c]">
+                      <div>
+                        <h2 className="font-merriweather leading-[120%] ~text-[1.25rem]/[3.0625rem]">
+                          {item.heading} <br />
+                          <span className="bg-gradient-to-r from-[#ECB45D] via-[#FFD38D] to-[#FFB644] bg-clip-text text-transparent">
+                            {item.span}
+                          </span>
+                        </h2>
+                        <p className="~text-[0.75rem]/[1rem] leading-[120%] ~pt-[1rem]/[2rem] ">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </React.Fragment>
+                </motion.div>
+              </motion.div>
+            </CarouselItem>
           ))}
-        </div>
+        </CarouselContent>
+      </Carousel>
       </div>
     </div>
   );

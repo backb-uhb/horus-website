@@ -10,7 +10,6 @@ import ProgressProvider from "@/providers/ProgressProvider";
 import { AbsoluteUrl } from "@/utils/BaseUrl";
 import IphoneViewportGuard from "@/components/IphoneViewportGuard";
 import { Toaster } from "react-hot-toast";
-import TradingViewTicker from "@/components/TradingViewTicker";
 
 const satoshi = localFont({
   src: "../app/fonts/Satoshi-Variable.ttf",
@@ -53,7 +52,6 @@ export default function RootLayout({
         <IphoneViewportGuard />
         <ProgressProvider>
           <Toaster position="top-center" containerClassName="mt-4" />
-          <TradingViewTicker height="56px"/>
           <Header />
           {children}
           <Footer />

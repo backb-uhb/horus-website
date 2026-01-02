@@ -1,70 +1,93 @@
 'use client';
-import { useEffect, useRef } from 'react';
+
+import { useEffect, useState } from 'react';
+
+interface Symbol {
+  proName: string;
+  title: string;
+}
 
 interface TradingViewTickerProps {
-  symbols?: string;
-  theme?: 'light' | 'dark';
-  hideChart?: boolean;
-  itemSize?: 'adaptive' | 'compact' | 'regular';
-  locale?: string;
-  height?: string;
+  symbols?: Symbol[];
+  colorTheme?: 'light' | 'dark';
+  isTransparent?: boolean;
+  showSymbolLogo?: boolean;
+  displayMode?: 'adaptive' | 'compact' | 'regular';
 }
 
 export default function TradingViewTicker({
-  symbols = 'FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD',
-  theme = 'dark',
-  hideChart = false,
-  itemSize = 'compact',
-  locale = 'en',
-  height = '56px'
+  symbols = [
+    { proName: "FOREXCOM:SPXUSD", title: "S&P 500 Index" },
+    { proName: "FOREXCOM:NSXUSD", title: "US 100 Cash CFD" },
+    { proName: "FX_IDC:EURUSD", title: "EUR to USD" },
+    { proName: "BITSTAMP:BTCUSD", title: "Bitcoin" },
+    { proName: "BITSTAMP:ETHUSD", title: "Ethereum" },
+    { proName: "TVC:GOLD", title: "Gold" },
+    { proName: "TVC:USOIL", title: "Crude Oil" },
+    { proName: "NSE:RELIANCE", title: "NSE" },
+    { proName: "NSE:NIFTY", title: "NIFTY" },
+    { proName: "NSE:ADANIENT", title: "ADANI" }
+  ],
+  colorTheme = 'dark',
+  isTransparent = false,
+  showSymbolLogo = true,
+  displayMode = 'adaptive'
 }: TradingViewTickerProps = {}) {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Load the TradingView widget script
-    const script = document.createElement('script');
-    script.type = 'module';
-    script.src = 'https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js';
-    script.async = true;
-
-    document.head.appendChild(script);
-
-    // Create the custom element
-    const container = containerRef.current;
-    if (container) {
-      const tickerTape = document.createElement('tv-ticker-tape');
-      tickerTape.setAttribute('symbols', symbols);
-      tickerTape.setAttribute('theme', theme);
-      tickerTape.setAttribute('hide-chart', hideChart ? 'true' : 'false');
-      tickerTape.setAttribute('item-size', itemSize);
-      tickerTape.setAttribute('locale', locale);
-
-      container.appendChild(tickerTape);
-    }
-
-    return () => {
-      // Cleanup
-      if (document.head.contains(script)) {
-        document.head.removeChild(script);
-      }
-      if (container) {
-        container.innerHTML = '';
-      }
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
     };
-  }, [symbols, theme, hideChart, itemSize, locale]);
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const height = isMobile ? 72 : 46;
+
+  const widgetConfig = {
+    symbols,
+    colorTheme,
+    largeChartUrl: "",
+    isTransparent,
+    showSymbolLogo,
+    displayMode,
+    width: "100%",
+    height,
+    utm_source: "thehorusacademy.com",
+    utm_medium: "widget",
+    utm_campaign: "ticker-tape",
+    "page-uri": "thehorusacademy.com/#contact-form"
+  };
+
+  const encodedConfig = encodeURIComponent(JSON.stringify(widgetConfig));
+  const iframeUrl = `https://www.tradingview-widget.com/embed-widget/ticker-tape/?locale=en#${encodedConfig}`;
 
   return (
-    <div 
-      ref={containerRef}
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        height: height,
-        overflow: 'hidden',
-        zIndex: 1000,
-      }}
-    />
+    <div style={{ 
+      width: '100vw', 
+      height: `${height}px`, 
+      overflow: 'hidden',
+      position: 'relative',
+      left: '50%',
+      right: '50%',
+      marginLeft: '-50vw',
+      marginRight: '-50vw'
+    }}>
+   <iframe
+  src={iframeUrl}
+  scrolling="no"
+  style={{
+    boxSizing: 'border-box',
+    display: 'block',
+    height: `${height}px`,
+    width: '100%',
+    border: 'none'
+  }}
+  title="TradingView Ticker Tape"
+/>
+    </div>
   );
 }

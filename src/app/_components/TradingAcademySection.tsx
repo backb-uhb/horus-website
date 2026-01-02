@@ -67,19 +67,7 @@ const MobileTradingCarousel = () => {
               </p>
             </div>
           </CarouselItem>
-          <CarouselItem className="mt-0 basis-1/1 md:basis-1 mr-[1rem] md:mr-0 md:mt-[-5rem]">
-            <div className="">
-              <iframe
-                src={
-                  "https://youtube.com/embed/rDCQ6q3Q0PA?si=bWkdqAotX-EbJYnw"
-                }
-                className="~size-[8.75rem]/[21.875rem] ~rounded-[0.625rem]/[1.5rem]"
-              />
-              <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-semibold">
-                Welcome to India&apos; First LIVE Trading Floor{" "}
-              </p>
-            </div>
-          </CarouselItem>
+
           <CarouselItem className="md:flex basis-1/1 md:basis-1 mr-[1rem] md:mr-0 justify-end md:mt-[-18rem]">
             <div className="">
               <iframe
@@ -121,7 +109,7 @@ const DesktopTradingLayout = () => {
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const ref4 = useRef(null);
-  const ref5 = useRef(null);
+  // const ref5 = useRef(null);
 
   const { scrollYProgress: s1 } = useScroll({
     target: ref1,
@@ -154,13 +142,13 @@ const DesktopTradingLayout = () => {
   const y4 = useTransform(s4, [0, 1], [40, -70]);
   const opacity4 = useTransform(s4, [0, 0.2, 1], [0, 1, 0.6]);
   const scale4 = useTransform(s4, [0, 1], [0.95, 1]);
-  const { scrollYProgress: s5 } = useScroll({
-    target: ref5,
-    offset: ["start end", "end start"],
-  });
-  const y5 = useTransform(s5, [0, 1], [-100, 150]);
-  const opacity5 = useTransform(s5, [0, 0.2, 1], [0, 1, 0.4]);
-  const scale5 = useTransform(s5, [0, 1], [0.9, 1.1]);
+  // const { scrollYProgress: s5 } = useScroll({
+  //   target: ref5,
+  //   offset: ["start end", "end start"],
+  // });
+  // const y5 = useTransform(s5, [0, 1], [-100, 150]);
+  // const opacity5 = useTransform(s5, [0, 0.2, 1], [0, 1, 0.4]);
+  // const scale5 = useTransform(s5, [0, 1], [0.9, 1.1]);
 
   return (
     <div className="~px-[0rem]/[5.5rem] z-[100] mx-auto max-w-[1440px] relative overflow-hidden">
@@ -236,21 +224,21 @@ const DesktopTradingLayout = () => {
           <div>
             <div className="~rounded-[0.625rem]/[1.5rem] w-fit  overflow-hidden">
               <YouTube
-                videoId="rDCQ6q3Q0PA"
+                videoId="uFtbfj6TWfs"
                 opts={opts}
                 className="~size-[8.75rem]/[21.875rem] ~rounded-[0.625rem]/[1.5rem]"
-                onReady={(e) => handleReady("rDCQ6q3Q0PA", e)}
-                onPlay={() => handlePlay("rDCQ6q3Q0PA")}
+                onReady={(e) => handleReady("uFtbfj6TWfs", e)}
+                onPlay={() => handlePlay("uFtbfj6TWfs")}
               />
             </div>
             <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-bold">
-              Welcome to India&apos;s First LIVE Trading Floor
+              From Beginner to Profitable Trader at 22!
             </p>
           </div>
         </motion.div>
 
         {/* 5 */}
-        <motion.div
+        {/* <motion.div
           ref={ref5}
           style={{ y: y5, opacity: opacity5, scale: scale5 }}
           className="md:flex basis-1/1 md:basis-1 justify-end md:~mt-[0rem]/[-18rem]"
@@ -269,7 +257,7 @@ const DesktopTradingLayout = () => {
               From Beginner to Profitable Trader at 22!
             </p>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

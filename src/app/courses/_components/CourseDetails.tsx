@@ -19,92 +19,38 @@ interface ChecklistSectionProps {
 }
 
 const CourseDetails = () => {
-  const onlineChecklistItems: ChecklistItem[] = [
-    { id: 1, text: "Introduction Into The Markets", completed: true },
-    { id: 2, text: "Online Practical Sessions", completed: true },
-    { id: 3, text: "Live Trading Floor Access for 30 Days", completed: true },
-    { id: 4, text: "Manipulations Of Fundamentals", completed: true },
-    { id: 5, text: "Club Access", completed: true },
-    { id: 6, text: "Trading Psychology", completed: true },
-    {
-      id: 7,
-      text: "Guest Lecturers (Industry expert, Personal growth )",
-      completed: true,
-    },
-    {
-      id: 8,
-      text: "Advanced Curriculum (From Introduction to Advanced Level) ",
-      completed: true,
-    },
-    { id: 9, text: "Candlesticks & Chart Patterns", completed: false },
-    {
-      id: 10,
-      text: "Certification Ceremony.",
-      completed: false,
-    },
-    {
-      id: 11,
-      text: "Traps & Consolidation",
-      completed: false,
-    },
-    { id: 12, text: "Risk Management", completed: false },
-
-    { id: 13, text: "Funded Accounts For Achievers", completed: false },
-    { id: 14, text: "Trading Community Access", completed: false },
-    { id: 15, text: "Placement Assistance", completed: false },
+  const onlineChecklistItems: ChecklistItem[] =  [
+    { id: 1, text: "Basic to advanced theory", completed: true },
+    { id: 2, text: "Online pactical sessions (live)", completed: true },
+    { id: 3, text: "Psychology session", completed: true },
+    { id: 4, text: "Guest lectures", completed: true },
+    { id: 5, text: "Club access", completed: true },
+    { id: 6, text: "Live trading floor access", completed: false },
+    { id: 7, text: "Placement oppurtunity", completed: false },
+    { id: 8, text: "Trading capital", completed: false },
   ];
 
-  const beginnerChecklistItems: ChecklistItem[] = [
-    { id: 1, text: "Introduction Into The Markets", completed: true },
-    { id: 2, text: "Candlesticks & Chart Patterns", completed: true },
-    { id: 3, text: "Live Trading Floor Access for 15 Days", completed: true },
-    { id: 4, text: "Manipulations Of Fundamentals", completed: true },
-    { id: 5, text: "Risk Management", completed: true },
-    { id: 6, text: "Certification Ceremony.", completed: true },
-    { id: 7, text: "Trading Psychology", completed: true },
-    { id: 8, text: "Traps & Consolidation", completed: true },
-    { id: 9, text: "Online & Offline Classes Available", completed: true },
-    {
-      id: 10,
-      text: "Guest Lecturers (Industry expert, Personal growth )",
-      completed: true,
-    },
-    {
-      id: 11,
-      text: "Advanced Curriculum (From Introduction to Advanced Level) ",
-      completed: true,
-    },
-    { id: 12, text: "Club Access", completed: false },
 
-    { id: 13, text: "Funded Accounts For Achievers", completed: false },
-    { id: 14, text: "Trading Community Access", completed: false },
-    { id: 15, text: "Placement Assistance", completed: false },
+  const beginnerChecklistItems: ChecklistItem[] =  [
+    { id: 1, text: "Basic to advanced theory", completed: true },
+    { id: 2, text: "Practical sessions", completed: true },
+    { id: 3, text: "Psychology session", completed: true },
+    { id: 4, text: "Guest lectures", completed: true },
+    { id: 5, text: "Club access", completed: true },
+    { id: 6, text: "Live trading floor access to 15 days", completed: true },
+    { id: 7, text: "Placement oppurtunity", completed: false },
+    { id: 8, text: "Trading capital", completed: false },
   ];
 
   const advancedChecklistItems: ChecklistItem[] = [
-    { id: 1, text: "Introduction Into The Markets", completed: true },
-    { id: 2, text: "Candlesticks & Chart Patterns", completed: true },
-    { id: 3, text: "Live Trading Floor Access for 30 days", completed: true },
-    { id: 4, text: "Manipulations Of Fundamentals", completed: true },
-    { id: 5, text: "Risk Management", completed: true },
-    { id: 6, text: "Certification Ceremony.", completed: true },
-    { id: 7, text: "Trading Psychology", completed: true },
-    { id: 8, text: "Traps & Consolidation", completed: true },
-    { id: 9, text: "Online & Offline Classes Available", completed: true },
-    {
-      id: 10,
-      text: "Guest Lecturers (Industry expert, Personal Growth )",
-      completed: true,
-    },
-    {
-      id: 11,
-      text: "Advanced Curriculum (From Introduction to Advanced Level) ",
-      completed: true,
-    },
-    { id: 12, text: "Club Access", completed: true },
-    { id: 13, text: "Funded Accounts For Achievers", completed: true },
-    { id: 14, text: "Trading Community Access", completed: true },
-    { id: 15, text: "Placement Assistance", completed: false },
+    { id: 1, text: "Basic to advanced theory", completed: true },
+    { id: 2, text: "Practical sessions", completed: true },
+    { id: 3, text: "Psychology session", completed: true },
+    { id: 4, text: "Guest lectures", completed: true },
+    { id: 5, text: "Club access", completed: true },
+    { id: 6, text: "Live trading floor access to 30 days", completed: true },
+    { id: 7, text: "Placement oppurtunity", completed: true },
+    { id: 8, text: "Trading capital", completed: true },
   ];
 
   const ChecklistSection = ({ items }: ChecklistSectionProps) => (
@@ -177,7 +123,7 @@ const CourseDetails = () => {
               <div className="relative p-[1px] h-fit  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-fit">
                 <div className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full  transition-all duration-300 ease-in-out py-[0.5rem] ~px-[0.75rem]/[1rem] bg-[#252525] ">
                   <p className="text-white   ~text-[0.75rem]/[1rem] leading-[100%] tracking-[-1.2%]">
-                    Beginner
+                    Online
                   </p>
                 </div>
               </div>
@@ -205,7 +151,7 @@ const CourseDetails = () => {
                   ₹ 49,999{" "}
                 </div>
                 <div className="text-center  font-satoshi pt-[0.5rem] font-normal text-[#FFFFFF] ~text-[0.625rem]/[1.0669rem] leading-[120%] tracking-[2%] ">
-                  Including GST <br /> {" "}
+                  Including GST <br /> EMI options avaialble{" "}
                 </div>
               </div>
               <div className="~px-[0.75rem]/[1.25rem] flex flex-col ~gap-[0.625rem]/[1.25rem] ~pb-[0.75rem]/[1.25rem] text-[#FFFFFF] font-satoshi font-normal ~text-[0.625rem]/[1.245rem] leading-[120%] tracking-[2%]">

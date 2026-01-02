@@ -14,17 +14,26 @@ import PhoneSvg from "@/components/svg/PhoneSvg";
 import MessageSvg from "@/components/svg/MessageSvg";
 import { usePathname } from "next/navigation";
 import { ButtonAnimation } from "@/components/ButtonAnimation";
+
 const icons = [
   { href: "https://twitter.com", icon: TwitterSvg },
   { href: "https://instagram.com", icon: InstagramSvg },
   { href: "https://linkedin.com", icon: LinkedInSvg },
   { href: "https://youtube.com", icon: YoutubeSvg },
 ];
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const pathname = usePathname();
+  const isHomePage = pathname === "/";
+
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
     const handleScroll = () => {
       if (window.scrollY > 100) {
         setIsScrolled(true);
@@ -33,9 +42,22 @@ const Header = () => {
       }
     };
 
+    // Initial check
+    handleResize();
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
+
+  const getTopPosition = () => {
+    if (!isHomePage || isScrolled) return "top-0";
+    return isMobile ? "top-[80px]" : "top-[46px]";
+  };
 
   return (
     <>
@@ -155,7 +177,7 @@ const Header = () => {
       </AnimatePresence>
       <div className="flex justify-center">
         <div
-          className={`~px-[0.9375rem]/[5rem]   fixed top-[3.5rem] z-[4000] w-full`}
+          className={`~px-[0.9375rem]/[5rem] fixed z-[4000] w-full transition-all duration-500 ease-in-out ${getTopPosition()}`}
         >
           {/* Separate blur layer */}
           {isScrolled && (

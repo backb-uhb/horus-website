@@ -1,4 +1,5 @@
 "use client";
+import EnrollButton from "@/app/_components/EnrollButton";
 import ButtonBrown from "@/components/svg/ButtonBrown";
 import CertificateSvg from "@/components/svg/CertificateSvg";
 import ClockSvg from "@/components/svg/ClockSvg";
@@ -68,7 +69,7 @@ const FourthSection = () => {
                 </div>
                 <div className="flex shrink-0 items-center gap-[0.75rem] ">
                   <PeopleSvg className="~size-[1rem]/[2rem] " />
-                  30-Student Batches
+                  20-Student Batches
                 </div>
                 <div className="w-full h-[1px] bg-[#DFAB60]"></div>
               </div>
@@ -81,11 +82,7 @@ const FourthSection = () => {
                 Including GST <br /> EMI options avaialble{" "}
               </div>
 
-              <div className="relative p-[1px] ~text-[0.625rem]/[1.245rem] leading-[120%] h-fit  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-full lg:w-fit">
-                <div className="flex justify-center cursor-pointer items-center ~gap-[0.35rem]/[0.62rem] rounded-full  transition-all duration-300 ease-in-out ~py-[0.5rem]/[1rem] ~px-[0.75rem]/[6rem] bg-transparent hover:bg-[#161616] ">
-                  <p className="text-white   "> Enroll Now</p>
-                </div>
-              </div>
+              <EnrollButton variant="hero"/>
             </div>
           </div>
         </div>

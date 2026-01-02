@@ -8,6 +8,13 @@ import Link from "next/link";
 import EnrollCTA from "./EnrollCta";
 
 const courses = [
+    {
+    image: "/images/courseImage2.png",
+    title: "Online Trading Course",
+    link: "/courses/online",
+    description:
+      "In 30 days, you'll experience the rhythm of the markets like never before. Each week focuses on a new layer of mastery- from understanding live setups to handling pressure like a pro . No theory overload . No stale charts . Just action, insights, and growth in real time",
+  },
   {
     image: "/images/courseImage.png",
     title: "Technical Course",
@@ -46,7 +53,7 @@ const CourseSection = () => {
             <div
               key={index}
               className={`sticky ${
-                index === 0 ? "top-[9rem]" : " top-[10rem]"
+                index === 0 ? "top-[9rem]" : " top-[12rem]"
               }`}
             >
               <div className="p-[1px]  bg-gradient-to-br ~rounded-[0.895rem]/[3rem] from-[#333333] to-[#111111]">

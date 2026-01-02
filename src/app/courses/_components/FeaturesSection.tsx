@@ -1,6 +1,10 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
+import Lottie from 'lottie-react';
+import chartAnimation from '@public/animations/chart-line.json'; 
+import Link from "next/link";
 
 const textArray = [
   "🧠 View Analysis",
@@ -14,8 +18,8 @@ const FeaturesSection = () => {
   return (
     <div className="relative z-10 bg-black">
       <div className="flex ~px-[0.6875rem]/[12.5rem] flex-col items-center ~py-[3rem]/[7.1875rem] text-white ">
-        <div className="grid grid-cols-2 md:grid-cols-3 ~gap-[0.5rem]/[1.5rem]  ">
-          <div className="col-span-2  p-[1px] bg-gradient-to-br overflow-hidden from-[#333333] h-full to-[#111111] ~rounded-[1.4119rem]/[3rem]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ~gap-[0.5rem]/[1.5rem]  ">
+          <div className="col-span-1 sm:col-span-2  p-[1px] bg-gradient-to-br overflow-hidden from-[#333333] h-full to-[#111111] ~rounded-[1.4119rem]/[3rem]">
             <div className=" flex justify-between h-full  flex-col bg-gradient-to-b to-[#0f0f0f] from-[#121212] ~rounded-[1.4119rem]/[3rem] overflow-hidden ">
               <div className=" relative w-full  ~rounded-[1.4119rem]/[3rem] ~h-[8.0625rem]/[13.0625rem] ">
                 <Image
@@ -35,9 +39,10 @@ const FeaturesSection = () => {
                     className="object-cover rounded-full"
                   />
                 </div>
-                <div>
+                <Link href={"https://t.me/trade_egram"}  target="_blank"
+  rel="noopener noreferrer">
                   <div className="font-normal font-merriweather ~text-[0.875rem]/[1.5rem]  leading-[120%] tracking-[-0.0163rem] text-[#F7F8F8] ">
-                    Exclusive Discord Access
+                 Exclusive Telegram Access
                   </div>
                   <div className="pt-[0.625rem]">
                     <button className="flex items-center gap-[0.5rem]  hover:scale-110 duration-300 transition-all ease-in-out text-[#FFFFFF] font-satoshi font-normal  text-[0.6913rem] leading-[0.79rem] tracking-[2%] gradient-bg-fill-new gradient-border ~px-[0.75rem]/[1rem] ~py-[0.35rem]/[0.5rem]">
@@ -49,16 +54,15 @@ const FeaturesSection = () => {
                           className="  object-cover "
                         />
                       </div>
-                      Join our Discord
+                      Join our Telegram Channel
                     </button>
                   </div>
-                </div>
+                </Link>
               </div>
 
               <div className="font-inter ~text-[0.625rem]/[0.9844rem] max-w-[65ch] leading-[120%] tracking-[0%] text-[#FFFFFF]  font-normal  ~pt-[1rem]/[2rem] ~px-[1rem]/[3rem]">
-                Join our Premium Discord Channel—your go-to space for feedback,
-                trade discussions, and community support. Stay connected, get
-                help, and grow alongside fellow students.
+   Join our Premium Telegram Channel — a focused space for market perspectives, growth-driven insights, and long-term thinking beyond just trading.
+Stay connected, build clarity, and grow alongside a disciplined community.
               </div>
 
               <div className="~pt-[0.625rem]/[1rem] ~pb-[0.65rem]/[1.6875rem] overflow-hidden">
@@ -75,7 +79,7 @@ const FeaturesSection = () => {
               </div>
             </div>
           </div>
-          <div className="relative flex flex-col justify-between h-full items-center p-[1px] bg-gradient-to-br overflow-hidden from-[#333333]  to-[#111111] ~rounded-[1.4119rem]/[3rem]">
+          <div className="relative flex flex-col justify-between h-full items-center  p-[1px] bg-gradient-to-br overflow-hidden from-[#333333]  to-[#111111] ~rounded-[1.4119rem]/[3rem]">
             <div className="col-span-1 flex flex-col bg-gradient-to-b to-[#0f0f0f] h-full from-[#121212] ~rounded-[1.4119rem]/[3rem] overflow-hidden  ">
               <div className="flex justify-center ~pt-[0.75rem]/[1.9375rem]">
                 <div className="relative ~w-[9.0625rem]/[16.2488rem] ~h-[7.8rem]/[14.0331rem] ">
@@ -99,18 +103,55 @@ const FeaturesSection = () => {
               </div>
             </div>
           </div>
-          <div className="md:col-span-3  p-[1px] bg-gradient-to-br overflow-hidden from-[#333333] h-full to-[#111111] ~rounded-[1.4119rem]/[3rem]">
+          <div className="md:col-span-3 col-span-1 p-[1px] bg-gradient-to-br overflow-hidden from-[#333333] h-full to-[#111111] ~rounded-[1.4119rem]/[3rem]">
+  <div className="flex flex-col bg-gradient-to-b to-[#0f0f0f] h-full from-[#121212] ~rounded-[1.4119rem]/[3rem] overflow-hidden relative">
+    
+    {/* Lottie Animation - Behind head but within box */}
+    <div className="absolute inset-0 flex items-center justify-start opacity-30 pointer-events-none">
+      <Lottie 
+        animationData={chartAnimation} 
+        loop={true}
+        className="~w-[15rem]/[30rem] ~h-[10rem]/[20rem]"
+      />
+    </div>
+
+    <div className="flex md:justify-evenly md:flex-row flex-col-reverse justify-center items-center relative z-10">
+      {/* Head Image */}
+      <div className="relative md:self-end ~w-[7.0625rem]/[12rem] ~h-[9rem]/[14rem] pt-[1.875rem]">
+        <Image
+          src={"/images/features-head-img.svg"}
+          alt="image"
+          fill 
+          className="object-contain"
+        />
+      </div>
+
+      {/* Text Content */}
+      <div className="md:~py-[2rem]/[5.125rem] py-[1rem] flex flex-col items-center ~px-[0.5rem]/[1rem]">
+        <div className="font-normal font-merriweather ~text-[0.875rem]/[1.5rem] leading-[120%] tracking-[-0.0163rem] text-[#F7F8F8]">
+          Trading Psychology
+        </div>
+        <div className="font-inter ~text-[0.625rem]/[0.9844rem] leading-[120%] max-w-[45ch] tracking-[0%] text-[#FFFFFF] font-normal ~pt-[0.5rem]/[1rem]">
+          Fear of losing or being wrong often leads to costly trading
+          mistakes. We offer 1-on-1 sessions to help students overcome
+          emotional hurdles and build a strong, positive mindset.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          {/* <div className="md:col-span-3 col-span-1  p-[1px] bg-gradient-to-br overflow-hidden from-[#333333] h-full to-[#111111] ~rounded-[1.4119rem]/[3rem]">
             <div className="flex flex-col  bg-gradient-to-b to-[#0f0f0f] h-full from-[#121212] ~rounded-[1.4119rem]/[3rem] overflow-hidden ">
-              <div className="flex justify-evenly md:flex-row flex-col">
-                <div className="relative ~w-[9.0625rem]/[27.5237rem] ~h-[8rem]/[21.375rem] pt-[1.875rem] ">
+              <div className="flex md:justify-evenly md:flex-row flex-col-reverse justify-center items-center">
+                <div className="relative md:self-end ~w-[7.0625rem]/[12rem] ~h-[9rem]/[14rem] pt-[1.875rem] ">
                   <Image
-                    src={"/images/Mask Group.svg"}
+                    src={"/images/features-head-img.svg"}
                     alt="image"
-                    fill
-                    className="object-cover"
+                    fill 
+                    className="object-contain "
                   />
                 </div>
-                <div className="  md:~pt-[2rem]/[5.125rem] py-[1rem] md:py-0  flex flex-col ~px-[0.5rem]/[1rem] ">
+                <div className="  md:~py-[2rem]/[5.125rem] py-[1rem]   flex flex-col items-center ~px-[0.5rem]/[1rem] ">
                   <div className="font-normal font-merriweather ~text-[0.875rem]/[1.5rem] leading-[120%] tracking-[-0.0163rem] text-[#F7F8F8]   ">
                     Trading Psychology
                   </div>
@@ -122,7 +163,7 @@ const FeaturesSection = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

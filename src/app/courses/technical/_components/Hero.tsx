@@ -1,8 +1,10 @@
 "use client";
+import EnrollButton from "@/app/_components/EnrollButton";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ButtonBrown from "@/components/svg/ButtonBrown";
 import PlayIcon from "@/components/svg/PlayIcon";
 import { Marquee } from "@/components/ui/Marquee";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -11,42 +13,38 @@ const Hero = () => {
     {
       name: "Raghav Nair",
       quote: "Placed at Emirates NBD",
-      image: "/images/testimonial-1.png",
+      image: "/images/testimonial/raghav-nair.jpg",
     },
     {
       name: "Zoya Sheikh",
       quote: "Placed at DFM",
-      image: "/images/testimonial-1.png",
+      image: "/images/testimonial/zoya-sheikh.jpg",
     },
     {
       name: "Meera Kapoor",
       quote: "Placed at Al Ramz Corp.",
-      image: "/images/testimonial-1.png",
+      image: "/images/testimonial/meera-kappor.jpg",
     },
     {
       name: "Kabir Malhotra",
       quote: "Placed at DGCX",
-      image: "/images/testimonial-1.png",
+      image: "/images/testimonial/kabir-malhotra.jpg",
     },
+    
     {
-      name: "Raghav Nair",
-      quote: "Placed at Emirates NBD",
-      image: "/images/testimonial-1.png",
-    },
-    {
-      name: "Zoya Sheikh",
+      name: "Aditya Rao",
       quote: "Placed at DFM",
-      image: "/images/testimonial-1.png",
+      image: "/images/testimonial/aditya-rao.jpg",
     },
     {
-      name: "Meera Kapoor",
-      quote: "Placed at Al Ramz Corp.",
-      image: "/images/testimonial-1.png",
+      name: "Rahul",
+      quote: "Placed at Aegis Logistics Ltd.",
+      image: "/images/testimonial/rahul.jpg",
     },
     {
-      name: "Kabir Malhotra",
-      quote: "Placed at DGCX",
-      image: "/images/testimonial-1.png",
+      name: "Saad Mohsin",
+      quote: "Placed at Redington Ltd.",
+      image: "/images/testimonial/saad-mohsin.jpg",
     },
   ];
 
@@ -66,7 +64,7 @@ const Hero = () => {
       <div className="max-w-[1440px] mx-auto">
         <Breadcrumbs
           activepage="Courses"
-          innerpage="Technical"
+          innerpage="Technical Course"
           activePageLink="/courses"
         />
         <div className="~px-[0.625rem]/[7.375rem] ~pb-[2rem]/[7.375rem] ~pt-[1rem]/[2rem]">
@@ -87,7 +85,7 @@ const Hero = () => {
                       <span className=" bg-gradient-to-r from-[#FDCA7C] bg-clip-text text-transparent to-[#FFC771]">
                         ★
                       </span>
-                      &nbsp;4.5+
+                      &nbsp;4.4+
                     </p>
                     <p className="~text-[0.625rem]/[1rem] pt-[0.2rem] leading-[120%]">
                       Average course rating
@@ -132,30 +130,28 @@ const Hero = () => {
   ))}
 </div>
                 <div className="flex ~gap-[0.5rem]/[1.25rem] ~py-[1.25rem]/[2.25rem]">
-                  <div className="relative p-[1px]  rounded-full bg-gradient-to-l from-[#DFAB60] to-[#DFAB601A] w-fit">
+                <WhatsAppButton message="Hi, I visited your website and would like more information about your Technical course."/>
+                  {/* <div className="relative p-[1px]  rounded-full bg-gradient-to-l from-[#DFAB60] to-[#DFAB601A] w-fit">
                     <div className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full cursor-pointer transition-all duration-300 ease-in-out py-[0.5rem] ~px-[0.75rem]/[1rem] hover:bg-transparent bg-[#111111]">
                       <button className="text-white font-semibold font-geist ~text-[0.75rem]/[1rem] leading-[160%] tracking-[-1.2%]">
                         Talk to our Mentor
                       </button>
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className="relative p-[1px]  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-fit">
-                    <div className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full cursor-pointer transition-all duration-300 ease-in-out py-[0.5rem] ~px-[0.75rem]/[1rem] hover:bg-[#111] bg-transparent">
-                      <button className="text-white font-semibold font-geist ~text-[0.75rem]/[1rem] leading-[160%] tracking-[-1.2%]">
-                        Enroll Now
-                      </button>
-                    </div>
+                         <EnrollButton variant="cta"/>
+
+                </div>
+   <div className=" p-[1px] ~rounded-[0.5rem]/[1rem] bg-gradient-to-l from-[#333333] to-[#111111] inline-block">
+                  <div className="flex items-center ~py-[0.5rem]/[0.75rem] bg-gradient-to-r  from-[#101010] to-[#171717] px-[0.75rem] ~rounded-[0.5rem]/[1rem]">
+                    <p className="font-satoshi ~text-[0.725rem]/[1.15rem] leading-[1.25rem] text-[#FFFFFF] ">
+                      EMI option Available =
+                    </p> {" "}
+                    <p className="bg-gradient-to-b ml-1 from-[#F3C070] to-[#EAB877] ~text-[0.725rem]/[1.15rem] font-medium bg-clip-text text-transparent ">
+                     ₹27,296 × 3 months
+                    </p>
                   </div>
-                </div>
-                <div className="flex">
-                  <p className="font-satoshi ~text-[0.625rem]/[0.8125rem] leading-[1.25rem] text-[#FFFFFF] ">
-                    EMI option Available =
-                  </p> {" "}
-                  <p className="bg-gradient-to-b ml-1 from-[#F3C070] to-[#EAB877] ~text-[0.625rem]/[0.8125rem] font-medium bg-clip-text text-transparent ">
-                   ₹27,296 × 3 months
-                  </p>
-                </div>
+   </div>
               </div>{" "}
               <div
                 className="shrink-0 w-full md:~w-[9.9475rem]/[32.5rem]
@@ -222,10 +218,10 @@ const Hero = () => {
             key={i}
             className="relative  p-[1px] bg-gradient-to-br w-fit ~rounded-[0.625rem]/[1rem] from-[#333333] h-full to-[#111111] "
           >
-            <div className="~max-w-[10.75rem]/[18.75rem] ~p-[0.75rem]/[1.5rem]   ~rounded-[0.625rem]/[1rem] bg-gradient-to-t from-[#1a1a19] to-[#201f1c]">
+            <div className="~min-w-[10rem]/[18.75rem] ~p-[0.75rem]/[1.5rem]   ~rounded-[0.625rem]/[1rem] bg-gradient-to-t from-[#1a1a19] to-[#201f1c]">
               <div className="flex items-center ~gap-[0.625rem]/[1rem]">
-                <div className="relative ~size-[1.3722555637rem]/[2.8779070377rem] rounded-full">
-                  <Image src={review.image} alt="" fill />
+                <div className="relative ~size-[1.3722555637rem]/[2.8779070377rem] ">
+                  <Image src={review.image} alt="" fill className="rounded-full object-cover object-top"/>
                 </div>
                 <div className="flex flex-col justify-between h-full">
                   <h3 className="text-[#F4F0FF] font-medium md:font-bold leading-[120%] ~text-[0.625rem]/[1.04625rem]">

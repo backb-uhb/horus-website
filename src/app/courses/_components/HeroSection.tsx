@@ -86,7 +86,7 @@ const HeroSection = () => {
               Risk Management
             </div>
             <Image
-              src={"/images/image-courses5.png"}
+              src={"/images/course-hero-img.png"}
               alt="img"
               fill
               className="object-cover"

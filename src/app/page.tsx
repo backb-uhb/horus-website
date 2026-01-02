@@ -9,6 +9,7 @@ import { Metadata } from "next";
 import { frontendApi } from "@/api/api";
 import { THomeData } from "@/api/type";
 import Testimonials from "./_components/TestimonialSection";
+import TradingViewTicker from "@/components/TradingViewTicker";
 
 const faqData = [
   {
@@ -57,24 +58,30 @@ const getHomePage = async (): Promise<THomeData> => {
 const page = async () => {
   const response = await getHomePage();
   return (
-    <div className="">
-      <Herosection />
-
-      <Experience />
-      <VideoSection />
-      <CourseSection />
-      <TradingAcademySection />
-
-      <Testimonials testimonials={response?.testimonials} />
-
-      <FAQSection
-        textColor="text-[#8F8F8F]"
-        faqData={faqData}
-        title="Frequently Asked "
-        span="Questions"
-        description=" Everything you need to know before stepping into the markets with Horus."
-      />
-    </div>
+<>
+    <div className=" top-0 left-0 right-0 w-full z-[4001]">
+        <TradingViewTicker />
+      </div>
+      <div className="">
+  
+        <Herosection />
+  
+        <Experience />
+        <VideoSection />
+        <CourseSection />
+        <TradingAcademySection />
+  
+        <Testimonials testimonials={response?.testimonials} />
+  
+        <FAQSection
+          textColor="text-[#8F8F8F]"
+          faqData={faqData}
+          title="Frequently Asked "
+          span="Questions"
+          description=" Everything you need to know before stepping into the markets with Horus."
+        />
+      </div>
+</>
   );
 };
 
