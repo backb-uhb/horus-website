@@ -69,7 +69,7 @@ export default function EnrollModal({ isOpen, onClose }: EnrollModalProps) {
 
   return (
     <Transition appear show={isOpen} as={Fragment}>
-      <Dialog as="div" className="relative z-[99999]" onClose={onClose}>
+      <Dialog as="div" className="relative z-[99999] " onClose={onClose}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -92,7 +92,7 @@ export default function EnrollModal({ isOpen, onClose }: EnrollModalProps) {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Dialog.Panel className="w-full max-w-md rounded-2xl bg-[#0f0f0f] p-6 shadow-xl">
+            <Dialog.Panel className="w-full max-w-md rounded-2xl bg-[#0f0f0f] overflow-hidden p-6 shadow-xl">
               <div className="mb-4 flex items-center justify-between">
                 <Dialog.Title className="text-xl font-semibold text-white">
                   Enroll Now

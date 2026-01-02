@@ -122,10 +122,10 @@ const Header = () => {
                 <div className="~py-[0.5rem]/[1rem]  border-b-white/30">
                   <Link
                     onClick={() => setOpen(false)}
-                    href=""
+                    href="/blog"
                     className=" text-white/50 block hover:text-white duration-300 ease-in-out transition-all underline-offset-4 decoration-1"
                   >
-                    Club
+                    Blog
                   </Link>
                 </div>
               </div>

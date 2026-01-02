@@ -1,4 +1,5 @@
 import axiosClient from "./config/axiosClient";
+import { TAllBlog, TBlogs } from "./type";
 
 export const frontendApi = {
   getHomeTestimonials: async () => {
@@ -53,7 +54,27 @@ export const frontendApi = {
 
       return null;
     }
-  }
+  },
+    getBlogs: async ():Promise<TAllBlog | null> => {
+    try {
+      const response = await axiosClient.get("blogs");
+
+      return response.data.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
+
+  getBlogsInner: async (slug: string): Promise<TBlogs | null> => {
+    try {
+      const response = await axiosClient.get(`/blogs/${slug}`);
+      return response.data.data;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  },
 
 };
 

@@ -51,7 +51,7 @@ export default function RootLayout({
       >
         <IphoneViewportGuard />
         <ProgressProvider>
-          <Toaster position="top-center" containerClassName="mt-4" />
+          <Toaster position="top-center" containerClassName="mt-4 !z-[100000]" />
           <Header />
           {children}
           <Footer />

@@ -19,7 +19,7 @@ const ReviewCard = ({
   const rating = Math.round(Number(ratings));
   return (
     <div className="relative  p-[1px] bg-gradient-to-br w-fit rounded-[1rem] from-[#333333] h-full to-[#111111] ">
-      <div className="~max-w-[15.75rem]/[31.3953495026rem] ~p-[0.75rem]/[1.5rem]   rounded-[1rem] bg-gradient-to-t from-[#1a1a19] to-[#201f1c]">
+      <div className="~max-w-[15.75rem]/[31.3953495026rem] ~p-[0.75rem]/[1.5rem] ~min-h-[8rem]/[12rem]  rounded-[1rem] bg-gradient-to-t from-[#1a1a19] to-[#201f1c]">
         <div className="flex items-center ~gap-[0.625rem]/[1rem]">
           <div className="relative ~size-[1.3722555637rem]/[2.8779070377rem] overflow-hidden rounded-full">
             <Image
@@ -49,10 +49,12 @@ const ReviewCard = ({
 type Props = {
   testimonials: Ttestimonials[];
 };
-const Testimonials = ({ testimonials }: Props) => {
+const Testimonials = ({ testimonials = [] }: Props) => {
   console.log("testimonials", testimonials);
-  const firstRow = testimonials.slice(0, testimonials.length / 2);
-  const secondRow = testimonials.slice(testimonials.length / 2);
+   const firstRow = testimonials.slice(0, Math.ceil(testimonials.length / 2));
+  const secondRow = testimonials.slice(Math.ceil(testimonials.length / 2));
+  // const firstRow = testimonials.slice(0, testimonials.length / 2);
+  // const secondRow = testimonials.slice(testimonials.length / 2);
   return (
     <section>
       <div className=" mx-auto text-center bg-black relative z-[100] ~pt-[0]/[2.375rem]">

@@ -115,6 +115,45 @@ lite-youtube {
     linear-gradient(to bottom right, #333333, #111111) border-box;
 }
 
+/* Mobile (default) */
+.new-description p {
+  padding-bottom: 1.25rem;
+}
+
+.new-description h3 {
+  padding-bottom: 0.75rem;
+  font-family: var(--font-merriweather);
+  font-weight: 400;
+  font-size: 1.325rem; /* mobile */
+  line-height: 130%;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .new-description p {
+    padding-bottom: 1.75rem;
+  }
+
+  .new-description h3 {
+    font-size: 1.75rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .new-description p {
+    padding-bottom: 2rem;
+  }
+
+  .new-description h3 {
+    font-size: 2.25rem;
+    line-height: 140%;
+  }
+}
+
+
+
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none !important;

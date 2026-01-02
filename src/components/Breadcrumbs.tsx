@@ -10,7 +10,7 @@ type Props = {
 
 const Breadcrumbs = ({ activepage, innerpage, activePageLink }: Props) => {
   return (
-    <div className="font-satoshi font-medium items-center relative z-[50] ~text-[0.625rem]/[0.875rem] leading-[105%] tracking-[0%] flex gap-[0.5rem] ~pt-[5rem]/[8.875rem]  ~pl-[0.625rem]/[7rem]">
+    <div className="font-satoshi font-medium items-center  relative z-[50] ~text-[0.625rem]/[0.875rem] leading-[105%] tracking-[0%] md:flex hidden gap-[0.5rem] ~pt-[5rem]/[8.875rem]  ~pl-[0.625rem]/[7rem]">
       <Link href={"/"}>
         <div className="text-[#292D32] duration-300 ease-in-out transition-all hover:text-[#FFFFFF8F]">
           {" "}

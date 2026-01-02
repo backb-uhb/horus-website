@@ -9,14 +9,14 @@ import EnrollCTA from "./EnrollCta";
 
 const courses = [
     {
-    image: "/images/courseImage2.png",
+    image: "/images/courseImage.png",
     title: "Online Trading Course",
     link: "/courses/online",
     description:
       "In 30 days, you'll experience the rhythm of the markets like never before. Each week focuses on a new layer of mastery- from understanding live setups to handling pressure like a pro . No theory overload . No stale charts . Just action, insights, and growth in real time",
   },
   {
-    image: "/images/courseImage.png",
+    image: "/images/blogs/blog-9.jpg",
     title: "Technical Course",
     link: "/courses/technical",
     description:
