@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from 'react';
 
 export default function ComingSoon() {
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const subtitleRef = useRef<HTMLParagraphElement>(null);
   const particlesRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -27,7 +26,7 @@ export default function ComingSoon() {
       });
 
       // Animate particles
-      particlesRef.current.forEach((particle, i) => {
+      particlesRef.current.forEach((particle) => {
         gsap.to(particle, {
           y: '-=100',
           x: '+=50',
@@ -72,7 +71,6 @@ export default function ComingSoon() {
 
   return (
     <div className="relative min-h-screen bg-black flex items-center justify-center overflow-hidden">
-      {/* Particles */}
       <div className="absolute inset-0">
         {[...Array(30)].map((_, i) => (
           <div
@@ -89,7 +87,6 @@ export default function ComingSoon() {
         ))}
       </div>
 
-      {/* Content */}
       <div className="text-center relative z-10">
         <h1 
           ref={titleRef}

@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Logo from "./Logo";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import TwitterSvg from "@/components/svg/TwitterSvg";
