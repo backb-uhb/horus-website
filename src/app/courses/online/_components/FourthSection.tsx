@@ -54,7 +54,7 @@ const FourthSection = () => {
 
           <div className="bg-gradient-to-t ~px-[0.75rem]/[2.5rem] from-[#171717] to-[#101010] ~rounded-[1.4119rem]/[3rem] ~py-[1rem]/[2.5rem]">
             <p className="text-white font-satoshi ~text-[0.75rem]/[1.5rem] leading-[120%]">
-       In 30 days, experience real market rhythm through live setups and hands-on learning. No theory overload, no stale charts—just action, insights, and growth in real time. Includes monthly catch-ups for focused guidance and 1-month Horus Club access to learn and grow with driven traders.
+       In 2 months, experience real market rhythm through live setups and hands-on learning. No theory overload, no stale charts—just action, insights, and growth in real time. Includes monthly catch-ups for focused guidance and 1-month Horus Club access to learn and grow with driven traders.
             </p>{" "}
             <div className=" font-satoshi font-medium ~text-[0.75rem]/[1.375rem] leading-[120%] tracking-[2%] ~pt-[1.25rem]/[2.5rem]   text-[#FFF4E3] ">
               <div className="flex max-md:flex-wrap md:flex-row  ~gap-[0.5rem]/[0.875rem] items-center">
@@ -63,7 +63,7 @@ const FourthSection = () => {
                   Certified
                 </div>
                 <div className="flex shrink-0 items-center ~gap-[0.5rem]/[0.75rem]">
-                  <ClockSvg className="~size-[0.875rem]/[1.875rem]" />1 Month
+                  <ClockSvg className="~size-[0.875rem]/[1.875rem]" />2 Month
                 </div>
                 <div className="flex shrink-0 items-center gap-[0.75rem] ">
                   <PeopleSvg className="~size-[1rem]/[2rem] " />

@@ -21,7 +21,7 @@ interface ChecklistSectionProps {
 const CourseDetails = () => {
   const onlineChecklistItems: ChecklistItem[] =  [
     { id: 1, text: "Basic to advanced theory", completed: true },
-    { id: 2, text: "Online pactical sessions (live)", completed: true },
+    { id: 2, text: "Online pactical sessions ( In Live Trading Floor )", completed: true },
     { id: 3, text: "Psychology session", completed: true },
     { id: 4, text: "Guest lectures", completed: true },
     { id: 5, text: "Club access", completed: true },
@@ -33,7 +33,7 @@ const CourseDetails = () => {
 
   const beginnerChecklistItems: ChecklistItem[] =  [
     { id: 1, text: "Basic to advanced theory", completed: true },
-    { id: 2, text: "Practical sessions", completed: true },
+    { id: 2, text: "Practical sessions ( In Live Trading Floor )", completed: true },
     { id: 3, text: "Psychology session", completed: true },
     { id: 4, text: "Guest lectures", completed: true },
     { id: 5, text: "Club access", completed: true },
@@ -44,7 +44,7 @@ const CourseDetails = () => {
 
   const advancedChecklistItems: ChecklistItem[] = [
     { id: 1, text: "Basic to advanced theory", completed: true },
-    { id: 2, text: "Practical sessions", completed: true },
+    { id: 2, text: "Practical sessions ( In Live Trading Floor )", completed: true },
     { id: 3, text: "Psychology session", completed: true },
     { id: 4, text: "Guest lectures", completed: true },
     { id: 5, text: "Club access", completed: true },
@@ -69,7 +69,7 @@ const CourseDetails = () => {
               )}
             </div>
             <span
-              className={`~text-[0.75rem]/[1.125rem] leading-[120%] tracking-[2%] font-normal font-satoshi ${
+              className={`~text-[0.75rem]/[1.125rem] leading-[120%] tracking-[0.02em] font-normal font-satoshi ${
                 item.completed
                   ? "text-[#FFFFFF]"
                   : "text-[#666666] line-through"
@@ -176,7 +176,7 @@ const CourseDetails = () => {
         <div className="relative flex flex-col  justify-between h-full items-center p-[1px] bg-gradient-to-br overflow-hidden from-[#333333]  to-[#111111] ~rounded-[1.4119rem]/[3rem]">
           <div className="bg-gradient-to-br from-[#333333] to-[#111111] w-full ">
             <div className="flex items-center gap-[0.5rem]  justify-between ~px-[0.75rem]/[1.875rem] ~py-[0.625rem]/[1.5225rem]">
-              <div className="bg-gradient-to-r from-[#FBCC83] to-[#FFC770] text-transparent bg-clip-text font-merriweather ~text-[0.875rem]/[1.425rem] leading-[120%] md:tracking-[-0.047em] tracking-[-0.08em]">
+              <div className="bg-gradient-to-r from-[#FBCC83] to-[#FFC770] text-transparent bg-clip-text font-merriweather ~text-[0.875rem]/[1.425rem] leading-[120%] md:tracking-[-0.047em] tracking-[0.02em]">
                 Technical Course
               </div>
               <div className="relative p-[1px] h-fit  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-fit">
@@ -190,14 +190,14 @@ const CourseDetails = () => {
 
             <div className="bg-gradient-to-t from-[#171717] to-[#101010] ~rounded-[1.4119rem]/[3rem] ~pt-[1rem]/[2.5rem]">
               <ChecklistSection items={beginnerChecklistItems} />
-              <div className=" font-satoshi font-medium ~text-[0.75rem]/[1.125rem] leading-[120%] tracking-[2%] ~px-[0.75rem]/[2.5rem]  text-[#FFF4E3] ">
+              <div className=" font-satoshi font-medium ~text-[0.75rem]/[1.125rem] leading-[120%] tracking-[0.02em] ~px-[0.75rem]/[2.5rem]  text-[#FFF4E3] ">
                 <div className="flex ~gap-[0.5rem]/[0.875rem]">
                   <div className="flex ~gap-[0.5rem]/[0.75rem] items-center">
                     <CertificateSvg className="~size-[0.875rem]/[1.625rem] ]" />{" "}
                     Certified
                   </div>
                   <div className="flex items-center ~gap-[0.5rem]/[0.75rem]">
-                    <ClockSvg className="~size-[0.875rem]/[1.625rem]" />3 Months
+                    <ClockSvg className="~size-[0.875rem]/[1.625rem]" />2 Months
                   </div>
                 </div>
                 <div className="flex items-center gap-[0.75rem] ~pt-[0.5rem]/[0.875rem]">
@@ -235,7 +235,7 @@ const CourseDetails = () => {
         <div className="relative flex flex-col  justify-between h-full items-center p-[1px] bg-gradient-to-br overflow-hidden from-[#333333]  to-[#111111] ~rounded-[1.4119rem]/[3rem]">
           <div className="bg-gradient-to-br from-[#333333] to-[#111111] w-full ">
             <div className="flex items-center gap-[0.5rem]  justify-between ~px-[0.75rem]/[1.875rem] ~py-[0.625rem]/[1.5225rem]">
-              <div className="bg-gradient-to-r from-[#FBCC83] to-[#FFC770] text-transparent bg-clip-text font-merriweather ~text-[0.875rem]/[1.425rem] leading-[120%] md:tracking-[-0.047em] tracking-[-0.08em]">
+              <div className="bg-gradient-to-r from-[#FBCC83] to-[#FFC770] text-transparent bg-clip-text font-merriweather ~text-[0.875rem]/[1.425rem] leading-[120%] md:tracking-[-0.047em] tracking-[0.02em]">
                 Advanced Technical
               </div>
               <div className="relative p-[1px] h-fit  rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-fit">
@@ -249,14 +249,14 @@ const CourseDetails = () => {
 
             <div className="bg-gradient-to-t from-[#171717] to-[#101010] ~rounded-[1.4119rem]/[3rem] ~pt-[1rem]/[2.5rem]">
               <ChecklistSection items={advancedChecklistItems} />
-              <div className=" font-satoshi font-medium ~text-[0.75rem]/[1.125rem] leading-[120%] tracking-[2%] ~px-[0.75rem]/[2.5rem]  text-[#FFF4E3] ">
+              <div className=" font-satoshi font-medium ~text-[0.75rem]/[1.125rem] leading-[120%] tracking-[0.02em] ~px-[0.75rem]/[2.5rem]  text-[#FFF4E3] ">
                 <div className="flex ~gap-[0.5rem]/[0.875rem]">
                   <div className="flex ~gap-[0.5rem]/[0.75rem] items-center">
                     <CertificateSvg className="~size-[0.875rem]/[1.625rem] ]" />{" "}
                     Certified
                   </div>
                   <div className="flex items-center ~gap-[0.5rem]/[0.75rem]">
-                    <ClockSvg className="~size-[0.875rem]/[1.625rem]" />6 Months
+                    <ClockSvg className="~size-[0.875rem]/[1.625rem]" />2 Months
                   </div>
                 </div>
                 <div className="flex items-center gap-[0.75rem] ~pt-[0.5rem]/[0.875rem]">

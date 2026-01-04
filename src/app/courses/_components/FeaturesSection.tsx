@@ -17,7 +17,7 @@ const textArray = [
 const FeaturesSection = () => {
   return (
     <div className="relative z-10 bg-black">
-      <div className="flex ~px-[0.6875rem]/[12.5rem] flex-col items-center ~py-[3rem]/[7.1875rem] text-white ">
+      <div className="flex ~px-[0.6875rem]/[12.5rem] flex-col items-center ~py-[2rem]/[7.1875rem] text-white ">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ~gap-[0.5rem]/[1.5rem]  ">
           <div className="col-span-1 sm:col-span-2  p-[1px] bg-gradient-to-br overflow-hidden from-[#333333] h-full to-[#111111] ~rounded-[1.4119rem]/[3rem]">
             <div className=" flex justify-between h-full  flex-col bg-gradient-to-b to-[#0f0f0f] from-[#121212] ~rounded-[1.4119rem]/[3rem] overflow-hidden ">
@@ -41,11 +41,11 @@ const FeaturesSection = () => {
                 </div>
                 <Link href={"https://t.me/trade_egram"}  target="_blank"
   rel="noopener noreferrer">
-                  <div className="font-normal font-merriweather ~text-[0.875rem]/[1.5rem]  leading-[120%] tracking-[-0.0163rem] text-[#F7F8F8] ">
+                  <div className="font-normal font-merriweather ~text-[0.75rem]/[1.5rem]  leading-[130%] tracking-[-0.0163rem] text-[#F7F8F8] ">
                  Exclusive Telegram Access
                   </div>
                   <div className="pt-[0.625rem]">
-                    <button className="flex items-center gap-[0.5rem]  hover:scale-110 duration-300 transition-all ease-in-out text-[#FFFFFF] font-satoshi font-normal  text-[0.6913rem] leading-[0.79rem] tracking-[2%] gradient-bg-fill-new gradient-border ~px-[0.75rem]/[1rem] ~py-[0.35rem]/[0.5rem]">
+                    <button className="flex items-center ~gap-[0.35rem]/[0.5rem]  hover:scale-110 duration-300 text-nowrap transition-all ease-in-out text-[#FFFFFF] font-satoshi font-normal  text-[0.6913rem] leading-[0.79rem] tracking-[0.02em] gradient-bg-fill-new gradient-border ~px-[0.75rem]/[1rem] ~py-[0.35rem]/[0.5rem]">
                       <div className="relative ~w-[0.8rem]/[1.125rem] ~h-[0.6rem]/[0.8562rem] ">
                         <Image
                           src={"/images/symbol-rounded.svg"}
@@ -91,7 +91,7 @@ Stay connected, build clarity, and grow alongside a disciplined community.
                   />
                 </div>
               </div>
-              <div className="~px-[0.5rem]/[1.9375rem] h-full">
+              <div className="~px-[0.75rem]/[1.9375rem] h-full">
                 <div className="font-normal font-merriweather ~text-[0.875rem]/[1.5rem] text-center leading-[120%] tracking-[-0.0163rem] text-[#F7F8F8]  ~pt-[1rem]/[2.1606rem]">
                   Monthly Catch-ups
                 </div>
@@ -106,17 +106,15 @@ Stay connected, build clarity, and grow alongside a disciplined community.
           <div className="md:col-span-3 col-span-1 p-[1px] bg-gradient-to-br overflow-hidden from-[#333333] h-full to-[#111111] ~rounded-[1.4119rem]/[3rem]">
   <div className="flex flex-col bg-gradient-to-b to-[#0f0f0f] h-full from-[#121212] ~rounded-[1.4119rem]/[3rem] overflow-hidden relative">
     
-    {/* Lottie Animation - Behind head but within box */}
     <div className="absolute inset-0 flex items-center justify-start opacity-30 pointer-events-none">
       <Lottie 
         animationData={chartAnimation} 
         loop={true}
-        className="~w-[15rem]/[30rem] ~h-[10rem]/[20rem]"
+        className=" md:w-[40%] lg:w-[45%] max-md:w-full h-full"
       />
     </div>
 
     <div className="flex md:justify-evenly md:flex-row flex-col-reverse justify-center items-center relative z-10">
-      {/* Head Image */}
       <div className="relative md:self-end ~w-[7.0625rem]/[12rem] ~h-[9rem]/[14rem] pt-[1.875rem]">
         <Image
           src={"/images/features-head-img.svg"}
@@ -126,12 +124,11 @@ Stay connected, build clarity, and grow alongside a disciplined community.
         />
       </div>
 
-      {/* Text Content */}
-      <div className="md:~py-[2rem]/[5.125rem] py-[1rem] flex flex-col items-center ~px-[0.5rem]/[1rem]">
+      <div className="md:~py-[2rem]/[5.125rem] py-[1.5rem] flex flex-col items-center ~px-[0.75rem]/[1rem]">
         <div className="font-normal font-merriweather ~text-[0.875rem]/[1.5rem] leading-[120%] tracking-[-0.0163rem] text-[#F7F8F8]">
           Trading Psychology
         </div>
-        <div className="font-inter ~text-[0.625rem]/[0.9844rem] leading-[120%] max-w-[45ch] tracking-[0%] text-[#FFFFFF] font-normal ~pt-[0.5rem]/[1rem]">
+        <div className="font-inter ~text-[0.625rem]/[0.9844rem] text-center leading-[120%] max-w-[45ch] tracking-[0%] text-[#FFFFFF] font-normal ~pt-[0.5rem]/[1rem]">
           Fear of losing or being wrong often leads to costly trading
           mistakes. We offer 1-on-1 sessions to help students overcome
           emotional hurdles and build a strong, positive mindset.

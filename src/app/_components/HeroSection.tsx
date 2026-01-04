@@ -9,7 +9,7 @@ const Herosection = () => {
   return (
     <div className=" sticky top-0 w-full h-screen   ">
       <div className="relative flex flex-col items-center overflow-hidden">
-        <div className="relative px-[1rem] w-full h-[100vh] flex flex-col ">
+        <div className="relative  px-[1rem] w-full h-[100vh] flex flex-col  ">
           <div className="">
             <Image
               src={"/images/bg-hero.png"}
@@ -19,7 +19,7 @@ const Herosection = () => {
             />
             <div className="bg-gradient-to-t from-black to-transparent absolute inset-0 z-10"></div>
 
-            <div className="absolute flex flex-col items-center bottom-[25%] w-full   z-[5000000]">
+            <div className="relative flex h-[100svh] px-[1rem] justify-center flex-col items-center  w-full z-[5000000]">
               <h1
                 className="font-merriweather font-normal md:font-bold ~text-[1.5rem]/[3.75rem] leading-[110%]  tracking-[-0.07rem]
                 text-center 

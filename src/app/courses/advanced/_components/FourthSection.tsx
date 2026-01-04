@@ -68,7 +68,7 @@ const FourthSection = () => {
                   Certified
                 </div>
                 <div className="flex shrink-0 items-center ~gap-[0.5rem]/[0.75rem]">
-                  <ClockSvg className="~size-[0.875rem]/[1.875rem]" />6 Months
+                  <ClockSvg className="~size-[0.875rem]/[1.875rem]" />2 Months
                 </div>
                 <div className="flex shrink-0 items-center gap-[0.75rem] ">
                   <PeopleSvg className="~size-[1rem]/[2rem] " />

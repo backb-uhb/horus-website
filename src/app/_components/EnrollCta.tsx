@@ -12,7 +12,7 @@ const EnrollCTA = () => {
       <div className="relative p-[1px] rounded-full bg-gradient-to-l from-[#F3C070] to-[#3B2A16] w-fit">
         <div
           onClick={() => setOpen(true)}
-          className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full cursor-pointer transition-all duration-300 ease-in-out ~py-[0.375rem]/[0.5rem] ~px-[0.375rem]/[1rem]  hover:bg-[#000] bg-transparent"
+          className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full cursor-pointer transition-all duration-300 ease-in-out ~py-[0.375rem]/[0.5rem] ~px-[0.75rem]/[1rem]  hover:bg-[#000] bg-transparent"
         >
           <button
             type="button"

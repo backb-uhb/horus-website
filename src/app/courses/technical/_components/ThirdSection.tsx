@@ -196,7 +196,7 @@ const ThirdSection = () => {
 
             <div className="text-white  ~pt-[0.3rem]/[0.5rem] ~pb-[0.75rem]/[1rem] ~px-[0.75rem]/[1rem]">
               <h2 className="font-bold leading-[1.875rem] text-[0.875rem]">
-                Meera, Trainer
+                Manu, Trainer
               </h2>
               <p className=" leading-[120%] text-[0.875rem]">
                 Gain insights directly from Meera, our seasoned trading mentor,

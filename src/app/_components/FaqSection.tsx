@@ -29,7 +29,7 @@ const FAQSection = ({
   return (
     <div className="bg-black relative z-50 ">
       <div className=" text-white max-w-[1440px] mx-auto  bg-black ~pt-[3.75rem]/[6.25rem] ~pb-[0.5rem]/[1.25rem]">
-        <div className="flex flex-col items-center ~px-[0.625rem]/[3.75rem]">
+        <div className="flex flex-col items-center ~px-[0.75rem]/[3.75rem]">
           <div
             className="inline-block bg-[#342511] backdrop-blur-[6px]
             shadow-[inset_0_-7px_11px_0_rgba(255,255,255,0.15)]
@@ -58,7 +58,7 @@ const FAQSection = ({
           </p>
         </div>
 
-        <div className="~pt-[2rem]/[7rem] ~px-[0.625rem]/[18.125rem]">
+        <div className="~pt-[2rem]/[7rem] ~px-[0.75rem]/[18.125rem]">
           {faqData.map((item, index) => {
             const isOpen = openIndex === index;
 

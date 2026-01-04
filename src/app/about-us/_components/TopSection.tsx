@@ -81,9 +81,9 @@ const TopSection = () => {
   ];
 
   return (
-    <div ref={ref} className=" bg-black ">
+    <div ref={ref} className=" bg-black max-md:pt-[3rem]">
       <Breadcrumbs activepage="About Us" />
-      <div className="~px-[0.625rem]/[7.4375rem] ~pb-[2.5rem]/[11.125rem] ~pt-[3.75rem]/[7rem]">
+      <div className="~px-[0.75rem]/[7.4375rem] ~pb-[2.5rem]/[11.125rem] ~pt-[3.75rem]/[7rem]">
         <div className="font-satoshi font-medium ~text-[1.375rem]/[4rem] leading-[105%] ~tracking-[-0.07rem]/[-0.0387rem] ~pr-[0]/[15rem] text-[#FFFFFF]">
           {lines.map((line, i) => (
             <motion.p key={i} style={lineAnimations[i]}>

@@ -13,22 +13,20 @@ const courses = [
     title: "Online Trading Course",
     link: "/courses/online",
     description:
-      "In 30 days, you'll experience the rhythm of the markets like never before. Each week focuses on a new layer of mastery- from understanding live setups to handling pressure like a pro . No theory overload . No stale charts . Just action, insights, and growth in real time",
+    "Study in a live trading floor environment.From basic to advanced theory, apply what you learn through live online practical sessions. Build discipline with psychology training, gain insights from guest traders, and stay connected with exclusive club access."
   },
   {
     image: "/images/blogs/blog-9.jpg",
     title: "Technical Course",
     link: "/courses/technical",
     description:
-      "Unlock a structured, mentor-led program designed to equip you with practical trading skills from day one. Gain deep insights into market structures, chart patterns, and psychological strategies used by top traders. Includes exclusive live trading floor access and a blend of technical, fundamental, and risk management modules.",
-  },
+"Start with studying in a live trading floor environment. Learn basic to advanced technical theory, apply it through practical live sessions, and build consistency with focused psychology training. Get 15 days of live trading floor access, learn directly from experts in guest lectures, and continue your journey with exclusive club access."  },
   {
     image: "/images/courseImage2.png",
     title: "Advanced Technical Course",
     link: "/courses/advanced",
     description:
-      "This high-impact course is built for traders ready to go beyond the basics. Dive into advanced market theories, price action mastery, liquidity zones, order flow, and institutional trading techniques. Learn through real-time live floor sessions, case studies, and expert mentorship. Designed for serious traders aiming to scale skill—and capital—with precision.",
-  },
+"Start with studying in a live trading floor with a funded account. Advance from basic to professional-level theory, sharpen execution through intensive practical sessions, and master consistency with psychology training. Get 30 days of live trading floor access, learn from industry experts in guest lectures, unlock exclusive club access, and move toward real careers with placement opportunities and trading capital support."  },
 ];
 
 const CourseSection = () => {

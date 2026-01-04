@@ -3,36 +3,32 @@
 import { ButtonAnimation } from "@/components/ButtonAnimation";
 import ArrowSvg from "@/components/svg/ArrowSvg";
 import ButtonBrown from "@/components/svg/ButtonBrown";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext } from "@/components/ui/carousal";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousal";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "motion/react";
 
-
 const slides = [
   {
     image: "/images/founder-img.png",
     title: "Shanu",
-    subtitle: "CEO & Trainer",
+    subtitle: "Founder & Trainer",
     heading: "Guiding",
     span: "The Vision",
     description:
       "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging. ",
   },
   {
-    image: "/images/anas.png",
-    title: "Anas",
-    subtitle: "Trainer",
-    heading: "Master",
-    span: "The Markets",
-    description:
-      "Anas is a dedicated trading mentor at Horus Academy, focused on live market execution and structured trade planning. He emphasizes discipline, risk control, and repeatable setups, helping students turn strategy into consistent action in real market conditions.",
-  },
-  {
     image: "/images/nasif.png",
     title: "Nasif",
-    subtitle: "Business Development Head",
+    subtitle: "Sales Head",
     heading: "Build",
     span: "With Vision",
     description:
@@ -47,11 +43,10 @@ const slides = [
     description:
       "LSP is a skilled trading mentor at Horus Academy, specializing in structured market analysis and disciplined execution. His practical approach and clarity help students develop consistency, confidence, and a strong trading foundation.",
   },
+  
 ];
 
-
 const InstructorProfile = () => {
- 
   const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -77,107 +72,117 @@ const InstructorProfile = () => {
         </p>
       </div>
 
-      <div className="~pt-[2.5rem]/[5rem] ~pb-[3rem]/[4.625rem] overflow-hidden">
-  <Carousel
-        plugins={[plugin.current]}
-        opts={{
-          align: "center",
-          loop: true,
-        }}
-        // onMouseEnter={plugin.current.stop}
-        // onMouseLeave={plugin.current.reset}
-        className="relative "
-      >
-        <CarouselNext className=" absolute   ~right-[0.5rem]/[2rem] -translate-y-1/2 top-1/2 z-10 cursor-pointer">
-          <ButtonAnimation>
-            <div className="relative hover:scale-110 duration-300 transition-all ease-in-out w-fit p-[1px] bg-gradient-to-br rounded-full from-[#333333] h-full to-[#111111]">
-              <div className="~size-[2rem]/[3.75rem] rounded-full flex justify-center items-center bg-gradient-to-br from-[#111214] to-[#111214]">
-                <ArrowSvg className="~w-[0.3rem]/[0.5rem] text-[#DFAB60]" />
+      <div className="~pt-[0rem]/[5rem] ~pb-[3rem]/[4.625rem] overflow-hidden">
+        <Carousel
+          plugins={[plugin.current]}
+          opts={{
+            align: "center",
+            loop: true,
+          }}
+          // onMouseEnter={plugin.current.stop}
+          // onMouseLeave={plugin.current.reset}
+          className="relative "
+        >
+          <CarouselNext className=" absolute   ~right-[0.5rem]/[2rem] -translate-y-1/2 top-1/2 z-10 cursor-pointer">
+            <ButtonAnimation>
+              <div className="relative hover:scale-110 duration-300 transition-all ease-in-out w-fit p-[1px] bg-gradient-to-br rounded-full from-[#333333]  to-[#111111]">
+                <div className="~size-[2rem]/[3.75rem] rounded-full flex justify-center items-center bg-gradient-to-br from-[#111214] to-[#111214]">
+                  <ArrowSvg className="~w-[0.3rem]/[0.5rem] text-[#DFAB60]" />
+                </div>
               </div>
-            </div>
-          </ButtonAnimation>
-        </CarouselNext>
-        <CarouselContent className="~pt-[2.5rem]/[5rem]  flex  ~py-[3rem]/[4.625rem]  ">
-          {slides.map((item, i) => (
-            <CarouselItem
-              key={i}
-              className="~w-[18.75rem]/[22.5rem] basis-1/1 shrink-0 ~h-[14.3092088699rem]/[33.6875rem] ~mr-[2rem]/[3rem] cursor-pointer"
-              style={{ perspective: "1000px" }}
-              onMouseEnter={() => {
-                plugin.current.stop();
-                setFlippedIndex(i);
-              }}
-              onMouseLeave={() => {
-                plugin.current.reset();
-                setFlippedIndex(null);
-              }}
-            >
-              <motion.div
-                className="relative w-full h-full"
-                style={{ transformStyle: "preserve-3d" }}
-                animate={{ rotateY: flippedIndex === i ? 180 : 0 }}
-                transition={{ duration: 0.7, ease: "easeInOut" }}
+            </ButtonAnimation>
+          </CarouselNext>
+          <CarouselPrevious className="absolute ~left-[0.5rem]/[2rem] -translate-y-1/2 top-1/2 z-10 cursor-pointer">
+            <ButtonAnimation>
+              <div className="relative hover:scale-110 duration-300 transition-all ease-in-out w-fit p-[1px] bg-gradient-to-br rounded-full from-[#333333] to-[#111111]">
+                <div className="~size-[2rem]/[3.75rem] rounded-full flex justify-center items-center bg-gradient-to-br from-[#111214] to-[#111214]">
+                  <ArrowSvg className="~w-[0.3rem]/[0.5rem] text-[#DFAB60] rotate-180" />
+                </div>
+              </div>
+            </ButtonAnimation>
+          </CarouselPrevious>
+
+          <CarouselContent className="~pt-[2.5rem]/[5rem]  flex  ~py-[3rem]/[4.625rem]  ">
+            {slides.map((item, i) => (
+              <CarouselItem
+                key={i}
+                className="~w-[18.75rem]/[22.5rem] basis-1/1 shrink-0 ~h-[20.25rem]/[33.6875rem] ~mr-[2rem]/[3rem] cursor-pointer"
+                style={{ perspective: "1000px" }}
+                onMouseEnter={() => {
+                  plugin.current.stop();
+                  setFlippedIndex(i);
+                }}
+                onMouseLeave={() => {
+                  plugin.current.reset();
+                  setFlippedIndex(null);
+                }}
               >
                 <motion.div
-                  className="absolute inset-0"
-                  style={{ backfaceVisibility: "hidden" }}
+                  className="relative w-full h-full"
+                  style={{ transformStyle: "preserve-3d" }}
+                  animate={{ rotateY: flippedIndex === i ? 180 : 0 }}
+                  transition={{ duration: 0.7, ease: "easeInOut" }}
                 >
-                  <div className="relative w-fit p-[1px] bg-gradient-to-br ~rounded-[0.5rem]/[1.25rem] from-[#333333] h-full to-[#111111]">
-                    <div className="~w-[18.75rem]/[22.5rem] relative ~rounded-[0.5rem]/[1.25rem] ~h-[14.3092088699rem]/[33.6875rem]">
-                      <Image
-                        src={item.image}
-                        fill
-                        className="object-cover ~rounded-[0.5rem]/[1.25rem]"
-                        alt=""
-                      />
+                  <motion.div
+                    className="absolute inset-0"
+                    style={{ backfaceVisibility: "hidden" }}
+                  >
+                    <div className="relative w-fit p-[1px] bg-gradient-to-br ~rounded-[0.5rem]/[1.25rem] from-[#333333] h-full to-[#111111]">
+                      <div className="~w-[18.75rem]/[22.5rem] relative ~rounded-[0.5rem]/[1.25rem] ~h-[20.25rem]/[33.6875rem]">
+                        <Image
+                          src={item.image}
+                          fill
+                          className="object-cover ~rounded-[0.5rem]/[1.25rem]"
+                          alt=""
+                        />
 
-                      <div className="~p-[0.5rem]/[1.5rem] absolute w-full bottom-0 text-white">
-                        <h2 className="font-medium ~text-[0.875rem]/[1.5rem] ~pb-[0.1rem]/[0.5rem] border-b w-full border-b-white/5">
-                          {item.title}
-                        </h2>
+                        <div className="~p-[0.5rem]/[1.5rem] absolute w-full bottom-0 text-white">
+                          <h2 className="font-medium ~text-[0.875rem]/[1.5rem] ~pb-[0.1rem]/[0.5rem] border-b w-full border-b-white/5">
+                            {item.title}
+                          </h2>
 
-                        <div className="flex justify-between items-center ~pt-[0.3rem]/[0.5rem]">
-                          <h4 className="~text-[0.75rem]/[1.125rem] leading-[100%]">
-                            {item.subtitle}
-                          </h4>
+                          <div className="flex justify-between items-center ~pt-[0.3rem]/[0.5rem]">
+                            <h4 className="~text-[0.75rem]/[1.125rem] leading-[100%]">
+                              {item.subtitle}
+                            </h4>
 
-                          <div className="~size-[1.25rem]/[2.25rem] flex justify-center items-center border border-[#FFFFFF1A] ~rounded-[0.3rem]/[0.5rem] shadow-[inset_0_-1px_0_0_#00000033,inset_0_0_0_0_#FFFFFF0D]">
-                            <ArrowSvg className="~w-[0.3rem]/[0.5rem]" />
+                            <div className="~size-[1.25rem]/[2.25rem] flex justify-center items-center border border-[#FFFFFF1A] ~rounded-[0.3rem]/[0.5rem] shadow-[inset_0_-1px_0_0_#00000033,inset_0_0_0_0_#FFFFFF0D]">
+                              <ArrowSvg className="~w-[0.3rem]/[0.5rem]" />
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
 
-                <motion.div
-                  className="absolute inset-0"
-                  style={{
-                    backfaceVisibility: "hidden",
-                    transform: "rotateY(180deg)",
-                  }}
-                >
-                  <div className="relative w-fit p-[1px] bg-gradient-to-br ~rounded-[0.5rem]/[1.25rem] from-[#DFAB6012] h-full to-[#AC814326]">
-                    <div className="~w-[18.75rem]/[22.5rem] text-white flex justify-center items-center ~px-[1rem]/[1.875rem] ~rounded-[0.5rem]/[1.25rem] relative ~h-[14.3092088699rem]/[33.6875rem] bg-gradient-to-br from-[#090909] to-[#25221c]">
-                      <div>
-                        <h2 className="font-merriweather leading-[120%] ~text-[1.25rem]/[3.0625rem]">
-                          {item.heading} <br />
-                          <span className="bg-gradient-to-r from-[#ECB45D] via-[#FFD38D] to-[#FFB644] bg-clip-text text-transparent">
-                            {item.span}
-                          </span>
-                        </h2>
-                        <p className="~text-[0.75rem]/[1rem] leading-[120%] ~pt-[1rem]/[2rem] ">
-                          {item.description}
-                        </p>
+                  <motion.div
+                    className="absolute inset-0"
+                    style={{
+                      backfaceVisibility: "hidden",
+                      transform: "rotateY(180deg)",
+                    }}
+                  >
+                    <div className="relative w-fit p-[1px] bg-gradient-to-br ~rounded-[0.5rem]/[1.25rem] from-[#DFAB6012] h-full to-[#AC814326]">
+                      <div className="~w-[18.75rem]/[22.5rem] text-white flex justify-center items-center ~px-[1rem]/[1.875rem] ~rounded-[0.5rem]/[1.25rem] relative ~h-[20.25rem]/[33.6875rem] bg-gradient-to-br from-[#090909] to-[#25221c]">
+                        <div>
+                          <h2 className="font-merriweather leading-[120%] ~text-[1.25rem]/[3.0625rem]">
+                            {item.heading} <br />
+                            <span className="bg-gradient-to-r from-[#ECB45D] via-[#FFD38D] to-[#FFB644] bg-clip-text text-transparent">
+                              {item.span}
+                            </span>
+                          </h2>
+                          <p className="~text-[0.75rem]/[1rem] leading-[120%] ~pt-[1rem]/[2rem] ">
+                            {item.description}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-      </Carousel>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </div>
     </div>
   );

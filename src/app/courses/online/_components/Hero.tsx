@@ -68,7 +68,7 @@ const Hero = () => {
           innerpage="Online Trading Course"
           activePageLink="/courses"
         />
-        <div className="~px-[0.625rem]/[7.375rem] ~pb-[2rem]/[7.375rem] ~pt-[1rem]/[2rem]">
+        <div className="~px-[0.625rem]/[7.375rem] ~pb-[2rem]/[7.375rem] md:~pt-[1rem]/[2rem] max-md:pt-[5rem]">
           <div className="relative  p-[1px] bg-gradient-to-br overflow-hidden from-[#333333]  to-[#111111] ~rounded-[1.4119rem]/[3rem]">
             <div className="~p-[0.75rem]/[1.875rem] flex md:flex-row flex-col items-center ~gap-[1rem]/[3rem] ~rounded-[1.4119rem]/[3rem] bg-[#101010]">
               <div className="w-full">
@@ -77,7 +77,7 @@ const Hero = () => {
                 <div className=" bg-gradient-to-r from-[#ECB45D] via-[#FFD38D] ~pt-[1rem]/[2.25rem] to-[#FFB644] bg-clip-text text-transparent font-merriweather ~text-[1.25rem]/[3rem] leading-[120%] tracking-[-1.12%]">
                   Online Trading Course
                 </div>
-                <div className="md:font-bold font-normal font-merriweather ~text-[0.75rem]/[1.5rem]  leading-[120%] ~tracking-[-0.0075rem]/[-0.0163rem] text-[#F7F8F8] ">
+                <div className="md:font-bold font-normal font-merriweather ~text-[0.75rem]/[1.5rem] pt-[0.375rem] leading-[120%] ~tracking-[-0.0075rem]/[-0.0163rem] text-[#F7F8F8] ">
                   See Beyond the Charts. Trade with Precision.
                 </div>
                 <div className="grid grid-cols-3 ~pt-[1.25rem]/[2.25rem] xl:~pr-[0]/[3.5rem]">
@@ -95,7 +95,7 @@ const Hero = () => {
                   <div className=" flex justify-center items-center text-white font-satoshi ">
                     <div>
                       <p className="font-medium ~text-[0.75rem]/[1.125rem] leading-[100%]">
-                        1 Month
+                        2 Months
                       </p>
                       <p className="~text-[0.625rem]/[1rem] pt-[0.2rem] leading-[120%]">
                         Duration (Online){" "}
@@ -140,14 +140,14 @@ Experience the markets in real time. Over 30 days, master live setups, decision-
                     </div>
                   </div> */}
                 </div>
-                {/* <div className="flex">
-                  <p className="font-satoshi ~text-[0.725rem]/[1rem] leading-[1.25rem] text-[#FFFFFF] ">
-                    EMI option Available =
-                  </p>{" "}
-                  <p className="bg-gradient-to-b ml-1 from-[#F3C070] to-[#EAB877] ~text-[0.725rem]/[1rem] font-medium bg-clip-text text-transparent ">
-₹13,648 × 6 months            
-      </p>
-                </div> */}
+                             <div className=" p-[1px] ~rounded-[0.5rem]/[1rem] bg-gradient-to-l from-[#333333] to-[#111111] inline-block">
+                  <div className="flex items-center ~py-[0.5rem]/[0.75rem] bg-gradient-to-r  from-[#101010] to-[#171717] px-[0.75rem] ~rounded-[0.5rem]/[1rem]">
+                    <p className="font-satoshi ~text-[0.725rem]/[1.15rem] leading-[120%] text-[#FFFFFF] ">
+                      EMI option Available 
+                    </p>{" "}
+         
+                  </div>
+                </div>
               </div>{" "}
               <div
                 className="shrink-0 w-full md:~w-[9.9475rem]/[32.5rem]

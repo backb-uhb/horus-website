@@ -9,6 +9,7 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousal";
 import Autoplay from "embla-carousel-autoplay";
 import { ButtonAnimation } from "@/components/ButtonAnimation";
@@ -22,15 +23,6 @@ const slides = [
     span: "The Vision",
     description:
       "Shanu is a seasoned finance mentor at Horus, known for simplifying complex financial concepts and guiding students with practical, real-world insights. His hands-on approach and industry knowledge make learning both effective and engaging. ",
-  },
-  {
-    image: "/images/anas.png",
-    title: "Anas",
-    subtitle: "Trainer",
-    heading: "Master",
-    span: "The Markets",
-    description:
-      "Anas is a dedicated trading mentor at Horus Academy, focused on live market execution and structured trade planning. He emphasizes discipline, risk control, and repeatable setups, helping students turn strategy into consistent action in real market conditions.",
   },
   {
     image: "/images/nasif.png",
@@ -63,12 +55,14 @@ const MembersSection = () => {
       <div className="flex justify-center ~px-[0.625rem]/[7.4375rem]  md:justify-start">
         <ButtonBrown content="Meet Our Members" />
       </div>
-      <h4 className="text-white ~text-[0.75rem]/[1.5rem] ~px-[0.625rem]/[7.4375rem]  ~pt-[1rem]/[1.5rem] leading-[100%] font-medium">
-        There&apos;s a mind behind every move.
-      </h4>
-      <p className="text-[#6A6B6C] ~text-[0.75rem]/[1.5rem] ~px-[0.625rem]/[7.4375rem]  pt-[0.25rem] leading-[100%] font-medium">
-        Meet the traders, mentors, and builders
-      </p>
+<div className="md:justify-start flex flex-col max-md:items-center justify-center">
+        <h4 className="text-white ~text-[0.75rem]/[1.5rem] ~px-[0.75rem]/[7.4375rem]  ~pt-[1rem]/[1.5rem] leading-[120%] font-medium">
+          There&apos;s a mind behind every move.
+        </h4>
+        <p className="text-[#6A6B6C] ~text-[0.75rem]/[1.5rem] ~px-[0.75rem]/[7.4375rem]  pt-[0.25rem] leading-[120%] font-medium">
+          Meet the traders, mentors, and builders
+        </p>
+</div>
 
       <Carousel
         plugins={[plugin.current]}
@@ -89,11 +83,20 @@ const MembersSection = () => {
             </div>
           </ButtonAnimation>
         </CarouselNext>
-        <CarouselContent className="~pt-[2.5rem]/[5rem]  flex  ~py-[3rem]/[4.625rem]  ">
+              <CarouselPrevious className="absolute ~left-[0.5rem]/[2rem] -translate-y-1/2 top-1/2 z-10 cursor-pointer">
+            <ButtonAnimation>
+              <div className="relative hover:scale-110 duration-300 transition-all ease-in-out w-fit p-[1px] bg-gradient-to-br rounded-full from-[#333333] to-[#111111]">
+                <div className="~size-[2rem]/[3.75rem] rounded-full flex justify-center items-center bg-gradient-to-br from-[#111214] to-[#111214]">
+                  <ArrowSvg className="~w-[0.3rem]/[0.5rem] text-[#DFAB60] rotate-180" />
+                </div>
+              </div>
+            </ButtonAnimation>
+          </CarouselPrevious>
+        <CarouselContent className=" flex  ~py-[2.5rem]/[4.625rem]  ">
           {slides.map((item, i) => (
             <CarouselItem
               key={i}
-              className="~w-[18.75rem]/[22.5rem] basis-1/1 shrink-0 ~h-[14.3092088699rem]/[33.6875rem] ~mr-[2rem]/[3rem] cursor-pointer"
+              className="~w-[18.75rem]/[22.5rem] basis-1/1 shrink-0 ~h-[20.5rem]/[33.6875rem] ~mr-[2rem]/[3rem] cursor-pointer"
               style={{ perspective: "1000px" }}
               onMouseEnter={() => {
                 plugin.current.stop();
@@ -115,7 +118,7 @@ const MembersSection = () => {
                   style={{ backfaceVisibility: "hidden" }}
                 >
                   <div className="relative w-fit p-[1px] bg-gradient-to-br ~rounded-[0.5rem]/[1.25rem] from-[#333333] h-full to-[#111111]">
-                    <div className="~w-[18.75rem]/[22.5rem] relative ~rounded-[0.5rem]/[1.25rem] ~h-[14.3092088699rem]/[33.6875rem]">
+                    <div className="~w-[18.75rem]/[22.5rem] relative ~rounded-[0.5rem]/[1.25rem] ~h-[20.5rem]/[33.6875rem]">
                       <Image
                         src={item.image}
                         fill
@@ -150,7 +153,7 @@ const MembersSection = () => {
                   }}
                 >
                   <div className="relative w-fit p-[1px] bg-gradient-to-br ~rounded-[0.5rem]/[1.25rem] from-[#DFAB6012] h-full to-[#AC814326]">
-                    <div className="~w-[18.75rem]/[22.5rem] text-white flex justify-center items-center ~px-[1rem]/[1.875rem] ~rounded-[0.5rem]/[1.25rem] relative ~h-[14.3092088699rem]/[33.6875rem] bg-gradient-to-br from-[#090909] to-[#25221c]">
+                    <div className="w-full text-white flex justify-center items-center ~px-[1rem]/[1.875rem] ~rounded-[0.5rem]/[1.25rem] relative ~h-[20.5rem]/[33.6875rem] bg-gradient-to-br from-[#090909] to-[#25221c]">
                       <div>
                         <h2 className="font-merriweather leading-[120%] ~text-[1.25rem]/[3.0625rem]">
                           {item.heading} <br />

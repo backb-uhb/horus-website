@@ -42,12 +42,11 @@ const Header = () => {
       }
     };
 
-    // Initial check
     handleResize();
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
@@ -80,9 +79,17 @@ const Header = () => {
             data-lenis-prevent
             className="fixed lg:hidden top-[2.5rem] right-0 ~p-[1rem]/[2rem] z-[6000]  ~min-w-[20rem]/[60rem] h-full bg-[#111111] overflow-y-auto no-scrollbar "
           >
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between ">
               <Link onClick={() => setOpen(false)} href="/">
-                <Logo className="~h-[4.0625rem]/[6.375rem] w-auto" />
+                {/* <Logo className="~h-[4.0625rem]/[6.375rem] w-auto" /> */}
+                <div className=" relative ~h-[5rem]/[6.375rem] ~w-[7.5rem]/[11.375rem]">
+                  <Image
+                    src={"/images/horus-logo.png"}
+                    alt="img"
+                    fill
+                    className="object-cover"
+                  />
+                </div>{" "}
               </Link>
               <ClossSvg
                 onClick={() => setOpen(false)}
@@ -113,19 +120,28 @@ const Header = () => {
                 <div className="~py-[0.5rem]/[1rem] border-b-[0.5px] border-b-white/30">
                   <Link
                     onClick={() => setOpen(false)}
-                    href=""
+                    href="/student-life"
                     className=" text-white/50 block hover:text-white duration-300 ease-in-out transition-all underline-offset-4 decoration-1"
                   >
                     Student Life
                   </Link>
                 </div>
-                <div className="~py-[0.5rem]/[1rem]  border-b-white/30">
+                <div className="~py-[0.5rem]/[1rem] border-b-[0.5px]  border-b-white/30">
                   <Link
                     onClick={() => setOpen(false)}
                     href="/blog"
                     className=" text-white/50 block hover:text-white duration-300 ease-in-out transition-all underline-offset-4 decoration-1"
                   >
                     Blog
+                  </Link>
+                </div>
+                <div className="~py-[0.5rem]/[1rem]  border-b-white/30">
+                  <Link
+                    onClick={() => setOpen(false)}
+                    href="/club"
+                    className=" text-white/50 block hover:text-white duration-300 ease-in-out transition-all underline-offset-4 decoration-1"
+                  >
+                    Club
                   </Link>
                 </div>
               </div>
@@ -192,7 +208,7 @@ const Header = () => {
           )}
 
           <div className="relative ~py-[0.75rem]/[1.25rem] max-w-[1440px] mx-auto flex justify-between items-center">
-            <Link href="/">
+            {/* <Link href="/">
               <Logo
                 className={`transition-all duration-500 ease-in-out ${
                   isScrolled
@@ -200,6 +216,21 @@ const Header = () => {
                     : "~h-[3.40625rem]/[6.25rem] w-auto"
                 }`}
               />
+            </Link> */}
+            <Link href="/">
+              <div
+                className={`relative transition-all duration-500 ease-in-out ${
+                  isScrolled ? "~h-[6.0625rem]/[7rem]" : "~h-[6rem]/[7rem]"
+                } ~w-[6.5rem]/[11.4375rem]`}
+              >
+                <Image
+                  src="/images/horus-logo.png"
+                  alt="Site Logo"
+                  fill
+                  priority
+                  className="object-cover"
+                />
+              </div>
             </Link>
             <div className="hidden lg:flex items-center">
               <div className="p-[1px] rounded-full bg-gradient-to-br from-[#333333] to-[#111111] w-fit">
@@ -226,17 +257,36 @@ const Header = () => {
                     Courses
                   </Link>
                   <Link
-                    href=""
-                    className="text-white/50 hover:text-white duration-300 ease-in-out transition-all underline-offset-4 decoration-1"
+                    href="/blog"
+                    className={`${
+                      pathname === "/blog" || pathname.startsWith("/courses/")
+                        ? "text-white"
+                        : "text-white/50 hover:text-white"
+                    } duration-300 ease-in-out transition-all underline-offset-4 decoration-1`}
+                  >
+                    Blog
+                  </Link>
+                  <Link
+                    href="/student-life"
+                    className={`${
+                      pathname === "/student-life" || pathname.startsWith("/courses/")
+                        ? "text-white"
+                        : "text-white/50 hover:text-white"
+                    } duration-300 ease-in-out transition-all underline-offset-4 decoration-1`}
                   >
                     Student Life
                   </Link>
                   <Link
-                    href=""
-                    className="text-white/50 hover:text-white duration-300 ease-in-out transition-all underline-offset-4 decoration-1"
+                    href="/club"
+                    className={`${
+                      pathname === "/club" || pathname.startsWith("/courses/")
+                        ? "text-white"
+                        : "text-white/50 hover:text-white"
+                    } duration-300 ease-in-out transition-all underline-offset-4 decoration-1`}
                   >
                     Club
-                  </Link>
+                  </Link>                 
+
                 </div>
               </div>
             </div>

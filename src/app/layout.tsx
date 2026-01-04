@@ -34,7 +34,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: " Horus Financial Academy",
+  title: "The Horus Academy",
   description: "",
   metadataBase: new URL(AbsoluteUrl),
 };

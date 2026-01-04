@@ -30,14 +30,14 @@ const Experience = () => {
           <div className="~pt-[2rem]/[8.875rem] ~rounded-t-[3rem]/[12.25rem] bg-[#070707] border-t border-t-[#433827]">
             <div className="max-w-[1440px] mx-auto">
               <div className="  flex flex-col items-center">
-                <div className="font-merriweather text-[#F7F8F8]  ~text-[1.375rem]/[3.25rem] text-center leading-[110%] tracking-[-0.07rem] font-normal md:font-bold max-w-[25ch] md:max-w-[20ch]">
+                <div className="font-merriweather text-[#F7F8F8] px-[1.3125rem] ~text-[1.375rem]/[3.25rem] text-center leading-[110%] tracking-[-0.07rem] font-normal md:font-bold max-w-[25ch] md:max-w-[20ch]">
                   Unlike any{" "}
                   <span className="bg-gradient-to-r from-[#ECB45D] via-[#FFD38D] to-[#FFB644] bg-clip-text text-transparent">
                     trading experience
                   </span>{" "}
                   you&apos;ve had
                 </div>
-                <div className="text-[#FFF4E3] font-inter text-center font-normal md:font-bold ~text-[0.75rem]/[1.33rem] md:max-w-[38ch] max-w-[40ch] tracking-[0%] leading-[120%]  ~pt-[0.625rem]/[1.4812rem]">
+                <div className="text-[#FFF4E3] px-[0.75rem] font-inter text-center font-normal md:font-bold ~text-[0.75rem]/[1.33rem] md:max-w-[38ch] max-w-[40ch] tracking-[0%] leading-[120%]  ~pt-[0.625rem]/[1.4812rem]">
                   Crafted for performance and precision, Horus merges elite
                   mentorship , immersive infrastructure, and cutting-edge tools
                   , giving you an edge the market can{"'"}t teach.

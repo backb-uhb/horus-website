@@ -37,7 +37,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div className="  flex items-center h-full relative  pt-[8.875rem] ~pb-[2rem]/[5.625rem] ">
+      <div className="  flex items-center h-full relative max-md:~pt-[12.5rem]/[20.5rem]  md:pt-[8.875rem] ~pb-[2rem]/[5.625rem] ">
         <div className="~pl-[1rem]/[6.25rem] ~pr-[1rem]/[6.25rem] md:pr-0  z-40 ">
           <div className="font-merriweather font-normal max-md:text-center ~text-[1.375rem]/[4rem] leading-[108%] tracking-[-0.07rem] text-[#FFFFFF] md:max-w-[19ch] ">
             Learn What{" "}
@@ -77,8 +77,8 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="absolute max-md:-translate-x-1/2 max-md:left-1/2 max-md:top-[0%] md:right-0 ">
-          <div className="relative ~w-[14.4177408218rem]/[42.625rem] ~h-[14.0843372345rem]/[41rem]">
+        <div className="absolute max-md:-translate-x-1/2 max-md:left-1/2 max-md:top-[0%] md:right-0 max-md:pt-[4rem]">
+          <div className="relative ~w-[14.4177408218rem]/[42.625rem] ~h-[14.0843372345rem]/[41rem] ">
             <div className="~py-[0.5rem]/[1.875rem] md:block hidden  ~top-[4rem]/[20.3125rem] ~left-[4rem]/[5.1875rem] ~px-[0.75rem]/[2.875rem] font-geist font-semibold ~text-[0.625rem]/[1rem] z-30 absolute bg-gradient-to-l from-[#D7C7B1]/5 to-[#EACA9C]/10 backdrop-blur-[0.7312rem] ~rounded-[0.75rem]/[1.25rem] border-[0.0625rem] border-[#DFAB6012] leading-[160%] tracking-[-1.2%] text-[#FFFFFF] ">
               Live Trading Access
             </div>

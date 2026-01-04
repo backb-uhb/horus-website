@@ -50,8 +50,7 @@ const MobileTradingCarousel = () => {
                 className="~size-[8.75rem]/[21.875rem] ~rounded-[0.625rem]/[1.5rem]"
               />
               <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-semibold">
-                College in the morning. Charts by night | Horus Financial
-                Academy{" "}
+                College in the morning. Charts by night | The Horus Academy {" "}
               </p>
             </div>
           </CarouselItem>
@@ -190,7 +189,7 @@ const DesktopTradingLayout = () => {
               />
             </div>
             <p className="~max-w-[8.75rem]/[21.875rem] font-satoshi leading-[110%] ~tracking-[-0.008125rem]/[-0.02rem] ~text-[0.75rem]/[1.5rem] md:font-bold">
-              College in the morning. Charts by night | Horus Financial Academy
+              College in the morning. Charts by night | The Horus Academy
             </p>
           </div>
         </motion.div>

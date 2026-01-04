@@ -30,7 +30,7 @@ const Hero = () => {
       quote: "Placed at DGCX",
       image: "/images/testimonial/kabir-malhotra.jpg",
     },
-    
+
     {
       name: "Aditya Rao",
       quote: "Placed at DFM",
@@ -67,7 +67,7 @@ const Hero = () => {
           innerpage="Technical Course"
           activePageLink="/courses"
         />
-        <div className="~px-[0.625rem]/[7.375rem] ~pb-[2rem]/[7.375rem] ~pt-[1rem]/[2rem]">
+        <div className="~px-[0.625rem]/[7.375rem] ~pb-[2rem]/[7.375rem] md:~pt-[1rem]/[2rem] max-md:pt-[5rem]">
           <div className="relative  p-[1px] bg-gradient-to-br overflow-hidden from-[#333333]  to-[#111111] ~rounded-[1.4119rem]/[3rem]">
             <div className="~p-[0.75rem]/[1.875rem] flex md:flex-row flex-col items-center ~gap-[1rem]/[3rem] ~rounded-[1.4119rem]/[3rem] bg-[#101010]">
               <div className="w-full">
@@ -76,7 +76,7 @@ const Hero = () => {
                 <div className=" bg-gradient-to-r from-[#ECB45D] via-[#FFD38D] ~pt-[1rem]/[2.25rem] to-[#FFB644] bg-clip-text text-transparent font-merriweather ~text-[1.25rem]/[3rem] leading-[120%] tracking-[-1.12%]">
                   Technical Course
                 </div>
-                <div className="md:font-bold font-normal font-merriweather ~text-[0.75rem]/[1.5rem]  leading-[120%] ~tracking-[-0.0075rem]/[-0.0163rem] text-[#F7F8F8] ">
+                <div className="md:font-bold font-normal font-merriweather ~text-[0.75rem]/[1.5rem] pt-[0.375rem] leading-[120%] ~tracking-[-0.0075rem]/[-0.0163rem] text-[#F7F8F8] ">
                   Explore What Actually Moves the Markets.{" "}
                 </div>
                 <div className="grid grid-cols-3 ~pt-[1.25rem]/[2.25rem] xl:~pr-[0]/[3.5rem]">
@@ -94,10 +94,10 @@ const Hero = () => {
                   <div className="border-r flex justify-center items-center text-white font-satoshi border-r-[#DFAB60]">
                     <div>
                       <p className="font-medium ~text-[0.75rem]/[1.125rem] leading-[100%]">
-                        3 Months
+                        2 Months
                       </p>
                       <p className="~text-[0.625rem]/[1rem] pt-[0.2rem] leading-[120%]">
-                        Duration (Online){" "}
+                        Duration{" "}
                       </p>
                     </div>
                   </div>
@@ -117,20 +117,20 @@ const Hero = () => {
                   real-time market access to core strategies—learn what works,
                   fast.
                 </div>
-      <div className="flex flex-wrap gap-[0.4375rem] ~pt-[1rem]/[1.625rem]">
-  {features.map((item, i) => (
-    <div
-      key={i}
-      className="p-[0.0625rem] bg-gradient-to-br from-[#333333] to-[#111111] rounded-[5.0625rem]"
-    >
-      <p className="font-satoshi ~text-[0.75rem]/[0.875rem] leading-[1.5rem] text-[#F1F1EF] flex items-center justify-center py-[0.3125rem] px-[0.625rem] bg-[#101010] rounded-[5rem] whitespace-nowrap">
-        {item}
-      </p>
-    </div>
-  ))}
-</div>
+                <div className="flex flex-wrap gap-[0.4375rem] ~pt-[1rem]/[1.625rem]">
+                  {features.map((item, i) => (
+                    <div
+                      key={i}
+                      className="p-[0.0625rem] bg-gradient-to-br from-[#333333] to-[#111111] rounded-[5.0625rem]"
+                    >
+                      <p className="font-satoshi ~text-[0.75rem]/[0.875rem] leading-[1.5rem] text-[#F1F1EF] flex items-center justify-center py-[0.3125rem] px-[0.625rem] bg-[#101010] rounded-[5rem] whitespace-nowrap">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
                 <div className="flex ~gap-[0.5rem]/[1.25rem] ~py-[1.25rem]/[2.25rem]">
-                <WhatsAppButton message="Hi, I visited your website and would like more information about your Technical course."/>
+                  <WhatsAppButton message="Hi, I visited your website and would like more information about your Technical course." />
                   {/* <div className="relative p-[1px]  rounded-full bg-gradient-to-l from-[#DFAB60] to-[#DFAB601A] w-fit">
                     <div className="flex items-center ~gap-[0.35rem]/[0.62rem] rounded-full cursor-pointer transition-all duration-300 ease-in-out py-[0.5rem] ~px-[0.75rem]/[1rem] hover:bg-transparent bg-[#111111]">
                       <button className="text-white font-semibold font-geist ~text-[0.75rem]/[1rem] leading-[160%] tracking-[-1.2%]">
@@ -139,19 +139,18 @@ const Hero = () => {
                     </div>
                   </div> */}
 
-                         <EnrollButton variant="cta"/>
-
+                  <EnrollButton variant="cta" />
                 </div>
-   <div className=" p-[1px] ~rounded-[0.5rem]/[1rem] bg-gradient-to-l from-[#333333] to-[#111111] inline-block">
+                <div className=" p-[1px] ~rounded-[0.5rem]/[1rem] bg-gradient-to-l from-[#333333] to-[#111111] inline-block">
                   <div className="flex items-center ~py-[0.5rem]/[0.75rem] bg-gradient-to-r  from-[#101010] to-[#171717] px-[0.75rem] ~rounded-[0.5rem]/[1rem]">
-                    <p className="font-satoshi ~text-[0.725rem]/[1.15rem] leading-[1.25rem] text-[#FFFFFF] ">
-                      EMI option Available =
-                    </p> {" "}
-                    <p className="bg-gradient-to-b ml-1 from-[#F3C070] to-[#EAB877] ~text-[0.725rem]/[1.15rem] font-medium bg-clip-text text-transparent ">
-                     ₹27,296 × 3 months
-                    </p>
+                    <p className="font-satoshi ~text-[0.725rem]/[1.15rem] leading-[120%] text-[#FFFFFF] ">
+                      EMI option Available 
+                    </p>{" "}
+                    {/* <p className="bg-gradient-to-b ml-1 from-[#F3C070] to-[#EAB877] ~text-[0.725rem]/[1.15rem] font-medium bg-clip-text text-transparent ">
+                      ₹27,296 × 3 months
+                    </p> */}
                   </div>
-   </div>
+                </div>
               </div>{" "}
               <div
                 className="shrink-0 w-full md:~w-[9.9475rem]/[32.5rem]
@@ -194,7 +193,7 @@ const Hero = () => {
                         flex items-center justify-center
                         group-hover:scale-110 transition-transform"
                       >
-                        <PlayIcon className="w-[1.0625rem] h-[1.5625rem]"/> 
+                        <PlayIcon className="w-[1.0625rem] h-[1.5625rem]" />
                       </div>
                     </div>
                   </>
@@ -221,7 +220,12 @@ const Hero = () => {
             <div className="~min-w-[10rem]/[18.75rem] ~p-[0.75rem]/[1.5rem]   ~rounded-[0.625rem]/[1rem] bg-gradient-to-t from-[#1a1a19] to-[#201f1c]">
               <div className="flex items-center ~gap-[0.625rem]/[1rem]">
                 <div className="relative ~size-[1.3722555637rem]/[2.8779070377rem] ">
-                  <Image src={review.image} alt="" fill className="rounded-full object-cover object-top"/>
+                  <Image
+                    src={review.image}
+                    alt=""
+                    fill
+                    className="rounded-full object-cover object-top"
+                  />
                 </div>
                 <div className="flex flex-col justify-between h-full">
                   <h3 className="text-[#F4F0FF] font-medium md:font-bold leading-[120%] ~text-[0.625rem]/[1.04625rem]">
