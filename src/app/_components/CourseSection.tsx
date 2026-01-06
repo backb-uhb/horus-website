@@ -13,14 +13,14 @@ const courses = [
     title: "Online Trading Course",
     link: "/courses/online",
     description:
-    "Study in a live trading floor environment.From basic to advanced theory, apply what you learn through live online practical sessions. Build discipline with psychology training, gain insights from guest traders, and stay connected with exclusive club access."
+"Start by mastering trading through live online practical sessions, applying strategies in real-time markets. Build a solid foundation with structured lessons from basic to advanced theory, sharpen your mindset with focused psychology training, gain insights from experienced traders in guest lectures, and stay engaged through an exclusive club that fuels ongoing growth." ,
   },
   {
     image: "/images/blogs/blog-9.jpg",
     title: "Technical Course",
     link: "/courses/technical",
     description:
-"Start with studying in a live trading floor environment. Learn basic to advanced technical theory, apply it through practical live sessions, and build consistency with focused psychology training. Get 15 days of live trading floor access, learn directly from experts in guest lectures, and continue your journey with exclusive club access."  },
+"Start with studying in a live trading floor environment. Learn basic to advanced technical theory, apply it through practical live sessions, and build consistency with focused psychology training. Get 30 days of live trading floor access, learn directly from experts in guest lectures, and continue your journey with exclusive club access."  },
   {
     image: "/images/courseImage2.png",
     title: "Advanced Technical Course",

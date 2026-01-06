@@ -21,7 +21,7 @@ interface ChecklistSectionProps {
 const CourseDetails = () => {
   const onlineChecklistItems: ChecklistItem[] =  [
     { id: 1, text: "Basic to advanced theory", completed: true },
-    { id: 2, text: "Online pactical sessions ( In Live Trading Floor )", completed: true },
+    { id: 2, text: "Online practical sessions", completed: true },
     { id: 3, text: "Psychology session", completed: true },
     { id: 4, text: "Guest lectures", completed: true },
     { id: 5, text: "Club access", completed: true },
@@ -37,7 +37,7 @@ const CourseDetails = () => {
     { id: 3, text: "Psychology session", completed: true },
     { id: 4, text: "Guest lectures", completed: true },
     { id: 5, text: "Club access", completed: true },
-    { id: 6, text: "Live trading floor access to 15 days", completed: true },
+    { id: 6, text: "Live trading floor access to 30 days", completed: true },
     { id: 7, text: "Placement oppurtunity", completed: false },
     { id: 8, text: "Trading capital", completed: false },
   ];
@@ -138,7 +138,7 @@ const CourseDetails = () => {
                     Certified
                   </div>
                   <div className="flex items-center ~gap-[0.5rem]/[0.75rem]">
-                    <ClockSvg className="~size-[0.875rem]/[1.625rem]" />30 Days
+                    <ClockSvg className="~size-[0.875rem]/[1.625rem]" />2 Months
                   </div>
                 </div>
                 <div className="flex items-center gap-[0.75rem] ~pt-[0.5rem]/[0.875rem]">

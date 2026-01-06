@@ -48,7 +48,7 @@ const AllBlogs = ({blogs} : Props) => {
   };
 
   return (
-    <div className=" ~px-[1.3125rem]/[6.25rem]    " id="all-blogs-section">
+    <div className=" ~px-[1.3125rem]/[6.25rem]  max-w-[1440px] mx-auto  " id="all-blogs-section">
       <h3 className="text-transparent bg-gradient-to-r from-[#DFAB60] to-[#613D09] bg-clip-text  ~text-[1.25rem]/[2.25rem] font-merriweather font-medium leading-[120%] tracking-[-0.01em]">
         All Blogs
       </h3>

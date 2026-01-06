@@ -114,8 +114,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="~text-[0.625rem]/[1.25rem] ~pt-[1rem]/[2.25rem] leading-[110%] text-[#FFF4E3] font-satoshi">
-                  Advanced course for serious traders, delivering institutional
-                  insights and high-performance strategies.
+             Designed for traders ready to move beyond fundamentals, this advanced in-person program combines intensive theory, real-market practice, and performance-focused psychology. Participants receive 30 days of live trading floor access, insights from industry experts, and continued learning through exclusive club access. The program also opens pathways to job placement opportunities and access to trading capital.
                 </div>
                 <div className="flex flex-wrap gap-[0.4375rem] ~pt-[1rem]/[1.625rem]">
                   {features.map((item, i) => (

@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import React, { useMemo, useEffect, useState } from "react";
 import Contents from "./Contents";
 import AuthorDetails from "./AuthorDetails";
@@ -101,9 +100,7 @@ const BlogDetails = ({ author, author_description, linked_in, description }: Pro
           className="font-normal new-description font-satoshi ~text-[0.75rem]/[1.25rem] leading-[150%] text-[#fff] ~py-[1rem]/[2.5rem]"
         />
 
-        <div className="w-full ~h-[14.5625rem]/[33.125rem] relative">
-          <Image src={"/images/blogs/blog-1.jpg"} alt="img" fill />
-        </div>
+ 
         <AuthorDetails author={author} author_description={author_description} linked_in={linked_in} />
       </div>
       <Contents headings={headings} activeId={activeId} />

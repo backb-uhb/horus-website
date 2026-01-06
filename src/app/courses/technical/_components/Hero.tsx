@@ -104,7 +104,7 @@ const Hero = () => {
                   <div className=" text-white flex items-center justify-center font-satoshi ">
                     <div>
                       <p className="font-medium ~text-[0.75rem]/[1.125rem] leading-[100%]">
-                        15 Days
+                        30 Days
                       </p>
                       <p className="~text-[0.625rem]/[1rem] pt-[0.2rem] leading-[120%]">
                         Live Trading Floor
@@ -113,9 +113,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="~text-[0.625rem]/[1.25rem] ~pt-[1rem]/[2.25rem] leading-[110%] text-[#FFF4E3] font-satoshi">
-                  Mentor-led curriculum designed for aspiring traders. From
-                  real-time market access to core strategies—learn what works,
-                  fast.
+Build a strong foundation through structured, in-person training. The first month focuses on basic to advanced trading theory, supported by practical market sessions and psychology training to develop disciplined decision-making. Gain live trading floor access for 30 days, learn from experienced guest speakers, and continue your progress with exclusive club and community access in the second month.
                 </div>
                 <div className="flex flex-wrap gap-[0.4375rem] ~pt-[1rem]/[1.625rem]">
                   {features.map((item, i) => (

@@ -114,8 +114,7 @@ const Hero = () => {
                   </div> */}
                 </div>
                 <div className="~text-[0.625rem]/[1.25rem] ~pt-[1rem]/[2.25rem] leading-[110%] text-[#FFF4E3] font-satoshi">
-Experience the markets in real time. Over 30 days, master live setups, decision-making, and pressure—without theory overload or stale charts. Only action, clarity, and growth.
-                </div>
+Step into live markets with one month of hands-on classes focused on real setups and decision-making under pressure. Follow it with a month of exclusive community access to stay connected, sharpen clarity, and grow with active traders.                </div>
                 <div className="flex flex-wrap gap-[0.4375rem] ~pt-[1rem]/[1.625rem]">
                   {features.map((item, i) => (
                     <div
