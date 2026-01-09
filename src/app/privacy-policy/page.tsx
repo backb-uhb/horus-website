@@ -4,17 +4,14 @@ import React from "react";
 const page = () => {
   return (
     <div className="text-white ~pt-[8rem]/[17rem] ~px-[0.625rem]/[6.25rem]">
-      {/* Page Title */}
       <div className="font-merriweather text-[#F7F8F8] ~pb-[3rem]/[6rem] ~text-[1.375rem]/[3.25rem] text-center leading-[110%] tracking-[-0.07rem] font-normal md:font-bold">
         <span className="bg-gradient-to-r from-[#ECB45D] via-[#FFD38D] to-[#FFB644] bg-clip-text text-transparent">
           Privacy Policy
         </span>
       </div>
 
-      {/* Content */}
       <div className="font-normal ~text-[0.75rem]/[1.5rem] font-satoshi ~space-y-[1rem]/[1.5rem] leading-[120%] text-white ~tracking-[-0.004375rem]/[-0.015rem]">
 
-        {/* 1. Definitions */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           1. Definitions
         </h2>
@@ -36,7 +33,6 @@ const page = () => {
           </li>
         </ul>
 
-        {/* 2. Applicability & Scope */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           2. Applicability & Scope
         </h2>
@@ -56,7 +52,6 @@ const page = () => {
           IT Rules, 2011, and the Digital Personal Data Protection Act, 2023.
         </p>
 
-        {/* 3. Consent */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           3. Consent
         </h2>
@@ -67,7 +62,6 @@ const page = () => {
           withdrawn at any time, subject to legal and contractual obligations.
         </p>
 
-        {/* 4. Categories of Personal Data */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           4. Categories of Personal Data Collected
         </h2>
@@ -103,7 +97,6 @@ const page = () => {
           <li>Cookies and analytics data</li>
         </ul>
 
-        {/* 5. Purpose of Processing */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           5. Purpose of Processing
         </h2>
@@ -113,7 +106,6 @@ const page = () => {
           and improvement of services and security.
         </p>
 
-        {/* 6. Data Sharing */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           6. Data Sharing & Disclosure
         </h2>
@@ -123,7 +115,6 @@ const page = () => {
           as required by law. All third parties are bound by confidentiality obligations.
         </p>
 
-        {/* 7. Data Security */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           7. Data Storage & Security Measures
         </h2>
@@ -133,7 +124,6 @@ const page = () => {
           However, no system can guarantee absolute security.
         </p>
 
-        {/* 8. Data Retention */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           8. Data Retention
         </h2>
@@ -143,7 +133,6 @@ const page = () => {
           securely deleted or anonymized thereafter.
         </p>
 
-        {/* 9. User Rights */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           9. User Rights
         </h2>
@@ -152,7 +141,6 @@ const page = () => {
           erasure of Personal Data, or file a grievance regarding misuse.
         </p>
 
-        {/* 10. Cookies */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           10. Cookies & Tracking Technologies
         </h2>
@@ -161,7 +149,6 @@ const page = () => {
           user experience. You may manage cookie preferences through browser settings.
         </p>
 
-        {/* 11. Children */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           11. Children & Minors
         </h2>
@@ -170,7 +157,6 @@ const page = () => {
           without verifiable parental or guardian consent.
         </p>
 
-        {/* 12. Amendments */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           12. Amendments
         </h2>
@@ -179,7 +165,6 @@ const page = () => {
           on official platforms and shall be effective from the date of publication.
         </p>
 
-        {/* 13. Governing Law */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           13. Governing Law & Jurisdiction
         </h2>
@@ -188,7 +173,6 @@ const page = () => {
           jurisdiction over the Academy’s registered office shall have exclusive jurisdiction.
         </p>
 
-        {/* 14. Contact */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           14. Grievance Redressal & Contact Details
         </h2>

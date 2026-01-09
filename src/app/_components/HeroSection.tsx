@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import ArrowSvg from "../../components/svg/ArrowSvg";
 import { ButtonAnimation } from "@/components/ButtonAnimation";
 import Link from "next/link";
@@ -11,12 +10,24 @@ const Herosection = () => {
       <div className="relative flex flex-col items-center overflow-hidden">
         <div className="relative  px-[1rem] w-full h-[100vh] flex flex-col  ">
           <div className="">
-            <Image
+            {/* <Image
               src={"/images/bg-hero.png"}
               alt="background-img"
               fill
               className="object-cover z-0"
-            />
+            /> */}
+
+<video
+src="/video/hero-bg.mp4"
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="absolute inset-0 w-full h-full object-cover z-0"
+>
+</video>
+
+
             <div className="bg-gradient-to-t from-black to-transparent absolute inset-0 z-10"></div>
 
             <div className="relative flex h-[100svh] px-[1rem] justify-center flex-col items-center  w-full z-[5000000]">

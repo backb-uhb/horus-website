@@ -15,10 +15,10 @@ const AuthorDetails = ({author,author_description}:Props) => {
       <div className="md:flex ~gap-[0.75rem]/[1.5rem] pt-[4.125rem] hidden ">
         <div className="~size-[3.375rem]/[5.625rem] relative shrink-0">
           <Image
-            src={"/images/testimonial/meera-kappor.jpg"}
+            src={"/images/author.png"}
             alt="img"
             fill
-            className="object-cover object-right rounded-full "
+            className="object-cover object-top rounded-full "
           />
         </div>
         <div>
@@ -39,7 +39,7 @@ const AuthorDetails = ({author,author_description}:Props) => {
       <div className="flex max-md:items-center ~gap-[0.625rem]/[1rem]">
         <div className="~size-[3.375rem]/[5.625rem] relative shrink-0">
           <Image
-            src={"/images/testimonial/meera-kappor.jpg"}
+            src={"/images/author.png"}
             alt="img"
             fill
             className="object-cover object-right rounded-full "

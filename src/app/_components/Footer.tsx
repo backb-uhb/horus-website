@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "./Logo";
 import TwitterSvg from "@/components/svg/TwitterSvg";
 import InstagramSvg from "@/components/svg/InstagramSvg";
 import LinkedInSvg from "@/components/svg/LinkedinSvg";
@@ -9,6 +8,7 @@ import MailSvg from "@/components/svg/MailSvg";
 import PhoneSvg from "@/components/svg/PhoneSvg";
 import MessageSvg from "@/components/svg/MessageSvg";
 import EnrollCTA from "./EnrollCta";
+import Image from "next/image";
 
 const icons = [
   { href: "https://twitter.com", icon: TwitterSvg },
@@ -28,7 +28,18 @@ const Footer = () => {
     <div className="">
       <div className="bg-black flex flex-col ~pt-[2.125rem]/[17.75rem]  items-center ~pb-[2.7406rem]/[10.4125rem] ">
         <div>
-          <Logo className="~w-[9.375rem]/[27.5231rem] ~h-[5.1094rem]/[15rem]" />
+                          <Link href="/">
+                                <div className=" relative ~h-[5.1094rem]/[8.75rem] ~w-[9.375rem]/[16.055rem]">
+                                  <Image
+                                    src={"/images/horus-logo.png"}
+                                    alt="img"
+                                    fill
+                                    className="object-cover"
+                                  />
+                                </div>{" "}
+                  {/* <Logo className="~w-[9.375rem]/[16.055rem] ~h-[5.1094rem]/[8.75rem]" /> */}
+                </Link>{" "}
+          {/* <Logo className="~w-[9.375rem]/[27.5231rem] ~h-[5.1094rem]/[15rem]" /> */}
         </div>
         <div className="text-[#FFFFFF] ~pb-[1.25rem]/[4.625rem]  font-bold font-merriweather text-center ~text-[1.375rem]/[4rem] leading-[120%] tracking-[-0.07rem] pt-[2.25rem]">
           Start Your{" "}
@@ -58,7 +69,15 @@ const Footer = () => {
             <div>
               <div className="flex flex-col items-center">
                 <Link href="/">
-                  <Logo className="~w-[9.375rem]/[16.055rem] ~h-[5.1094rem]/[8.75rem]" />
+                                <div className=" relative ~h-[5rem]/[6.375rem] ~w-[7.5rem]/[11.375rem]">
+                                  <Image
+                                    src={"/images/horus-logo.png"}
+                                    alt="img"
+                                    fill
+                                    className="object-cover"
+                                  />
+                                </div>{" "}
+                  {/* <Logo className="~w-[9.375rem]/[16.055rem] ~h-[5.1094rem]/[8.75rem]" /> */}
                 </Link>{" "}
                 <div className="font-inter text-[#FFFFFF] font-medium ~text-[0.75rem]/[0.8681rem] leading-[1.5rem] tracking-[0%] ~py-[1.0625rem]/[2.1875rem]">
                   #18/1, 3rd Floor, Alexandria Street,
@@ -120,6 +139,12 @@ const Footer = () => {
                     className="hover:text-white transition-colors"
                   >
                     Terms & Conditions
+                  </Link>
+                         <Link
+                    href="/rental-floor-terms-and-conditions"
+                    className="hover:text-white transition-colors"
+                  >
+                    Rental Trading Floor - Terms & Conditions
                   </Link>
                   <Link href="/disclaimer" className="hover:text-white transition-colors">
                     Disclaimer

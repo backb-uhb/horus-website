@@ -4,17 +4,14 @@ import React from "react";
 const page = () => {
   return (
     <div className="text-white ~pt-[8rem]/[17rem] ~px-[0.625rem]/[6.25rem]">
-      {/* Page Title */}
       <div className="font-merriweather text-[#F7F8F8] ~pb-[3rem]/[6rem] ~text-[1.375rem]/[3.25rem] text-center leading-[110%] tracking-[-0.07rem] font-normal md:font-bold">
         <span className="bg-gradient-to-r from-[#ECB45D] via-[#FFD38D] to-[#FFB644] bg-clip-text text-transparent">
           Terms And Conditions
         </span>
       </div>
 
-      {/* Content */}
       <div className="font-normal ~text-[0.75rem]/[1.5rem] font-satoshi ~space-y-[1rem]/[1.5rem] leading-[120%] text-white ~tracking-[-0.004375rem]/[-0.015rem]">
 
-        {/* 1. Acceptance of Terms */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           1. Acceptance of Terms
         </h2>
@@ -29,7 +26,6 @@ const page = () => {
           using the Academy’s services.
         </p>
 
-        {/* 2. Eligibility */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           2. Eligibility
         </h2>
@@ -45,7 +41,6 @@ const page = () => {
           </li>
         </ul>
 
-        {/* 3. Services Offered */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           3. Services Offered
         </h2>
@@ -61,7 +56,6 @@ const page = () => {
           or guaranteed returns. All training is strictly educational in nature.
         </p>
 
-        {/* 4. User Obligations */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           4. User Obligations
         </h2>
@@ -80,7 +74,6 @@ const page = () => {
           of access without refund.
         </p>
 
-        {/* 5. Fees & Payments */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           5. Fees & Payments
         </h2>
@@ -98,7 +91,6 @@ const page = () => {
           of services.
         </p>
 
-        {/* 6. Intellectual Property */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           6. Intellectual Property
         </h2>
@@ -112,7 +104,6 @@ const page = () => {
           is strictly prohibited and may result in legal action.
         </p>
 
-        {/* 7. Limitation of Liability */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           7. Limitation of Liability
         </h2>
@@ -127,7 +118,6 @@ const page = () => {
           decisions are made at their own discretion.
         </p>
 
-        {/* 8. Termination */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           8. Termination
         </h2>
@@ -141,7 +131,6 @@ const page = () => {
           <li>Legal or regulatory requirements</li>
         </ul>
 
-        {/* 9. Governing Law */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           9. Governing Law & Jurisdiction
         </h2>
@@ -151,7 +140,6 @@ const page = () => {
           office shall have exclusive jurisdiction.
         </p>
 
-        {/* 10. Contact */}
         <h2 className="text-[#FFD38D] font-bold ~text-[1rem]/[1.875rem]">
           10. Contact Us
         </h2>
