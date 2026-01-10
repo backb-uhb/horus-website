@@ -29,12 +29,12 @@ const Footer = () => {
       <div className="bg-black flex flex-col ~pt-[2.125rem]/[17.75rem]  items-center ~pb-[2.7406rem]/[10.4125rem] ">
         <div>
                           <Link href="/">
-                                <div className=" relative ~h-[5.1094rem]/[8.75rem] ~w-[9.375rem]/[16.055rem]">
+                                <div className=" relative ~h-[8.0625rem]/[15.3125rem] ~w-[12.375rem]/[27.5rem]">
                                   <Image
-                                    src={"/images/horus-logo.png"}
+                                    src={"/images/horus-logo-footer.png"}
                                     alt="img"
                                     fill
-                                    className="object-cover"
+                                    className="object-contain"
                                   />
                                 </div>{" "}
                   {/* <Logo className="~w-[9.375rem]/[16.055rem] ~h-[5.1094rem]/[8.75rem]" /> */}
@@ -69,12 +69,12 @@ const Footer = () => {
             <div>
               <div className="flex flex-col items-center">
                 <Link href="/">
-                                <div className=" relative ~h-[5rem]/[6.375rem] ~w-[7.5rem]/[11.375rem]">
+                                <div className=" relative ~h-[5rem]/[6.375rem] ~w-[7.5rem]/[12.375rem]">
                                   <Image
                                     src={"/images/horus-logo.png"}
                                     alt="img"
                                     fill
-                                    className="object-cover"
+                                    className="object-contain"
                                   />
                                 </div>{" "}
                   {/* <Logo className="~w-[9.375rem]/[16.055rem] ~h-[5.1094rem]/[8.75rem]" /> */}

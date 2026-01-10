@@ -55,7 +55,7 @@ const CourseSection = () => {
               }`}
             >
               <div className="p-[1px]  bg-gradient-to-br ~rounded-[0.895rem]/[3rem] from-[#333333] to-[#111111]">
-                <div className="relative ~min-h-[15.875rem]/[41.8125rem] md:h-[70svh] ~rounded-[0.895rem]/[3rem] overflow-hidden ">
+                <div className="relative ~min-h-[15.875rem]/[41.8125rem] ~rounded-[0.895rem]/[3rem] overflow-hidden ">
                   <div className="absolute inset-0 bg-gradient-to-t from-[#111111]  opacity-[] z-50 to-transparent"></div>
                   <Image
                     src={course.image}

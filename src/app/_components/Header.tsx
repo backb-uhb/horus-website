@@ -86,7 +86,7 @@ const Header = () => {
                     src={"/images/horus-logo.png"}
                     alt="img"
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>{" "}
               </Link>
@@ -194,7 +194,6 @@ const Header = () => {
         <div
           className={`~px-[0.9375rem]/[5rem] fixed z-[4000] w-full transition-all duration-500 ease-in-out ${getTopPosition()}`}
         >
-          {/* Separate blur layer */}
           {isScrolled && (
             <div
               className="absolute inset-0 backdrop-blur-[1rem] bg-black/20 duration-700 transition-all ease-in-out pointer-events-none"
@@ -227,7 +226,7 @@ const Header = () => {
                   alt="Site Logo"
                   fill
                   priority
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             </Link>
